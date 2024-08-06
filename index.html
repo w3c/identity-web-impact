@@ -644,14 +644,14 @@ So, the challenge is enabling this technological innovation by being aware of th
    <p>The centralized identity model is the typical scenario when the user logs in to a social network to use it, and the credentials here are used to authenticate.</p>
    <figure id="fig-centralized-identity-model">
      <img src="figures/centralized-identity-model.svg"> 
-    <figcaption>Centralized Identity Management</figcaption>
+    <figcaption>Centralized identity management</figcaption>
    </figure>
    <p>Here is the <em>Data Flow</em>:</p>
    <ul>
     <li data-md>
      <p><strong>Authentication</strong>: The user authenticates themselves with the centralizdd system using their credentials.</p>
     <li data-md>
-     <p><strong>Access Granting</strong>: This system grants access to the resource.</p>
+     <p><strong>Access granting</strong>: This system grants access to the resource.</p>
    </ul>
    <p>Perspectives:</p>
    <ul>
@@ -672,18 +672,18 @@ So, the challenge is enabling this technological innovation by being aware of th
    <p>This model allows users to utilize a single Identity Provider (IdP) to authenticate and access multiple Service Providers (SPs) or Relying Parties (RPs) without needing to create separate accounts for each one.</p>
    <figure id="fig-federated-identity-model">
      <img src="figures/federated-identity-model.svg"> 
-    <figcaption>Federated Identity Management</figcaption>
+    <figcaption>Federated identity management</figcaption>
    </figure>
    <p>Here is the simplified <em>Data Flow</em>:</p>
    <ul>
     <li data-md>
      <p><strong>Authentication</strong>: The user sends their credentials to the IdP to authenticate.</p>
     <li data-md>
-     <p><strong>Obtaining Identity Assertions</strong>: The IdP then creates an identity assertion, a verifiable confirmation of the user’s identity.</p>
+     <p><strong>Obtaining identity assertions</strong>: The IdP then creates an identity assertion, a verifiable confirmation of the user’s identity.</p>
     <li data-md>
-     <p><strong>Sending Identity Assertions</strong>: The user sends their identity assertion to the SP or RP.</p>
+     <p><strong>Sending identity assertions</strong>: The user sends their identity assertion to the SP or RP.</p>
     <li data-md>
-     <p><strong>Trust and Access</strong>: The SP or the RP, trusting the IdP, accepts the Identity Assertion sent by the user and grants access.</p>
+     <p><strong>Trust and access</strong>: The SP or the RP, trusting the IdP, accepts the Identity Assertion sent by the user and grants access.</p>
    </ul>
    <p>Perspectives:</p>
    <ul>
@@ -702,7 +702,7 @@ So, the challenge is enabling this technological innovation by being aware of th
    <p>The decentralized identity model introduces a significant shift in the architecture, moving away from federated IdPs, SPs, or RPs.</p>
    <figure id="fig-decentralized-identity-model">
      <img src="https://www.w3.org/TR/vc-data-model-2.0/diagrams/ecosystem.svg"> 
-    <figcaption>Decentralized Identity Management <a data-link-type="biblio" href="#biblio-vc-data-model-20" title="Verifiable Credentials Data Model v2.0">[vc-data-model-2.0]</a></figcaption>
+    <figcaption>Decentralized identity management <a data-link-type="biblio" href="#biblio-vc-data-model-20" title="Verifiable Credentials Data Model v2.0">[vc-data-model-2.0]</a></figcaption>
    </figure>
    <p>Instead, it involves a new set of actors and dynamics, described in the W3C Verifiable Credentials Data Model (VCDM) <a data-link-type="biblio" href="#biblio-vc-data-model-20" title="Verifiable Credentials Data Model v2.0">[vc-data-model-2.0]</a>:</p>
    <ul>
@@ -713,7 +713,7 @@ So, the challenge is enabling this technological innovation by being aware of th
     <li data-md>
      <p>The <strong>Verifier</strong> in this model is akin to an SP or RP in federated models. It receives the credentials presented by the <em>Holder</em> and verifies them. Importantly, this process does not necessarily involve informing the <em>Issuer</em>. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.</p>
     <li data-md>
-     <p>The <strong>Verifiable Data Registry (VRP)</strong>, a crucial entity of this architecture. This registry holds the data needed to verify credentials and their status. This can be government databases, distributed ledgers, or other services. By maintaining this information, the VRP, depending on its form, enables verification without direct communication between the <em>Issuer</em> and the <em>Verifier</em>.</p>
+     <p>The <strong>Verifiable Data Registry (VRP)</strong> is a crucial entity of this architecture. This registry holds the data needed to verify credentials and their status. This can be government databases, distributed ledgers, or other services. By maintaining this information, the VRP, depending on its form, enables verification without direct communication between the <em>Issuer</em> and the <em>Verifier</em>.</p>
    </ul>
    <p class="note" role="note"><span class="marker">Note:</span> In this model, the definition of a <strong>credential</strong> shifts to a set of <em>claims</em> (attributes) linked to <em>identifiers</em> controlled by the user. While credentials represent identities, not all claims within a credential are used for identification. They can describe various characteristics, extending the application of credentials beyond mere identification.</p>
    <p>The VCDM defines two basic concepts: the <em>Verifiable Credentials</em> and the <em>Verifiable Presentation</em>.</p>
