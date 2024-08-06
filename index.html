@@ -785,14 +785,14 @@ So, the challenge is enabling this technological innovation by being aware of th
      </ol>
    </ul>
    <h5 class="heading settled" data-level="2.3.3.2" id="security-and-privacy"><span class="secno">2.3.3.2. </span><span class="content">Security and Privacy</span><a class="self-link" href="#security-and-privacy"></a></h5>
-   <p>It is interesting reflect on how this model differs from a security and privacy perspective both from previously described models and from the use of physical identity documents, as credentials can enable this use case:</p>
+   <p>It is interesting to reflect on how this model differs from a security and privacy perspective both from previously described models and from the use of physical identity documents, as credentials can enable this use case:</p>
    <ul>
     <li data-md>
      <p><strong>Decentralized vs. Federated Model</strong>: Let us analyze one of the privacy issues of the federated model: whoever provides the identity can track the user. This is one of the threats this model wants to mitigate since the identity is in the user’s Wallet, and they use it as they wish.</p>
-     <p>Does this guarantee its untraceability? One can presume that the answer is 8"it depends"*. It depends on how the architecture is defined and implemented and the technologies used. For example, when we present our credentials to log in, the verifier contacts the issuer directly, asking if the credentials are still valid, and we continue to be traceable.</p>
+     <p>Does this guarantee its untraceability? One can presume that the answer is "it depends"*. It depends on how the architecture is defined and implemented and the technologies used. For example, when we present our credentials to log in, the verifier contacts the issuer directly, asking if the credentials are still valid, and we continue to be traceable.</p>
     <li data-md>
-     <p><strong>Decentralized vs Physical Document</strong>: If we instead think about the case where I have to send my passport online to open a bank account, to date, the most used method is to send the file with the passport scan. The bank usually sends the file to third-party services, which often use Machine Learning systems for analysis. In addition, the file could be reused by someone who has access to it, exposing all our data and not only the one needed.</p>
-     <p>Presenting a digital credential, which could also support the submission of a subset of the contained claims, can improve the situation but, again, we may encounter the problem of the verifier contacting the issuer for verification, a problem that is rarer to happen sending the file, although databases of stolen documents do exist and a verifier could make a request with the passport-id to verify the status.</p>
+     <p><strong>Decentralized vs Physical Document</strong>: If we instead think about the case where I have to send my passport online to open a bank account, to date, the most used method is to send the file with the passport scan. The bank usually sends the file to third-party services, which often use Machine Learning systems for analysis. In addition, the file could be reused by someone who has access to it, exposing all my data and not only the one needed.</p>
+     <p>Presenting a digital credential, which could also support the submission of a subset of the contained claims, can improve the situation but, again, we may encounter the problem of the verifier contacting the issuer for verification, a problem that is rarer to happen when sending the file, although databases of stolen documents do exist and a verifier could make a request with the passport-id to verify the status.</p>
    </ul>
    <p class="note" role="note"><span class="marker">Note:</span> Architectural change can solve some issues but can also generate new ones, this is why a thorough analysis is necessary.</p>
    <p>We can take a step back and understand what privacy properties are needed for digital identity, considering that the higher the level of credential assurance, the more threats can impact the user. Over the years, several proposals have been made to understand the properties of digital identities, such as <a href="https://www.identityblog.com/?p=352">Kim Cameron’s 7 Identity Laws</a> and Ben Laure’s Three Properties. Analyzing the latter <a data-link-type="biblio" href="#biblio-selective-disclosure" title="Selective Disclosure (v0.2)">[selective-disclosure]</a>:</p>
@@ -800,16 +800,16 @@ So, the challenge is enabling this technological innovation by being aware of th
     <li data-md>
      <p><strong>Verifiable</strong>: Identities, credentials, and various claims must be verifiable, which is possible through appropriate cryptographic proofs. This is part of the security aspects, which include cryptography.</p>
     <li data-md>
-     <p><strong>Minimal</strong>: This is a privacy aspect. When we send information to the verifier, the information should be minimized as much as possible. For example, if we have to show that we are of age, it is okay to submit all the credentials or even the specific claim of the date of birth, but simply that I am of age.</p>
+     <p><strong>Minimal</strong>: This is a privacy aspect. When we send information to the verifier, the information should be minimized as much as possible. For example, if I have to show that I am of age, it is okay to submit all the credentials or even the specific claim of my date of birth, but simply that I am of age.</p>
     <li data-md>
      <p><strong>Unlinkable</strong>: This is another privacy aspect related to the minimal issue anyway. Suppose any party involved in the interaction, such as the Issuer or Verifier, or even a third party, can link and correlate the information we have sent. In that case, this can be done through various techniques, and privacy is compromised.</p>
    </ul>
    <p>So we have a number of properties, both security and privacy as a starting point. How can we implement them? First of all, different credential formats, have different privacy and security features <a data-link-type="biblio" href="#biblio-verifiable-credentials-flavors-explained" title="Verifiable Credentials Flavors Explained">[verifiable-credentials-flavors-explained]</a> and we can expand the discussion not only to formats but to all other components of the architecture, which must be aligned to ensure security and privacy.</p>
    <div class="advisement" id="a3">
-     <span class="marker">Modeling Security, Privacy, and Human Rights Threats of Decentralized Credentials</span><br> 
+     <span class="marker">Modeling security, privacy, and human rights threats of decentralized credentials</span><br> 
     <p>Given the levels of complexity, a comprehensive analysis of threats to privacy, security, and human rights is necessary.</p>
-    <p>This is especially important for high-assurance credentials, such as those issued by governments. This is highlighted by organizations such as the Electronic Frontier Foundation (EFF)<a data-link-type="biblio" href="#biblio-eff-digital-identification" title="Digital Identification Must Be Designed for Privacy and Equity">[eff-digital-identification]</a> and Access Now <a data-link-type="biblio" href="#biblio-access-now-whyid" title="#WhyID">[access-now-whyid]</a>.</p>
-    <p>W3C recognized the <a href="https://github.com/w3c/strategy/issues/458">need for rights-respecting digital credentials</a> and started a joint <a href="https://github.com/w3c-cg/threat-modeling/blob/main/models/decentralized-identities.md">Threat Model for Decentralized Identities</a>:</p>
+    <p>This is especially important for high-assurance credentials, such as those issued by governments. This is highlighted by organizations such as the Electronic Frontier Foundation (EFF) <a data-link-type="biblio" href="#biblio-eff-digital-identification" title="Digital Identification Must Be Designed for Privacy and Equity">[eff-digital-identification]</a> and Access Now <a data-link-type="biblio" href="#biblio-access-now-whyid" title="#WhyID">[access-now-whyid]</a>.</p>
+    <p>W3C recognized the <a href="https://github.com/w3c/strategy/issues/458">need for rights-respecting digital credentials</a> and started a joint <a href="https://github.com/w3c-cg/threat-modeling/blob/main/models/decentralized-identities.md">Threat Model for Decentralized Identities</a> with the following groups:</p>
     <ul>
      <li data-md>
       <p><a href="https://www.w3.org/groups/other/tag/">Technical Architecture Group (TAG)</a></p>
@@ -822,7 +822,7 @@ So, the challenge is enabling this technological innovation by being aware of th
      <li data-md>
       <p><a href="https://www.w3.org/groups/cg/credentials/">Credentials Community Group (CCG)</a></p>
      <li data-md>
-      <p><a href="https://www.w3.org/community/tmcg/">Threat Modeling Community Group (TMCG)</a> (open to all privacy, security and human rights experts).</p>
+      <p><a href="https://www.w3.org/community/tmcg/">Threat Modeling Community Group (TMCG)</a> (open to all privacy, security and human rights experts)</p>
     </ul>
     <p><strong>Threat Modeling</strong> is "<em>a family of structured, repeatable processes that allows to make rational decisions to secure applications, software, and systems</em>" <a data-link-type="biblio" href="#biblio-threat-modeling-designing-for-security" title="Threat Modeling: Designing for Security">[threat-modeling-designing-for-security]</a>. This Threat Model is using different frameworks and toolkits to cover the different threat types, such as:</p>
     <ul>
@@ -831,44 +831,45 @@ So, the challenge is enabling this technological innovation by being aware of th
      <li data-md>
       <p><strong>Privacy</strong>: <em>LINNDUN</em> (Linking, Identifying, Non-Repudiation, Detecting, Data Disclosure, Unawareness &amp; Inintervenability, Non-Compliance), <em>RFC 6973</em>.</p>
      <li data-md>
-      <p><strong>Human Rights</strong>: <em>Microsoft’s Types of Harm</em>, and <em>Access Now #WhyID</em>.</p>
+      <p><strong>Human rights</strong>: <em>Microsoft’s Types of Harm</em>, and <em>Access Now #WhyID</em>.</p>
     </ul>
-     Other approaches includes the <a href="https://www.w3.org/TR/security-privacy-questionnaire/">Self-Review Questionnaire: Security and Privacy</a> and the <em>OSSTMM</em>. 
+     Other approaches includes the <a href="https://www.w3.org/TR/security-privacy-questionnaire/">Self-Review Questionnaire: Security and Privacy</a> and the <em><abbr title="Open-Source Security Testing Methodology Manual
+">OSSTMM</abbr></em>. 
     <p>The Threat Model also includes a list of various mitigation techniques, particularly those based on cryptography techniques such as Zero Knowledge Proof (ZKP), and additional methods for enabling secure and privacy-preserving technology.</p>
    </div>
    <h5 class="heading settled" data-level="2.3.3.3" id="standards"><span class="secno">2.3.3.3. </span><span class="content">Standards</span><a class="self-link" href="#standards"></a></h5>
-   <p>As noted, VCDM and DID define only certain elements of the architecture. Other SDOs define other elements that are essential for the architecture to function.
+   <p>As noted, VCDM and DID define only certain elements of the architecture. Other Standards Development Organizations (SDOs) define other elements that are essential for the architecture to function.
 Therefore, coordination between these entities is necessary to ensure everything works seamlessly. So, let us look at the standards involved for the various components needed.</p>
    <p>To understand the extent of the various standards, is it possible to refer to Michael Palage’s <a href="https://www.linkedin.com/posts/michaelpalage_eic2024-identiverse2024-iam-activity-7168002034833604608-JF5E">Digital Identity Galaxy</a>.</p>
-   <p>This is why several Standards Development Organizations (SDOs) such as the World Wide Web Consortium (W3C), the Internet Engineering Task Force (IETF), the OpenID Foundation (OIDF), and the Decentralized Identity Foundation (DIF) are coordinating to standardize the components and how they should communicate:</p>
+   <p>This is why several SDOs such as the World Wide Web Consortium (W3C), the Internet Engineering Task Force (IETF), the OpenID Foundation (OIDF), and the Decentralized Identity Foundation (DIF) are coordinating to standardize the components and how they should communicate:</p>
    <ul>
     <li data-md>
-     <p><strong>Data Models:</strong> abstract models for Credentials and Presentation such as the <a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials Data Model</a>, and mDL in ISO/IEC <a href="https://www.iso.org/standard/69084.html">18013-5:2021</a>.</p>
+     <p><strong>Data models:</strong> abstract models for Credentials and Presentation such as the <a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials Data Model</a>, and mDL in ISO/IEC <a href="https://www.iso.org/standard/69084.html">18013-5:2021</a>.</p>
     <li data-md>
      <p><strong>Identifiers</strong>: <a href="https://www.w3.org/TR/did-core/">DIDs</a> and the <a href="https://w3c.github.io/did-spec-registries/\#did-methods">DID methods</a>, or <a href="https://w3c.github.io/WebID/spec/identity/">WebID</a>.</p>
     <li data-md>
-     <p><strong>Encoding Schemas:</strong> JSON, JSON-LD, CBOR, CBOR-LD.</p>
+     <p><strong>Encoding schemas:</strong> JSON, JSON-LD, CBOR, CBOR-LD.</p>
     <li data-md>
-     <p><strong>Securing Mechanisms:</strong> Each mechanism may or may not support different privacy features or be quantum-resistant:</p>
+     <p><strong>Securing mechanisms:</strong> Each mechanism may or may not support different privacy features or be quantum-resistant:</p>
      <ul>
       <li data-md>
-       <p><strong>Enveloped Formats (Credential Formats)</strong>: The proof wraps around the serialization of the credential.
+       <p><strong>Enveloped formats (credential formats)</strong>: The proof wraps around the serialization of the credential.
 JSONs are enveloped using JSON Object Signing and Encryption (<a href="https://datatracker.ietf.org/wg/jose/about/">JOSE</a>), and we can find JWT, JWS, and JWK here. JOSE is <em>cryptographically agile</em> (as it can fit different cryptographic primitives) and can also have Selective Disclosure (SD) with <a href="https://www.ietf.org/archive/id/draft-fett-oauth-selective-disclosure-jwt-02.html">SD-JWT</a> (which uses HMAC). New securing mechanisms are coming up, like <a href="https://arxiv.org/abs/2406.19035">SD-BLS</a> (which uses BLS) and ongoing efforts to fit BBS#.  
 CBORs are enveloped using CBOR Object Signing and Encryption (<a href="https://www.rfc-editor.org/rfc/rfc9052">COSE</a>). Other formats include mdoc and <a href="https://datatracker.ietf.org/wg/spice/about/">SPICE</a>.  
 The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3.org/TR/vc-jose-cose/">Securing Verifiable Credentials using JOSE and COSE</a>.</p>
       <li data-md>
-       <p><strong>Embedded Formats (Signature Algorithms):</strong> The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in <a href="https://www.w3.org/TR/vc-data-integrity/">Verifiable Credential Data Integrity 1.0</a>.</p>
+       <p><strong>Embedded formats (signature algorithms):</strong> The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in <a href="https://www.w3.org/TR/vc-data-integrity/">Verifiable Credential Data Integrity 1.0</a>.</p>
      </ul>
     <li data-md>
-     <p><strong>Status Information (Revocation Algorithms)</strong>: <em>Issuers</em> can implement several ways to keep the credential’s status up to date, such as a Revocation List, a Status List (e.g., <a href="https://www.w3.org/TR/vc-bitstring-status-list/">Bitstring Status List v1.0</a>), and Cryptographic Accumulators, etc..</p>
+     <p><strong>Status information (revocation algorithms)</strong>: <em>Issuers</em> can implement several ways to keep the credential’s status up to date, such as a Revocation List, a Status List (e.g., <a href="https://www.w3.org/TR/vc-bitstring-status-list/">Bitstring Status List v1.0</a>), and Cryptographic Accumulators, etc.</p>
     <li data-md>
-     <p><strong>Communication Protocols</strong>: for the different phases of Issuance and Presentation (e.g., <a href="https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html">OID4VCI</a>, <a href="https://openid.net/specs/openid-4-verifiable-presentations-1\0.html">OID4VP</a>, <a href="https://openid.net/specs/openid-connect-self-issued-v2-1_0.html">SIOPv2</a>).</p>
+     <p><strong>Communication protocols</strong>: for the different phases of issuance and presentation (e.g., <a href="https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html">OID4VCI</a>, <a href="https://openid.net/specs/openid-4-verifiable-presentations-1\0.html">OID4VP</a>, <a href="https://openid.net/specs/openid-connect-self-issued-v2-1_0.html">SIOPv2</a>).</p>
    </ul>
-   <p class="note" role="note"><span class="marker">Note:</span> This list is representative. For more detailed information, please refer to the <a href="https://docs.google.com/spreadsheets/d/1X93ptJcmfX1NZEo5E7ElnqJ-knDS4Dj6JOYSJ_2PsUw/edit#gid=1084392809">Comparison Matrix</a>.</p>
+   <p class="note" role="note"><span class="marker">Note:</span> This list is representative. For more detailed information, please refer to the <a href="https://docs.google.com/spreadsheets/d/1X93ptJcmfX1NZEo5E7ElnqJ-knDS4Dj6JOYSJ_2PsUw/edit#gid=1084392809">comparison matrix</a>.</p>
    <div class="advisement" id="a4">
      <span class="marker">Avoiding discrimination by standardizing interoperability</span><br> 
     <p>One of the significant challenges today is the interoperability of various technologies. This issue becomes particularly evident in the context of government-issued digital credentials when comparing the interoperability of physical documents such as Passports.</p>
-    <p>The threat here is clear: if a service supports only a specific format, it excludes and discriminates against users who use a different format due to their government’s decisions rather than their own. Consequently, this limitation affects users and restricts the service’s business potential.</p>
+    <p>The threat here is clear: if a service supports only a specific format, it excludes and discriminates against users who use a different format due to their government’s decisions. Consequently, this limitation affects users and restricts the service’s business potential.</p>
     <p>To address these concerns, there are ongoing discussions about standardizing credential presentation at the web platform level through the <a href="https://github.com/w3c/strategy/issues/450">Digital Credentials API</a>.
     The Working Group already on the Federated Identity Model is undertaking this standardization effort as the API is similar. The goal is to provide an optimal user experience by ensuring user agents operate securely and in privacy-preserving ways.</p>
     <p>Moreover, the Group’s new scope proposal aims to adopt this API with a broader perspective. It suggests incorporating the "Issuance" aspect to enable all possible use cases through the web platform.</p>
