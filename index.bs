@@ -332,7 +332,7 @@ To understand the extent of the various standards, is it possible to refer to Mi
 This is why several Standards Development Organizations (SDOs) such as the World Wide Web Consortium (W3C), the Internet Engineering Task Force (IETF), the OpenID Foundation (OIDF), and the Decentralized Identity Foundation (DIF) are coordinating to standardize the components and how they should communicate:
 
 * **Data Models:** abstract models for Credentials and Presentation such as the [Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/), and mDL in ISO/IEC [18013-5:2021](https://www.iso.org/standard/69084.html).  
-* **Identifiers**: [DIDs](https://www.w3.org/TR/did-core/) and the [DID methods](https://w3c.github.io/did-spec-registries/\#did-methods), or [WebID](https://w3c.github.io/WebID/spec/identity/).  
+* **Identifiers**: [DIDs](https://www.w3.org/TR/did-core/) and the [DID methods](https://w3c.github.io/did-spec-registries/#did-methods), or [WebID](https://w3c.github.io/WebID/spec/identity/).  
 * **Encoding Schemas:** JSON, JSON-LD, CBOR, CBOR-LD.  
 * **Securing Mechanisms:** Each mechanism may or may not support different privacy features or be quantum-resistant:  
     * **Enveloped Formats (Credential Formats)**: The proof wraps around the serialization of the credential.  
@@ -341,7 +341,7 @@ This is why several Standards Development Organizations (SDOs) such as the World
         The mechanism to use VCDM with JOSE/COSE is described in [Securing Verifiable Credentials using JOSE and COSE](https://www.w3.org/TR/vc-jose-cose/).  
     * **Embedded Formats (Signature Algorithms):** The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in [Verifiable Credential Data Integrity 1.0](https://www.w3.org/TR/vc-data-integrity/).  
 * **Status Information (Revocation Algorithms)**: *Issuers* can implement several ways to keep the credential's status up to date, such as a Revocation List, a Status List (e.g., [Bitstring Status List v1.0](https://www.w3.org/TR/vc-bitstring-status-list/)), and Cryptographic Accumulators, etc..
-* **Communication Protocols**: for the different phases of Issuance and Presentation (e.g., &#91;OID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html), &#91;OID4VP](https://openid.net/specs/openid-4-verifiable-presentations-1\0.html), [SIOPv2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html)).
+* **Communication Protocols**: for the different phases of Issuance and Presentation (e.g., &#91;OID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html), &#91;OID4VP](https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html), [SIOPv2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html)).
 
 Note: This list is representative. For more detailed information, please refer to the [Comparison Matrix](https://docs.google.com/spreadsheets/d/1X93ptJcmfX1NZEo5E7ElnqJ-knDS4Dj6JOYSJ_2PsUw/edit#gid=1084392809).
 
