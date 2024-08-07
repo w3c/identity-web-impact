@@ -1,15 +1,17 @@
 <pre class='metadata'>
-Title: Identity & The Web
+Title: Identity & the Web
 Status: w3c/UD
 ED: https://www.w3.org/reports/identity-web-impact/
 Shortname: identity-web-impact
 Issue Tracking: GitHub https://github.com/w3c/identity-web-impact/issues
 Level: 1
 Editor: Simone Onofri, w3cid 38211, W3C, simone@w3.org
-Abstract: <p>This document proposes an analysis of the systemic impact of Digital Identities on the Web trough different use cases and the role that Web standardization may play in managing that impact.</p>
-Status Text: <p>This document is intended to capture the current shared understanding of the [W3C Team](https://www.w3.org/staff/) on the current and expected impact of developments linked to Identity on the Web and identifying explorations the World Wide Web Consortium community has started or ought to be starting to manage that impact. It does not represent any consensus from the W3C Membership, nor is it a standardization document.</p><p>The document was authored by Simone Onofri ([simone@w3.org](mailto:simone@w3.org)), with significant contributions from the rest of the W3C Team and people listed in the Acknowledgements section.</p><p>This document helps structure discussions on what may be needed at the standardization level to make Identity's systemic impact less harmful or more manageable. It is bound to be incomplete and sometimes wrong — we are gathering input and feedback in [GitHub](https://github.com/w3c/identity-web-impact/issues), preferably before @@Feedback-Date.</p><p>Depending on the feedback received, possible next steps include more in-depth stakeholder interviews, a dedicated W3C Workshop, or developing a standardization roadmap.</p>
+Abstract: <p>This document proposes an overview of Digital Identities on the Web and an analysis through different use cases of the systemic impact on both the market side and the human side, as well as the role that Web standardization may play in managing that impact.</p>
+Status Text: <p>This document is intended to capture the current shared understanding of the [W3C Team](https://www.w3.org/staff/) on the current and expected impact of developments linked to identity on the Web and identifying explorations the World Wide Web Consortium and its community have started or ought to be starting to manage that impact. It does not represent any consensus from the W3C Membership, nor is it a standardization document.</p><p>The document was authored by Simone Onofri ([simone@w3.org](mailto:simone@w3.org)), with significant contributions from the W3C Team and people listed in the Acknowledgements section.</p><p>This document helps structure discussions on what may be needed at the standardization level to make Identity's systemic impact less harmful or more manageable. It is bound to be incomplete and sometimes wrong — we are gathering input and feedback in [GitHub](https://github.com/w3c/identity-web-impact/issues), preferably before @@Feedback-Date.</p><p>Depending on the feedback received, possible next steps include more in-depth stakeholder interviews, a dedicated W3C Workshop, or developing a standardization roadmap.</p>
 Markup Shorthands: markdown on, biblio yes
 Boilerplate: omit issues-index, omit conformance
+Group: w3t
+Text Macro: W3C-STYLESHEET-URL https://www.w3.org/StyleSheets/TR/2021/base.css
 </pre>
 
 # Executive summary # {#executive-summary}
@@ -20,10 +22,17 @@ Given the scope and scale of this innovation, digital identities are significant
 
 This document further develops the concepts described in "*Identity on the Web*" at W3C’s Member Meeting of April 2024 [[identity-on-the-web]]. It reviews the intersections of Digital Identities through their societal, ethical, and technical impacts and highlights several areas where standardization, guidelines, and interoperability could help manage these changes:
 * [Enabling passwordless credentials for authentication and payments](#a1)   
-* [Enabling Federated identity in the Web platform without third-party cookies](#a2)  
-* [Modeling Security, Privacy, and Human Rights Threats of Decentralized Credentials](#a3)  
+* [Enabling federated identity in the web platform without third-party cookies](#a2)  
+* [Modeling security, privacy, and human rights threats of decentralized credentials](#a3)  
 * [Avoiding discrimination by standardizing interoperability](#a4)  
 * [Mitigating the threats at technological and governance levels](#a5)
+
+Through exploratory thinking, the following understanding emerge:
+
+* Standards can help, as they have in the past, to drive innovation while mitigating threats and to enable technical progress while having a positive impact on the world
+* The technology stack is composite and broad, and needs to be coordinated across standards and across Standards Development Organizations (SDOs)
+* People, SDOs and governments are the key actors who need to collaborate to ensure that digital credentials/identities solve more problems than they create, because identity is not only technology, but also governance
+* It is crucial to pay close attention to the impact in security, privacy, and human rights in general, and the proposed method of analysis is threat modeling
 
 We seek [input](https://github.com/w3c/identity-web-impact/issues) from the community on proposals that could help progress on these topics and other topics that this document may contribute to identifying.
 
@@ -139,8 +148,6 @@ As an example, below is an initial analysis of threats to human rights (Harms) c
 * **Dignity loss** (*Dehumanization*): For example, if the vocabulary used does not correctly describe people’s characteristics, this can reduce or obscure people’s humanity and characteristics.
 * **Privacy Loss** (*Surveillance*): if this technology is not designed and implemented properly, it can lead to surveillance by state and non-state actors such as government and private technology providers. For example, centralized or federated models are more prone to these threats, while decentralized models are less so, but it depends on how they are implemented. Therefore, it is necessary to provide privacy-preserving technologies and implement them properly.
 
-Note: W3C is handling this issue with a [Threat Model](#a5).
-
 ## Digital identity management models ## {#digital-identity-management-models}
 
 With these assumptions, before proceeding, it is important to understand how digital identities are managed and how they have evolved over the years. 
@@ -249,7 +256,7 @@ The VCDM defines two basic concepts: the *Verifiable Credentials* and the *Verif
 
 Note: For a comprehensive overview of Verifiable Credentials (VCs), refer to Ivan Herman's [W3C Verifiable Credentials Overview](https://www.w3.org/TR/vc-overview/).
 
-Another pillar of important element of this architecture are the **Decentralized Identifiers (DIDs)**, a new Uniform Resource Identifier (URI) type that allows entities and resources to be identified through various methods [[did-core]]. These methods can rely on various technologies, including blockchains such as Bitcoin or Ethereum, the web, InterPlanetary File System (IPFS), and Domain Name System (DNS) [did-spec-registries]. All methods allow cryptographical control over the identifier. Still, they vary in how decentralized they are and the features they support (e.g., key rotation and revocation).
+Another pillar of important element of this architecture are the **Decentralized Identifiers (DIDs)**, a new Uniform Resource Identifier (URI) type that allows entities and resources to be identified through various methods [[did-core]]. These methods can rely on various technologies, including blockchains such as Bitcoin or Ethereum, the web, InterPlanetary File System (IPFS), and Domain Name System (DNS) [[did-spec-registries]]. Does this guarantee its untraceability?. All methods allow cryptographical control over the identifier. Still, they vary in how decentralized they are and the features they support (e.g., key rotation and revocation).
 
 Here's the *Data Flow*:
 * **Credential Issuing (CI):**
@@ -274,7 +281,7 @@ Here's the *Data Flow*:
 It is interesting reflect on how this model differs from a security and privacy perspective both from previously described models and from the use of physical identity documents, as credentials can enable this use case:
 * **Decentralized vs. Federated Model**: Let us analyze one of the privacy issues of the federated model: whoever provides the identity can track the user. This is one of the threats this model wants to mitigate since the identity is in the user’s Wallet, and they use it as they wish.
     
-    Does this guarantee its untraceability? One can presume that the answer is 8"it depends"*. It depends on how the architecture is defined and implemented and the technologies used. For example, when we present our credentials to log in, the verifier contacts the issuer directly, asking if the credentials are still valid, and we continue to be traceable.
+    Does this guarantee its untraceability? One can presume that the answer is *"it depends"*. It depends on how the architecture is defined and implemented and the technologies used. For example, when we present our credentials to log in, the verifier contacts the issuer directly, asking if the credentials are still valid, and we continue to be traceable.
 * **Decentralized vs Physical Document**: If we instead think about the case where I have to send my passport online to open a bank account, to date, the most used method is to send the file with the passport scan. The bank usually sends the file to third-party services, which often use Machine Learning systems for analysis. In addition, the file could be reused by someone who has access to it, exposing all our data and not only the one needed.
     
     Presenting a digital credential, which could also support the submission of a subset of the contained claims, can improve the situation but, again, we may encounter the problem of the verifier contacting the issuer for verification, a problem that is rarer to happen sending the file, although databases of stolen documents do exist and a verifier could make a request with the passport-id to verify the status.
@@ -290,7 +297,7 @@ We can take a step back and understand what privacy properties are needed for di
 So we have a number of properties, both security and privacy as a starting point. How can we implement them? First of all, different credential formats, have different privacy and security features [[verifiable-credentials-flavors-explained]] and we can expand the discussion not only to formats but to all other components of the architecture, which must be aligned to ensure security and privacy.
 
 <div class="advisement" id="a3">
-    <span class="marker">Modeling Security, Privacy, and Human Rights Threats of Decentralized Credentials</span><br>    
+    <span class="marker">Modeling security, privacy, and human rights threats of decentralized credentials</span><br>    
 
     Given the levels of complexity, a comprehensive analysis of threats to privacy, security, and human rights is necessary.
 
@@ -415,7 +422,7 @@ An interesting use case for **automotive** can be found in "Self-Sovereign Ident
 
 A car, identified by the Vehicle Identification Number (VIN), interacts with various entities throughout its lifecycle, including:
 
-- **Manufacturer, vendors and workshops **: Tracking maintenance and service history.
+- **Manufacturer, vendors and workshops**: Tracking maintenance and service history.
 - **Governmental Entities**: Registration and tax payment.
 - **Owners and Users**: Ownership verification and usage rights.
 - **Road Infrastracture**: Toll payments and other interactions during use.
