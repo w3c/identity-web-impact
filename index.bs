@@ -519,7 +519,7 @@ Below is a short list with some implementation examples:
 * **Singapore**: [Singpass](https://www.singpass.gov.sg/main).
 * **Spain**: [Cl@ve](https://clave.gob.es/clave_Home/en/clave.html).
 * **United Arab Emirates**: [UAE Pass](https://uaepass.ae).
-* **United States of America**: [U.S. DHS on Digital Identities](https://www.dhs.gov/science-and-technology/digital-identity-and-trust) and Mobile Driving Licence (e.g., [Maryland](https://mva.maryland.gov/Pages/mdMobileID.aspx), [Arizona](https://azdot.gov/mvd/mobile-driver-license\#), [Utah](https://dld.utah.gov/utahmdl/), [California](https://www.dmv.ca.gov/portal/ca-dmv-wallet/)).
+* **United States of America**: [U.S. DHS on Digital Identities](https://www.dhs.gov/science-and-technology/digital-identity-and-trust) and Mobile Driving Licence (e.g., [Maryland](https://mva.maryland.gov/Pages/mdMobileID.aspx), [Arizona](https://azdot.gov/mvd/mobile-driver-license), [Utah](https://dld.utah.gov/utahmdl/), [California](https://www.dmv.ca.gov/portal/ca-dmv-wallet/)).
 
 Some governments are doing pilot projects with Decentralized Identities, providing their citizens with Digital Wallets and IDs.
 
