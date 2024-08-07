@@ -13,6 +13,7 @@ Boilerplate: omit issues-index, omit conformance
 Group: w3t
 Text Macro: W3C-STYLESHEET-URL https://www.w3.org/StyleSheets/TR/2021/base.css
 Text Macro: LONGSTATUS W3C Team
+Text Macro: W3C-STATUS-URL https://www.w3.org/staff/
 </pre>
 
 # Executive summary # {#executive-summary}
