@@ -27,7 +27,7 @@ This document further develops the concepts described in "*Identity on the Web*"
 * [Avoiding discrimination by standardizing interoperability](#a4)  
 * [Mitigating the threats at technological and governance levels](#a5)
 
-Through exploratory thinking, the following understanding emerge:
+Through exploratory thinking, the following understanding emerged:
 
 * Standards can help, as they have in the past, to drive innovation while mitigating threats and to enable technical progress while having a positive impact on the world
 * The technology stack is composite and broad, and needs to be coordinated across standards and across Standards Development Organizations (SDOs)
@@ -555,7 +555,7 @@ Therefore, even in a scenario that may seem trivial, it requires extensive study
 
 # Acknowledgment # {#acknowledgment}
 
-Several individuals contributed to the document. The editor especially thanks Pierre-Antoine Champin, Andrea D’Intino, Giuseppe De Marco, Heather Flanagan, Ivan Herman, Philippe Le Hegaret, Tommaso Innocenti, Ian Jacobs, and Denis Roio.
+Several individuals contributed to the document. The editor especially thanks Pierre-Antoine Champin, Andrea D’Intino, Giuseppe De Marco, Heather Flanagan, Ivan Herman, Tommaso Innocenti, Ian Jacobs, Philippe Le Hegaret, Coralie Mercier, and Denis Roio.
 
 <pre class=biblio>
 {
