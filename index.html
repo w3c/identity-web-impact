@@ -432,13 +432,13 @@ dfn > a.self-link::before      { content: "#"; }
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>This document proposes an analysis of the systemic impact of Digital Identities on the Web trough different use cases and the role that Web standardization may play in managing that impact.</p>
+   <p>This document proposes an overview of Digital Identities on the Web and an analysis through different use cases of the systemic impact on both the market side and the human side, as well as the role that Web standardization may play in managing that impact.</p>
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="sotd"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
    <p></p>
-   <p>This document is intended to capture the current shared understanding of the <a href="https://www.w3.org/staff/">W3C Team</a> on the current and expected impact of developments linked to Identity on the Web and identifying explorations the World Wide Web Consortium community has started or ought to be starting to manage that impact. It does not represent any consensus from the W3C Membership, nor is it a standardization document.</p>
-   <p>The document was authored by Simone Onofri (<a href="mailto:simone@w3.org">simone@w3.org</a>), with significant contributions from the rest of the W3C Team and people listed in the Acknowledgements section.</p>
+   <p>This document is intended to capture the current shared understanding of the <a href="https://www.w3.org/staff/">W3C Team</a> on the current and expected impact of developments linked to identity on the Web and identifying explorations the World Wide Web Consortium and its community have started or ought to be starting to manage that impact. It does not represent any consensus from the W3C Membership, nor is it a standardization document.</p>
+   <p>The document was authored by Simone Onofri (<a href="mailto:simone@w3.org">simone@w3.org</a>), with significant contributions from the W3C Team and people listed in the Acknowledgements section.</p>
    <p>This document helps structure discussions on what may be needed at the standardization level to make Identity’s systemic impact less harmful or more manageable. It is bound to be incomplete and sometimes wrong — we are gathering input and feedback in <a href="https://github.com/w3c/identity-web-impact/issues">GitHub</a>, preferably before @@Feedback-Date.</p>
    <p>Depending on the feedback received, possible next steps include more in-depth stakeholder interviews, a dedicated W3C Workshop, or developing a standardization roadmap.</p>
   </div>
@@ -511,21 +511,32 @@ dfn > a.self-link::before      { content: "#"; }
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="executive-summary"><span class="secno">1. </span><span class="content">Executive summary</span><a class="self-link" href="#executive-summary"></a></h2>
-   <p>Digital Identities have been in development for decades. As governments increasingly consider becoming providers and consumers of these technologies, they more than ever have the potential to change the Web and the concept of identity as we know it.</p>
-   <p>Given the scope and scale of this innovation, digital identities are significantly impacting the web and, in particular, privacy, altering the assumptions and the balance that have shaped its ecosystem.</p>
-   <p>This document further develops the concepts described in "<em>Identity on the Web</em>" at W3C’s Member Meeting of April 2024 <a data-link-type="biblio" href="#biblio-identity-on-the-web" title="Identity on the Web">[identity-on-the-web]</a>. It reviews the intersections of Digital Identities through their societal, ethical, and technical impacts and highlights several areas where standardization, guidelines, and interoperability could help manage these changes:</p>
+   <p>Digital identities have been in development for decades. As governments increasingly consider becoming providers and consumers of these technologies, they more than ever have the potential to change the Web and the concept of identity as we know it.</p>
+   <p>Given the scope and scale of this innovation, digital identities are significantly impacting the Web and, in particular, privacy, altering the assumptions and the balance that have shaped its ecosystem.</p>
+   <p>This document further develops the concepts described in "<em>Identity on the Web</em>" at W3C’s Member Meeting of April 2024 <a data-link-type="biblio" href="#biblio-identity-on-the-web" title="Identity on the Web">[identity-on-the-web]</a>. It reviews the intersections of digital identities through their societal, ethical, and technical impacts and highlights several areas where standardization, guidelines, and interoperability could help manage these changes:</p>
    <ul>
     <li data-md>
      <p><a href="#a1">Enabling passwordless credentials for authentication and payments</a></p>
     <li data-md>
-     <p><a href="#a2">Enabling Federated identity in the Web platform without third-party cookies</a></p>
+     <p><a href="#a2">Enabling federated identity in the Web platform without third-party cookies</a></p>
     <li data-md>
-     <p><a href="#a3">Modeling Security, Privacy, and Human Rights Threats of Decentralized Credentials</a></p>
+     <p><a href="#a3">Modeling security, privacy, and human rights threats of decentralized credentials</a></p>
     <li data-md>
      <p><a href="#a4">Avoiding discrimination by standardizing interoperability</a></p>
     <li data-md>
      <p><a href="#a5">Mitigating the threats at technological and governance levels</a></p>
    </ul>
+   <p>Through exploratory thinking, the following understanding emerge:</p>
+ <ul>
+  <li data-md>
+    <p>Standards can help, as they have in the past, to drive innovation while mitigating threats and to enable technical progress while having a positive impact on the world</p>
+  <li data-md>
+    <p>The technology stack is composite and broad, and needs to be coordinated across standards and across Standards Development Organizations (SDOs)</p>
+  <li data-md>
+    <p>People, SDOs and governments are the key actors who need to collaborate to ensure that digital credentials/identities solve more problems than they create, because identity is not only technology, but also governance</p>
+  <li data-md>
+   <p>It is crucial to pay close attention to the impact in security, privacy, and human rights in general, and the proposed method of analysis is threat modeling</p>
+ </ul>
    <p>We seek <a href="https://github.com/w3c/identity-web-impact/issues">input</a> from the community on proposals that could help progress on these topics and other topics that this document may contribute to identifying.</p>
    <h2 class="heading settled" data-level="2" id="introduction"><span class="secno">2. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
    <p>Digital Identities have been in development for decades, and at this moment in history, they are about to be implemented government-wide. They can change the Web and the concept of Identity as we know it. There are many opportunities but also threats to society and the Web.</p>
