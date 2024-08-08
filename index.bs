@@ -301,9 +301,9 @@ So we have a number of properties, both security and privacy as a starting point
 <div class="advisement" id="a3">
     <span class="marker">Modeling security, privacy, and human rights threats of decentralized credentials</span><br>    
 
-    Given the levels of complexity, a comprehensive analysis of threats to privacy, security, and human rights is necessary.
+    Given the levels of complexity, a comprehensive analysis of threats to privacy, security, and human rights is necessary [[human-rights-and-technical-standards]].
 
-    This is especially important for high-assurance credentials, such as those issued by governments. This is highlighted by organizations such as the Electronic Frontier Foundation (EFF)[[eff-digital-identification]] and Access Now [[access-now-whyid]]. 
+    This is especially important for high-assurance credentials, such as those issued by governments, as highlighted by organizations such as the Electronic Frontier Foundation (EFF)[[eff-digital-identification]] and Access Now [[access-now-whyid]].
     
     W3C recognized the [need for rights-respecting digital credentials](https://github.com/w3c/strategy/issues/458) and started a joint [Threat Model for Decentralized Identities](https://github.com/w3c-cg/threat-modeling/blob/main/models/decentralized-identities.md):
     * [Technical Architecture Group (TAG)](https://www.w3.org/groups/other/tag/)
@@ -804,6 +804,11 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "title": "Introduction to Trust Over IP",
     "href":"https://trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf",
     "publisher" : "ToIP Foundation"
+  },
+    "human-rights-and-technical-standards": {
+    "title": "Human rights and technical standard-setting processes for new and emerging digital technologies : report of the Office of the United Nations High Commissioner for Human Rights",
+    "href":"https://digitallibrary.un.org/record/4031373?v=pdf",
+    "publisher" : "United Nation"
   }
 }
 
