@@ -230,10 +230,10 @@ The decentralized identity model introduces a significant shift in the architect
 
 <figure id="fig-decentralized-identity-model">
     <img src="https://www.w3.org/TR/vc-data-model-2.0/diagrams/ecosystem.svg"></img>
-    <figcaption>Decentralized Identity Management [[vc-data-model-2.0]]</figcaption>
+    <figcaption>The roles and information flows forming the basis for this specification, from VCDM 2.0 [[vc-data-model-2.0]]</figcaption>
 </figure>
 
-Instead, it involves a new set of actors and dynamics, described in the W3C Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]]:
+Instead, it involves a new set of actors, described in the W3C Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]]:
 
 * The **Holder** (the *user*), who stores their credentials in a **Digital Wallet**, is at the heart of this architecture. This wallet, whether a native app or a web-based application, operates much like a physical wallet. Just as a physical wallet holds more than just IDs, the digital wallet can store various credentials and information. The transformation from physical to digital doesn’t change the wallet's fundamental role but enhances its capabilities with digital features.
 
@@ -241,24 +241,40 @@ Instead, it involves a new set of actors and dynamics, described in the W3C Veri
 
 * The **Verifier** in this model is akin to an SP or RP in federated models. It receives the credentials presented by the *Holder* and verifies them. Importantly, this process does not necessarily involve informing the *Issuer*. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.
 
-* The **Verifiable Data Registry (VRP)**, a crucial entity of this architecture. This registry holds the data needed to verify credentials and their status. This can be government databases, distributed ledgers, or other services. By maintaining this information, the VRP, depending on its form, enables verification without direct communication between the *Issuer* and the *Verifier*. 
+* The **Verifiable Data Registry (VDR)**, a crucial entity of this architecture. This registry holds the data needed to verify credentials and their status. This can be government databases, distributed ledgers, or other services. By maintaining this information, the VDR, depending on its form, enables verification without direct communication between the *Issuer* and the *Verifier*. 
 
 Note: In this model, the definition of a **credential** shifts to a set of *claims* (attributes) linked to *identifiers* controlled by the user. While credentials represent identities, not all claims within a credential are used for identification. They can describe various characteristics, extending the application of credentials beyond mere identification.
 
-The VCDM defines two basic concepts: the *Verifiable Credentials* and the *Verifiable Presentation*.
-
-* **Verifiable Credential** is what the holder stores in the Wallet. It contains:
+In the VCDM context, a **Veriable Credential**: *can represent all of the same information that a physical credential represents*. And it is called *Verifiable* because adds *technologies, such as digital signatures, makes verifiable credentials more tamper-evident and more trustworthy than their physical counterparts*. It is issued by the Holder and stored by the Holder. Let us see what is inside:
     * **Metadata**: of the Credentials.
     * **Claim(s)**: one or more assertions where a characteristic of a subject is described (e.g., the subject is a citizen of a certain state, was born in a certain place on a certain day, month, and year, and can drive cars of this type).  
     * **Proof(s)**: cryptographic proof of the integrity of the credential, typically via a digital signature.
-* **Verifiable Presentation** is what the holder sends to the verifier to show their credentials. The basic case is to present the credential as is. However, in many scenarios, the holder may wish to present only a subset of the claims of a credential to the verifier - this is called *Selective Disclosure (SD)* - or a combination of information from different credentials. It contains:
+
+**Verifiable Presentation** is what the holder sends to the verifier to show their claims. The basic case is to present the credential as is. However, in many scenarios, the holder may wish to present only a subset of the claims of a credential to the verifier - this is called *Selective Disclosure (SD)* - or a combination of information from different credentials. It contains:
     * **Metadata**: of the presentation.  
     * **Credential(s)**: information derived or combined from one or more credentials.  
     * **Proof(s)**: cryptographic proof of the integrity of the credential(s) and the presentation.
 
-Note: For a comprehensive overview of Verifiable Credentials (VCs), refer to Ivan Herman's [W3C Verifiable Credentials Overview](https://www.w3.org/TR/vc-overview/).
+Obviously the Issuer, the Holder and the Verifier needs a **communication protocol** to exchange VCs and VPs, which is not described in VCDM though, but it is defined by other standards.
 
-Another pillar of important element of this architecture are the **Decentralized Identifiers (DIDs)**, a new Uniform Resource Identifier (URI) type that allows entities and resources to be identified through various methods [[did-core]]. These methods can rely on various technologies, including blockchains such as Bitcoin or Ethereum, the web, InterPlanetary File System (IPFS), and Domain Name System (DNS) [[did-spec-registries]]. Does this guarantee its untraceability?. All methods allow cryptographical control over the identifier. Still, they vary in how decentralized they are and the features they support (e.g., key rotation and revocation).
+Note: For a comprehensive overview of Verifiable Credentials, refer to Ivan Herman's [W3C Verifiable Credentials Overview](https://www.w3.org/TR/vc-overview/).
+
+Another important component of the Decentralized Crendentials ecosystem are the identifiers that are contained within *Verifiable Credentials* and *Verifiable Presentation*. These identifiers "connect", similar to what happens in hyperlinks, the various actors to each other and, in particular, they reference the VDR.
+
+They are the **Decentralized Identifiers (DIDs)**, a new Uniform Resource Identifier (URI) [[RFC3986]] type that allows entities and resources to be identified through various methods [[did-core]]. These methods can rely on various technologies, including blockchains such as Bitcoin or Ethereum, the web, InterPlanetary File System (IPFS), and Domain Name System (DNS) [[did-spec-registries]].
+
+Some distinctive properties of DIDs are [[did-intro]]:
+
+* **Decenralized**: do not depend on centralized registries, identity providers, authorities, etc.
+* **Persistent**: once created, it is permanently assigned to the subject.
+* **Resolvable**: it is possible to find out basic set of information on the subject.
+* **Cryprographically verifable**: there is a mechanism to cryptographically prove identity and ownership.
+
+Note: Does them guarantee its untraceability and decentralization? It depends on the method, but there are also for ephemeral and peer to peer intractions.
+
+To conclude, we have two main software componentes:
+* **Agents**: that do content retrivals, resolve them, render them, and facilitate interactions between the various actors.
+* **Digital Wallet**: which instead contains the credentials. Standardization of these agents is not provided by VCDM or DID, but the characteristics are often defined within governance and trust frameworks, such as in Europe by the [EU Digital Wallet](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/Technical+Specifications).
 
 Here's the *Data Flow*:
 * **Credential Issuing (CI):**
