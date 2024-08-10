@@ -26,7 +26,7 @@ This document further develops the concepts described in "*Identity on the Web*"
 * [Enabling passwordless credentials for authentication and payments](#a1)   
 * [Enabling federated identity in the web platform without third-party cookies](#a2)  
 * [Modeling security, privacy, and human rights threats of decentralized credentials](#a3)  
-* [Avoiding discrimination by standardizing interoperability](#a4)  
+* [Mitigating surveillance, censorship, intrusion, and discrimination and ensuring interoperability by standardizing digital credentials in the web platform](#a4)  
 * [Mitigating the threats at technological and governance levels](#a5)
 
 Through exploratory thinking, the following understanding emerged:
