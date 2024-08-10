@@ -272,9 +272,15 @@ Some distinctive properties of DIDs are [[did-intro]]:
 
 Note: Does them guarantee its untraceability and decentralization? It depends on the method, but there are also for ephemeral and peer to peer intractions.
 
-To conclude, we have two main types software components:
+We have also two main software actors, that mediates what other actors do and enable interactions between them:
 * **Agents**: that do content retrivals, resolve them, render them, and facilitate interactions between the various actors.
-* **Digital Wallet**: which instead contains the credentials. Standardization of these agents is not provided by VCDM or DID, but the characteristics are often defined within governance and trust frameworks, such as in Europe by the [EU Digital Wallet](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/Technical+Specifications).
+* **Digital Wallet**: which instead contains the credentials, and simplifying they have two main components: an *agent* and a *secure storage*. Standardization of this component is not provided by VCDM or DID and depends on the context - or domain - in which we can use Wallet and Credentials.
+
+We then conclude the part on architectural components with one last thought. Thinking about an end-to-end solution related to decentralized identities, it all depends on the context (or domain). 
+
+Each context is governed by one or more governance or trust frameworks. For example, for the domain of credentials issued by governments in Europe we have [EU Digital Wallet](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/Technical+Specifications) and we can have others related to other states, as well as other domains such as individual organizations, enterprises or universities.
+
+Therefore, in the various architectures, *"Trust"* and its framework is included as an element above the architecture, and it permeates it.
 
 Here is the *Data Flow*:
 * **Credential Issuing (CI):**
