@@ -825,6 +825,12 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "title": "Human rights and technical standard-setting processes for new and emerging digital technologies : report of the Office of the United Nations High Commissioner for Human Rights",
     "href":"https://digitallibrary.un.org/record/4031373?v=pdf",
     "publisher" : "United Nation"
+  },
+    "did-intro": {
+    "author" : ["Ivan Herman"],
+    "title": "Introduction to Decentralized Identifiers (DID)",
+    "href":"https://www.youtube.com/watch?v=t8lMCmjPKq4",
+    "publisher" : "W3C"
   }
 }
 
