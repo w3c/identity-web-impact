@@ -173,7 +173,7 @@ The centralized identity model is the typical scenario when the user logs in to 
     <figcaption>Centralized Identity Management</figcaption>
 </figure>
 
-Here is the *Data Flow*:
+Here is the simplified *Data Flow*:
 * **Authentication**: The user authenticates themselves with the centralizdd system using their credentials.
 * **Access Granting**: This system grants access to the resource.
 
@@ -272,11 +272,11 @@ Some distinctive properties of DIDs are [[did-intro]]:
 
 Note: Does them guarantee its untraceability and decentralization? It depends on the method, but there are also for ephemeral and peer to peer intractions.
 
-To conclude, we have two main software componentes:
+To conclude, we have two main types software components:
 * **Agents**: that do content retrivals, resolve them, render them, and facilitate interactions between the various actors.
 * **Digital Wallet**: which instead contains the credentials. Standardization of these agents is not provided by VCDM or DID, but the characteristics are often defined within governance and trust frameworks, such as in Europe by the [EU Digital Wallet](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/Technical+Specifications).
 
-Here's the *Data Flow*:
+Here is the *Data Flow*:
 * **Credential Issuing (CI):**
     1. The *Issuer* requests a certain authentication mechanism from the *Holder*.
     2. After authentication, the *Holder* asks the *Issuer* for the credential, or the *Issuer* submits it.
