@@ -268,7 +268,7 @@ At this level we find the various applications, accessible to end users, that im
         * *Cryptographic Key location*: Custodial (e.g, the key is stored in the Cloud) or Non-Custodial (e.g., the key is stored in a device in possession of the end-user)
     Simplifying their structure, is composed by a secure storage and then an Agent that manages interactions.
 
-Note: There are differences between the levels of DIF and with **ToIP Techological Stack**: *Wallets* are at [Layer 2](##agents-and-infrastructure). *Layer 4* is for practical applications, which we cover in [Use cases](#uses-cases).
+Note: There are differences between the levels of DIF and with **ToIP Techological Stack**: *Wallets* are at [Layer 2](#agents-and-infrastructure). *Layer 4* is for practical applications, which we cover in [Use cases](#uses-cases).
 
 #### Layer 3: Credential Layer #### {#credential-layer}
 
