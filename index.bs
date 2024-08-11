@@ -252,6 +252,12 @@ Let us start by looking at the layers.
 
 At this level we find compliance and regulation, governance and trust frameworks, which tell us who we can trust such as a particular issuer that follows specific Level of Assurance. These trust elements depend on the context - or domain - of reference. We can have different contexts such as state, government, as well as university contexts.
 
+Each context is governed by one or more governance or trust frameworks. For example, for the domain of credentials issued by governments in Europe we have [EU Digital Wallet](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/Technical+Specifications) and we can have others related to other states, as well as other domains such as individual organizations, enterprises or universities.
+
+Therefore, in the various architectures, *"Trust"* and its framework permeates all layers.
+
+Note: There are differences between the levels of DIF and with **ToIP Techological Stack**: *Governance* is a parallel halves and have specific frameworks for each level.
+
 #### Layer 4: Applications, Wallets, Products  #### {#application-layer}
 
 At this level we find the various applications, accessible to end users, that implement the model:
@@ -262,7 +268,7 @@ At this level we find the various applications, accessible to end users, that im
         * *Cryptographic Key location*: Custodial (e.g, the key is stored in the Cloud) or Non-Custodial (e.g., the key is stored in a device in possession of the end-user)
     Simplifying their structure, is composed by a secure storage and then an Agent that manages interactions.
 
-Note: In the ToIP Techological Stack, we found Wallets at Layer 2. Layer 4 is for practical applications, which we cover in [Use cases](#uses-cases).
+Note: There are differences between the levels of DIF and with **ToIP Techological Stack**: *Wallets* are at [Layer 2](##agents-and-infrastructure). *Layer 4* is for practical applications, which we cover in [Use cases](#uses-cases).
 
 #### Layer 3: Credential Layer #### {#credential-layer}
 
@@ -317,10 +323,6 @@ This can be government databases, distributed ledgers, or other services.
 By maintaining this information, the VDR, depending on its form, enables verification without direct communication between the *Issuer* and the *Verifier*. 
 
 We then conclude the part on architectural components with one last thought. Thinking about an end-to-end solution related to decentralized identities, it all depends on the context (or domain). 
-
-Each context is governed by one or more governance or trust frameworks. For example, for the domain of credentials issued by governments in Europe we have [EU Digital Wallet](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/Technical+Specifications) and we can have others related to other states, as well as other domains such as individual organizations, enterprises or universities.
-
-Therefore, in the various architectures, *"Trust"* and its framework is included as an element above the architecture, and it permeates it.
 
 Here is the *Data Flow*:
 * **Credential Issuing (CI):**
