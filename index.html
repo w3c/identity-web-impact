@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 82ce88815, updated Thu Sep 7 16:33:55 2023 -0700" name="generator">
   <link href="https://www.w3.org/reports/identity-web-impact/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="7dfdb076be738b2e6fdf37d1ba5b18920ea3b07f" name="document-revision">
+  <meta content="250f59936620da4f5aea279ac4d29ea9ed43e6ad" name="document-revision">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -460,49 +460,58 @@ dfn > a.self-link::before      { content: "#"; }
         <li><a href="#identity-for-development-(id4d)"><span class="secno">2.2.3</span> <span class="content">Identity for Development (ID4D)</span></a>
         <li><a href="#opportunities-and-threats"><span class="secno">2.2.4</span> <span class="content">Opportunities and threats</span></a>
        </ol>
+     </ol>
+    <li>
+     <a href="#digital-identity-management-models"><span class="secno">3</span> <span class="content">Digital identity management models</span></a>
+     <ol class="toc">
+      <li><a href="#centralized-identity-model"><span class="secno">3.1</span> <span class="content">Centralized identity model</span></a>
+      <li><a href="#federated-identity-model"><span class="secno">3.2</span> <span class="content">Federated identity model</span></a>
       <li>
-       <a href="#digital-identity-management-models"><span class="secno">2.3</span> <span class="content">Digital identity management models</span></a>
+       <a href="#decentralized-identity-model"><span class="secno">3.3</span> <span class="content">Decentralized identity model</span></a>
        <ol class="toc">
-        <li><a href="#centralized-identity-model"><span class="secno">2.3.1</span> <span class="content">Centralized identity model</span></a>
-        <li><a href="#federated-identity-model"><span class="secno">2.3.2</span> <span class="content">Federated identity model</span></a>
         <li>
-         <a href="#decentralized-identity-model"><span class="secno">2.3.3</span> <span class="content">Decentralized identity model</span></a>
+         <a href="#architecture"><span class="secno">3.3.1</span> <span class="content">Architecture</span></a>
          <ol class="toc">
-          <li><a href="#architecture"><span class="secno">2.3.3.1</span> <span class="content">Architecture</span></a>
-          <li><a href="#security-and-privacy"><span class="secno">2.3.3.2</span> <span class="content">Security and Privacy</span></a>
-          <li><a href="#standards"><span class="secno">2.3.3.3</span> <span class="content">Standards</span></a>
+          <li><a href="#trust-layer"><span class="secno">3.3.1.1</span> <span class="content">Layer 5: Trust Frameworks and Ecosystems</span></a>
+          <li><a href="#application-layer"><span class="secno">3.3.1.2</span> <span class="content">Layer 4: Applications, Wallets, Products</span></a>
+          <li><a href="#credential-layer"><span class="secno">3.3.1.3</span> <span class="content">Layer 3: Credential Layer</span></a>
+          <li><a href="#agents-and-infrastructure"><span class="secno">3.3.1.4</span> <span class="content">Layer 2: Agent Frameworks and Infrastructure</span></a>
+          <li><a href="#identifiers-and-namespaces"><span class="secno">3.3.1.5</span> <span class="content">Layer 1: Identifiers and Namespaces</span></a>
          </ol>
+        <li><a href="#data-flow"><span class="secno">3.3.2</span> <span class="content">Data Flow</span></a>
+        <li><a href="#security-and-privacy"><span class="secno">3.3.3</span> <span class="content">Security and Privacy</span></a>
+        <li><a href="#standards"><span class="secno">3.3.4</span> <span class="content">Standards</span></a>
        </ol>
      </ol>
     <li>
-     <a href="#uses-cases"><span class="secno">3</span> <span class="content">Uses cases</span></a>
+     <a href="#uses-cases"><span class="secno">4</span> <span class="content">Uses cases</span></a>
      <ol class="toc">
       <li>
-       <a href="#organizations"><span class="secno">3.1</span> <span class="content">Organizations</span></a>
+       <a href="#organizations"><span class="secno">4.1</span> <span class="content">Organizations</span></a>
        <ol class="toc">
-        <li><a href="#organizational-identity"><span class="secno">3.1.1</span> <span class="content">Organizational Identity</span></a>
-        <li><a href="#identity-and-access-management"><span class="secno">3.1.2</span> <span class="content">Identity and Access Management (IAM)</span></a>
-        <li><a href="#global-workforce"><span class="secno">3.1.3</span> <span class="content">Global Workforce</span></a>
+        <li><a href="#organizational-identity"><span class="secno">4.1.1</span> <span class="content">Organizational Identity</span></a>
+        <li><a href="#identity-and-access-management"><span class="secno">4.1.2</span> <span class="content">Identity and Access Management (IAM)</span></a>
+        <li><a href="#global-workforce"><span class="secno">4.1.3</span> <span class="content">Global Workforce</span></a>
        </ol>
       <li>
-       <a href="#things"><span class="secno">3.2</span> <span class="content">Things</span></a>
+       <a href="#things"><span class="secno">4.2</span> <span class="content">Things</span></a>
        <ol class="toc">
-        <li><a href="#supply-chain"><span class="secno">3.2.1</span> <span class="content">Supply Chain</span></a>
-        <li><a href="#energy-devices-(iot)"><span class="secno">3.2.2</span> <span class="content">Energy Devices (IoT)</span></a>
-        <li><a href="#automotive-(iot)"><span class="secno">3.2.3</span> <span class="content">Automotive (IoT)</span></a>
+        <li><a href="#supply-chain"><span class="secno">4.2.1</span> <span class="content">Supply Chain</span></a>
+        <li><a href="#energy-devices-(iot)"><span class="secno">4.2.2</span> <span class="content">Energy Devices (IoT)</span></a>
+        <li><a href="#automotive-(iot)"><span class="secno">4.2.3</span> <span class="content">Automotive (IoT)</span></a>
        </ol>
       <li>
-       <a href="#human-identities-and-governments"><span class="secno">3.3</span> <span class="content">Human identities and governments</span></a>
+       <a href="#human-identities-and-governments"><span class="secno">4.3</span> <span class="content">Human identities and governments</span></a>
        <ol class="toc">
-        <li><a href="#physical-identity"><span class="secno">3.3.1</span> <span class="content">Physical Identity</span></a>
-        <li><a href="#textual-credentials"><span class="secno">3.3.2</span> <span class="content">Textual Credentials</span></a>
-        <li><a href="#photographic-credentials"><span class="secno">3.3.3</span> <span class="content">Photographic Credentials</span></a>
-        <li><a href="#machine-readable-credentials"><span class="secno">3.3.4</span> <span class="content">Machine Readable Credentials</span></a>
-        <li><a href="#physical-credentials-as-digital-credentials"><span class="secno">3.3.5</span> <span class="content">Physical Credentials as Digital Credentials</span></a>
-        <li><a href="#pure-digital-credentials"><span class="secno">3.3.6</span> <span class="content">Pure Digital Credentials</span></a>
+        <li><a href="#physical-identity"><span class="secno">4.3.1</span> <span class="content">Physical Identity</span></a>
+        <li><a href="#textual-credentials"><span class="secno">4.3.2</span> <span class="content">Textual Credentials</span></a>
+        <li><a href="#photographic-credentials"><span class="secno">4.3.3</span> <span class="content">Photographic Credentials</span></a>
+        <li><a href="#machine-readable-credentials"><span class="secno">4.3.4</span> <span class="content">Machine Readable Credentials</span></a>
+        <li><a href="#physical-credentials-as-digital-credentials"><span class="secno">4.3.5</span> <span class="content">Physical Credentials as Digital Credentials</span></a>
+        <li><a href="#pure-digital-credentials"><span class="secno">4.3.6</span> <span class="content">Pure Digital Credentials</span></a>
        </ol>
      </ol>
-    <li><a href="#acknowledgment"><span class="secno">4</span> <span class="content">Acknowledgment</span></a>
+    <li><a href="#acknowledgment"><span class="secno">5</span> <span class="content">Acknowledgment</span></a>
     <li>
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ol class="toc">
@@ -601,7 +610,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p>There are several aspects, first of all, the <em>context</em> and <em>domain</em> in which the credential lives. The key difference lies in the <strong>trust</strong> we place in the issuers of these credentials. Trust can be defined as "<em>the belief that someone is good and honest and will not harm you, or that something is safe and reliable</em>" <a data-link-type="biblio" href="#biblio-cambridge-dictionary-trust" title="trusT | English meaning">[cambridge-dictionary-trust]</a>. Essentially, trust is a choice we make; we choose to trust or not trust someone or something <a data-link-type="biblio" href="#biblio-osstmm-3" title="Open Source Security Testing Methodology Manual v3">[OSSTMM-3]</a>, and often, it is not a binary question.</p>
    <p><em>Cryptographic trust</em>, such as verifying a credential, is not the same as <em>human trust</em> <a data-link-type="biblio" href="#biblio-self-sovereign-identity" title="Self-Sovereign Identity">[self-sovereign-identity]</a>. Cryptographic methods ensure that the credentials haven’t been tampered with. Human trust involves trusting the entity that issued the credential and that the issuer provided the credential to the legitmate user.</p>
    <p>This is why we also need <strong>governance frameworks</strong> or <strong>trust frameworks</strong>. These frameworks include business, legal, and technical rules that help establish and maintain trust in the issuers of credentials.</p>
-   <p>This includes establishing the <strong>levels of assurance (LOA)</strong>. Follow as an example the <em>Identity Assurance Level (IAL)</em> from NIST-SP-800-63-3 <a data-link-type="biblio" href="#biblio-nist-sp-800-63-3" title="Types of credentials and authenticators">[NIST-SP-800-63-3]</a>:</p>
+   <p>This includes establishing the <strong>Levels of (identity) Assurance (LOA)</strong>. Follow as an example the <em>Identity Assurance Level (IAL)</em> from NIST-SP-800-63-3 <a data-link-type="biblio" href="#biblio-nist-sp-800-63-3" title="Types of credentials and authenticators">[NIST-SP-800-63-3]</a>:</p>
    <ul>
     <li data-md>
      <p><strong>IAL1</strong>: No requirement to prove a specific real-life identity, e.g., identity can be self-asserted.</p>
@@ -639,7 +648,7 @@ So, the challenge is enabling this technological innovation by being aware of th
     <li data-md>
      <p><strong>Privacy Loss</strong> (<em>Surveillance</em>): if this technology is not designed and implemented properly, it can lead to surveillance by state and non-state actors such as government and private technology providers. For example, centralized or federated models are more prone to these threats, while decentralized models are less so, but it depends on how they are implemented. Therefore, it is necessary to provide privacy-preserving technologies and implement them properly.</p>
    </ul>
-   <h3 class="heading settled" data-level="2.3" id="digital-identity-management-models"><span class="secno">2.3. </span><span class="content">Digital identity management models</span><a class="self-link" href="#digital-identity-management-models"></a></h3>
+   <h2 class="heading settled" data-level="3" id="digital-identity-management-models"><span class="secno">3. </span><span class="content">Digital identity management models</span><a class="self-link" href="#digital-identity-management-models"></a></h2>
    <p>With these assumptions, before proceeding, it is important to understand how digital identities are managed and how they have evolved over the years.</p>
    <p>Let us start with the example of a person’s identity given earlier and break it down. We had:</p>
    <ul>
@@ -651,17 +660,17 @@ So, the challenge is enabling this technological innovation by being aware of th
      <p>Driver’s license within a digital wallet application.</p>
    </ul>
    <p>These examples represent the <a href="https://www.lifewithalacrity.com/article/the-path-to-self-soverereign-identity/">evolutionary stages of Internet Identity</a> described by Christopher Allen at the <a href="https://internetidentityworkshop.com">Internet Identity Workshop (IIW)</a>. From these developmental stages, the community agrees that there are currently three models of identity relationships <a data-link-type="biblio" href="#biblio-three-models-of-digital-identity-relationships" title="Three Models of Digital Identity">[three-models-of-digital-identity-relationships]</a>. Let us analyze them.</p>
-   <h4 class="heading settled" data-level="2.3.1" id="centralized-identity-model"><span class="secno">2.3.1. </span><span class="content">Centralized identity model</span><a class="self-link" href="#centralized-identity-model"></a></h4>
+   <h3 class="heading settled" data-level="3.1" id="centralized-identity-model"><span class="secno">3.1. </span><span class="content">Centralized identity model</span><a class="self-link" href="#centralized-identity-model"></a></h3>
    <p>In the centralized identity model, also known as siloed or traditional, a single provider offers both the identity (and its credentials, typically a username and password) and the service. This older model was used in the early days of the Internet and the Web and is still used today.</p>
    <p>The centralized identity model is the typical scenario when the user logs in to a social network to use it, and the credentials here are used to authenticate.</p>
    <figure id="fig-centralized-identity-model">
      <img src="figures/centralized-identity-model.svg"> 
     <figcaption>Centralized Identity Management</figcaption>
    </figure>
-   <p>Here is the <em>Data Flow</em>:</p>
+   <p>Here is the simplified <em>Data Flow</em>:</p>
    <ul>
     <li data-md>
-     <p><strong>Authentication</strong>: The user authenticates themselves with the centralized system using their credentials.</p>
+     <p><strong>Authentication</strong>: The user authenticates themselves with the centralizdd system using their credentials.</p>
     <li data-md>
      <p><strong>Access Granting</strong>: This system grants access to the resource.</p>
    </ul>
@@ -678,7 +687,7 @@ So, the challenge is enabling this technological innovation by being aware of th
      <span class="marker">Enabling passwordless credentials for authentication and payments</span><br> To mitigate security threats, in particular the use of multiple passwords and phishing, FIDO Alliance created <strong>Passkeys</strong>, "<em>a replacement for passwords that provide faster, easier, and more secure sign-ins to websites and apps across a user’s devices</em>" <a data-link-type="biblio" href="#biblio-passkeys-101" title="Passkeys 101">[passkeys-101]</a>. 
     <p>The <a href="https://www.w3.org/groups/wg/webauthn/">W3C Web Authentication Working Group</a> brought to the Web Platform standardizing Web Authentication Level 2 <a data-link-type="biblio" href="#biblio-webauthn-2" title="Web Authentication: An API for accessing Public Key Credentials - Level 2">[webauthn-2]</a>, and is developing Level 3 <a data-link-type="biblio" href="#biblio-webauthn-3" title="Web Authentication: An API for accessing Public Key Credentials - Level 3">[webauthn-3]</a>. This technology, moreover, can also be used to make online transactions more secure by using the same underlying technology to confirm payments, such as the "payment" extension for Secure Payment Confirmation <a data-link-type="biblio" href="#biblio-secure-payment-confirmation" title="Secure Payment Confirmation">[secure-payment-confirmation]</a>.</p>
    </div>
-   <h4 class="heading settled" data-level="2.3.2" id="federated-identity-model"><span class="secno">2.3.2. </span><span class="content">Federated identity model</span><a class="self-link" href="#federated-identity-model"></a></h4>
+   <h3 class="heading settled" data-level="3.2" id="federated-identity-model"><span class="secno">3.2. </span><span class="content">Federated identity model</span><a class="self-link" href="#federated-identity-model"></a></h3>
    <p>In the federated identity model, also known as a third-party <strong>Identity Provider (IdP)</strong>, the function of <em>making available identity information</em> is separated from the one <em>which provides a service to the user</em> - the <strong>Service Provider (SP) or Relying Party (RP)</strong> <a data-link-type="biblio" href="#biblio-iso-iec-24760-1" title="IT Security and Privacy — A framework for identity management — Part 1: Terminology and concepts">[ISO-IEC-24760-1]</a>.</p>
    <p>The federated identity model is the typical scenario when a user logs into a third-party site using a social network’s "Sign in with..." feature or through Single Sign-On (SSO) in enterprise environments.</p>
    <p>This model allows users to utilize a single Identity Provider (IdP) to authenticate and access multiple Service Providers (SPs) or Relying Parties (RPs) without needing to create separate accounts for each one.</p>
@@ -707,31 +716,61 @@ So, the challenge is enabling this technological innovation by being aware of th
      <p><strong>Standards</strong>: standards support interoperability between different systems. The most used in this context are <a href="https://www.oasis-open.org/standard/saml/">OASIS Security Assertion Markup Language (SAML)</a> and <a href="https://openid.net/connect/">OpenID Connect</a>, which underpins <a href="https://oauth.net/">OAuth</a> for authorization and different token formats.</p>
    </ul>
    <div class="advisement" id="a2"> <span class="marker">Enabling Federated identity in the Web platform without third-party cookies</span><br> The <a href="https://www.w3.org/community/fed-id/">Federated Identity Community Group</a> was born to resolve these privacy concerns for this model. The Group is working on Federated Credential Management API <a data-link-type="biblio" href="#biblio-fedcm" title="Federated Credential Management API">[FEDCM]</a> and other APIs such as Login Status API, to implement the Federated Identity Model in the Web Platform. The <a href="https://www.w3.org/groups/wg/fedid/">Federated Identity Working Group</a> also came from this group to proceed with standardization. </div>
-   <h4 class="heading settled" data-level="2.3.3" id="decentralized-identity-model"><span class="secno">2.3.3. </span><span class="content">Decentralized identity model</span><a class="self-link" href="#decentralized-identity-model"></a></h4>
-   <p>In the decentralized model, also known as the Self-Sovereign Identity (SSI) model, the user independently administers their identities and is the highest expression of user-centric identity. It is the newest model, and several pilot projects are underway for large-scale implementations.</p>
+   <h3 class="heading settled" data-level="3.3" id="decentralized-identity-model"><span class="secno">3.3. </span><span class="content">Decentralized identity model</span><a class="self-link" href="#decentralized-identity-model"></a></h3>
+   <p>In the decentralized model, also known as the Self-Sovereign Identity (SSI) or three party model, the user independently administers their identities and is the highest expression of user-centric identity. It is the newest model, and several pilot projects are underway for large-scale implementations.</p>
    <p class="note" role="note"><span class="marker">Note:</span> We will examine the decentralized identity model more closely, as it is the source of new challenges.</p>
-   <h5 class="heading settled" data-level="2.3.3.1" id="architecture"><span class="secno">2.3.3.1. </span><span class="content">Architecture</span><a class="self-link" href="#architecture"></a></h5>
-   <p>The decentralized identity model introduces a significant shift in the architecture, moving away from federated IdPs, SPs, or RPs.</p>
+   <h4 class="heading settled" data-level="3.3.1" id="architecture"><span class="secno">3.3.1. </span><span class="content">Architecture</span><a class="self-link" href="#architecture"></a></h4>
+   <p>The decentralized identity model marks a significant shift in architecture. Moving away from federated Identity Providers (IdPs) and Service Providers (SPs) or Relying Parties (RPs), the focus now centers on the user.</p>
+   <p>In this model, the user <em>controls</em> their credentials, acquires them from an <em>Issuer</em>, stores them in their <em>wallet</em>, and presents <em>them</em> to a Verifier. Verification activities are mediated by a <em>Verifiable Data Registry</em>, which contains the various information needed.</p>
    <figure id="fig-decentralized-identity-model">
-     <img src="https://www.w3.org/TR/vc-data-model-2.0/diagrams/ecosystem.svg"> 
-    <figcaption>Decentralized Identity Management <a data-link-type="biblio" href="#biblio-vc-data-model-20" title="Verifiable Credentials Data Model v2.0">[vc-data-model-2.0]</a></figcaption>
+     <img src="figures/decentralized-identity-model.svg"> 
+    <figcaption> Decentralized Identity Model, adapted from Verifiable Credentials Data Model (VCDM) <a data-link-type="biblio" href="#biblio-vc-data-model-20" title="Verifiable Credentials Data Model v2.0">[vc-data-model-2.0]</a> </figcaption>
    </figure>
-   <p>Instead, it involves a new set of actors and dynamics, described in the W3C Verifiable Credentials Data Model (VCDM) <a data-link-type="biblio" href="#biblio-vc-data-model-20" title="Verifiable Credentials Data Model v2.0">[vc-data-model-2.0]</a>:</p>
+   <p>To best understand the decentralized model and its end-to-end operation, we can refer to the model by Decentralized Identity Fundation <a data-link-type="biblio" href="#biblio-did-faq" title="DID FAQ">[did-faq]</a> build on the Trust Over IP architecture <a data-link-type="biblio" href="#biblio-introduction-toip" title="Introduction to Trust Over IP">[introduction-toip]</a> <a data-link-type="biblio" href="#biblio-evolution-toip" title="Evolution of the ToIP Stack">[evolution-toip]</a>.</p>
+   <p>This model comprises both technology and governance aspects, sliced in different layers.We will then provide an overview of the various layers, focusing on specific elements related to credentials and identifiers, which are considered the two pillars of decentralized identities.</p>
+   <figure id="fig-decentralized-identity-model-01">
+     <img src="figures/decentralized-identity-layers.svg"> 
+    <figcaption>Decentralized Identity Architecture, inspired and adapted by ToIP <a data-link-type="biblio" href="#biblio-introduction-toip" title="Introduction to Trust Over IP">[introduction-toip]</a></figcaption>
+   </figure>
+   <p>Let us start by looking at the layers.</p>
+   <h5 class="heading settled" data-level="3.3.1.1" id="trust-layer"><span class="secno">3.3.1.1. </span><span class="content">Layer 5: Trust Frameworks and Ecosystems</span><a class="self-link" href="#trust-layer"></a></h5>
+   <p>At this level we find compliance and regulation, governance and trust frameworks, which tell us who we can trust such as a particular issuer that follows specific Level of Assurance. These trust elements depend on the context - or domain - of reference. We can have different contexts such as state, government, as well as university contexts.</p>
+   <p>Each context is governed by one or more governance or trust frameworks. For example, for the domain of credentials issued by governments in Europe we have <a href="https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/Technical+Specifications">EU Digital Wallet</a> and we can have others related to other states, as well as other domains such as individual organizations, enterprises or universities.</p>
+   <p>Therefore, in the various architectures, <em>"Trust"</em> and its framework permeates all layers.</p>
+   <p class="note" role="note"><span class="marker">Note:</span> There are differences between the levels of DIF and with <strong>ToIP Techological Stack</strong>: <em>Governance</em> is a parallel halves and have specific frameworks for each level.</p>
+   <h5 class="heading settled" data-level="3.3.1.2" id="application-layer"><span class="secno">3.3.1.2. </span><span class="content">Layer 4: Applications, Wallets, Products</span><a class="self-link" href="#application-layer"></a></h5>
+   <p>At this level we find the various applications, accessible to end users, that implement the model:</p>
    <ul>
     <li data-md>
-     <p>The <strong>Holder</strong> (the <em>user</em>), who stores their credentials in a <strong>Digital Wallet</strong>, is at the heart of this architecture. This wallet, whether a native app or a web-based application, operates much like a physical wallet. Just as a physical wallet holds more than just IDs, the digital wallet can store various credentials and information. The transformation from physical to digital doesn’t change the wallet’s fundamental role but enhances its capabilities with digital features.</p>
+     <p><strong>Applications</strong>: that can be Native, Web Based, and it is possible to interact with them in different ways.</p>
     <li data-md>
-     <p>The <strong>Issuer</strong> is the entity that creates and issues credentials to the <em>Holder</em>. This can be a trusted <em>third-party</em> entity like governments or  universities. In some cases, credentials can be <em>self-issued</em> by the user, e.g., to represent informal skills or competencies. This flexibility allows for a broader range of credentials and applications.</p>
+     <p><strong>Digital Wallets</strong>: in which the Holder stores their credentials.
+Just as a physical wallet holds more than just IDs, the digital wallet can store various credentials and information. We can classify the wallets depending on several factors</p>
+     <ul>
+      <li data-md>
+       <p><em>Technology</em>: Wallets can be Native Applications (e.g., Mobile), Web Application (e.g, Cloud).</p>
+      <li data-md>
+       <p><em>Cryptographic Key location</em>: Custodial (e.g, the key is stored in the Cloud) or Non-Custodial (e.g., the key is stored in a device in possession of the end-user)</p>
+     </ul>
+     Simplifying their structure, is composed by a secure storage and then an Agent that manages interactions. 
+   </ul>
+   <p class="note" role="note"><span class="marker">Note:</span> There are differences between the levels of DIF and with <strong>ToIP Techological Stack</strong>: <em>Wallets</em> are at <a href="#agents-and-infrastructure">Layer 2</a>. <em>Layer 4</em> is for practical applications, which we cover in <a href="#uses-cases">Use cases</a>.</p>
+   <h5 class="heading settled" data-level="3.3.1.3" id="credential-layer"><span class="secno">3.3.1.3. </span><span class="content">Layer 3: Credential Layer</span><a class="self-link" href="#credential-layer"></a></h5>
+   <p>At this level, the various actors exchange credentials. Let’s see what happens, using the specific definitions of the W3C Verifiable Credentials Data Model (VCDM) <a data-link-type="biblio" href="#biblio-vc-data-model-20" title="Verifiable Credentials Data Model v2.0">[vc-data-model-2.0]</a></p>
+   <p>The actors are:</p>
+   <ul>
     <li data-md>
-     <p>The <strong>Verifier</strong> in this model is akin to an SP or RP in federated models. It receives the credentials presented by the <em>Holder</em> and verifies them. Importantly, this process does not necessarily involve informing the <em>Issuer</em>. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.</p>
+     <p>The <strong>Issuer</strong> creates and <em>issues credentials</em> to the <em>Holder</em>. It also writes the necessary information within the <em>Verifiable Data Registry</em>. This can be a trusted third-party entity like governments or  universities. In some cases, credentials can be <em>self-issued</em> by the user e.g., to represent informal skills or competencies. This flexibility allows for a broader range of credentials and applications.</p>
     <li data-md>
-     <p>The <strong>Verifiable Data Registry (VRP)</strong>, a crucial entity of this architecture. This registry holds the data needed to verify credentials and their status. This can be government databases, distributed ledgers, or other services. By maintaining this information, the VRP, depending on its form, enables verification without direct communication between the <em>Issuer</em> and the <em>Verifier</em>.</p>
+     <p>The <strong>Holder</strong> (the <em>user</em>), at the heart of this architecture, receives the credentials from the Issuer, stores them in a <em>Digital Wallet</em>, and <em>presents credentials</em> to the <em>Verifier</em>.</p>
+    <li data-md>
+     <p>The <strong>Verifier</strong> receives the presented credentials by the <em>Holder</em> and verifies them. In this model is akin to an SP or RP in federated models. This process does not necessarily involve informing the <em>Issuer</em>. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.</p>
    </ul>
    <p class="note" role="note"><span class="marker">Note:</span> In this model, the definition of a <strong>credential</strong> shifts to a set of <em>claims</em> (attributes) linked to <em>identifiers</em> controlled by the user. While credentials represent identities, not all claims within a credential are used for identification. They can describe various characteristics, extending the application of credentials beyond mere identification.</p>
-   <p>The VCDM defines two basic concepts: the <em>Verifiable Credentials</em> and the <em>Verifiable Presentation</em>.</p>
+   <p>The actors exchanges:</p>
    <ul>
     <li data-md>
-     <p><strong>Verifiable Credential</strong> is what the holder stores in the Wallet. It contains:</p>
+     <p><strong>Verifiable Credential (VC)</strong>: when the Issuer sends the credential to the Holder, who then stores it in their Wallet. It is called <em>Verifiable</em> because adds <em>technologies, such as digital signatures, makes verifiable credentials more tamper-evident and more trustworthy than their physical counterparts</em>.</p>
      <ul>
       <li data-md>
        <p><strong>Metadata</strong>: of the Credentials.</p>
@@ -741,7 +780,7 @@ So, the challenge is enabling this technological innovation by being aware of th
        <p><strong>Proof(s)</strong>: cryptographic proof of the integrity of the credential, typically via a digital signature.</p>
      </ul>
     <li data-md>
-     <p><strong>Verifiable Presentation</strong> is what the holder sends to the verifier to show their credentials. The basic case is to present the credential as is. However, in many scenarios, the holder may wish to present only a subset of the claims of a credential to the verifier - this is called <em>Selective Disclosure (SD)</em> - or a combination of information from different credentials. It contains:</p>
+     <p>*<em>Verifiable Presentation (VP) *</em>: when the Holder sends a credential to the Verfier which then verifies it. The basic case is to present the credential as is. However, in many scenarios, the holder may wish to present only a subset of the claims of a credential to the verifier - this is called <em>Selective Disclosure (SD)</em> - or a combination of information from different credentials. It contains:</p>
      <ul>
       <li data-md>
        <p><strong>Metadata</strong>: of the presentation.</p>
@@ -751,9 +790,33 @@ So, the challenge is enabling this technological innovation by being aware of th
        <p><strong>Proof(s)</strong>: cryptographic proof of the integrity of the credential(s) and the presentation.</p>
      </ul>
    </ul>
-   <p class="note" role="note"><span class="marker">Note:</span> For a comprehensive overview of Verifiable Credentials (VCs), refer to Ivan Herman’s <a href="https://www.w3.org/TR/vc-overview/">W3C Verifiable Credentials Overview</a>.</p>
-   <p>Another pillar of this architecture is <strong>Decentralized Identifiers (DIDs)</strong>, an Uniform Resource Identifier (URI) <a data-link-type="biblio" href="#biblio-rfc3986" title="Uniform Resource Identifier (URI): Generic Syntax">[RFC3986]</a> type that allows entities and resources to be identified through various methods <a data-link-type="biblio" href="#biblio-did-core" title="Decentralized Identifiers (DIDs) v1.0">[did-core]</a>. These methods can rely on various technologies, including blockchains such as Bitcoin or Ethereum, the web, InterPlanetary File System (IPFS), and Domain Name System (DNS) <a data-link-type="biblio" href="#biblio-did-spec-registries" title="DID Specification Registries">[did-spec-registries]</a>. Does this guarantee its untraceability?. All methods allow cryptographical control over the identifier. Still, they vary in how decentralized they are and the features they support (e.g., key rotation and revocation).</p>
-   <p>Here’s the <em>Data Flow</em>:</p>
+   <p class="note" role="note"><span class="marker">Note:</span> For a comprehensive overview of Verifiable Credentials, refer to Ivan Herman’s <a href="https://www.w3.org/TR/vc-overview/">W3C Verifiable Credentials Overview</a>.</p>
+   <p>Obviously the Issuer, the Holder and the Verifier needs a <strong>credential exchange protocol</strong> for VCs and VPs. This is not described in VCDM, but it is defined by other standards such as VC API and OpenID4VC.</p>
+   <h5 class="heading settled" data-level="3.3.1.4" id="agents-and-infrastructure"><span class="secno">3.3.1.4. </span><span class="content">Layer 2: Agent Frameworks and Infrastructure</span><a class="self-link" href="#agents-and-infrastructure"></a></h5>
+   <p>At this level, the software responsible for the interaction between the various actors communicates by processing the identifiers in the credentials. Agents do content retrivals, resolve them, render them, and facilitate interactions between the various actors and the lower-levels.</p>
+   <h5 class="heading settled" data-level="3.3.1.5" id="identifiers-and-namespaces"><span class="secno">3.3.1.5. </span><span class="content">Layer 1: Identifiers and Namespaces</span><a class="self-link" href="#identifiers-and-namespaces"></a></h5>
+   <p>At this level we find identifiers - which are considered, along with Verifiable Credentials, one of the two pillars of decentralized models - and the Verifiable Data Registry (VDR) where referenced information is written, updated, read, and deleted.</p>
+   <p>As indentifiers, we mainly refer to the <strong>Decentralized Identifiers (DIDs)</strong>, a new Uniform Resource Identifier (URI) <a data-link-type="biblio" href="#biblio-rfc3986" title="Uniform Resource Identifier (URI): Generic Syntax">[RFC3986]</a> type that allows entities and resources to be identified.</p>
+   <p>One of the powers of DIDs, is to provide for different methods of referencing resources <a data-link-type="biblio" href="#biblio-did-core" title="Decentralized Identifiers (DIDs) v1.0">[did-core]</a>.</p>
+   <p>These methods can rely on various technologies, including blockchains such as Bitcoin or Ethereum, the web, InterPlanetary File System (IPFS), and Domain Name System (DNS) <a data-link-type="biblio" href="#biblio-did-spec-registries" title="DID Specification Registries">[did-spec-registries]</a> and it is possible to write your own method.</p>
+   <p>Some distinctive properties of DIDs are <a data-link-type="biblio" href="#biblio-did-intro" title="Introduction to Decentralized Identifiers (DID)">[did-intro]</a>:</p>
+   <ul>
+    <li data-md>
+     <p><strong>Decentralized</strong>: do not depend on centralized registries, identity providers, authorities, etc.</p>
+    <li data-md>
+     <p><strong>Persistent</strong>: once created, it is permanently assigned to the subject.</p>
+    <li data-md>
+     <p><strong>Resolvable</strong>: it is possible to find out basic set of information on the subject.</p>
+    <li data-md>
+     <p><strong>Cryprographically verifable</strong>: there is a mechanism to cryptographically prove identity and ownership.</p>
+   </ul>
+   <p class="note" role="note"><span class="marker">Note:</span> The <strong>ToIP Techological Stack</strong> often icludes Identifiers also at other layers.</p>
+   <p>The <strong>Verifiable Data Registry (VDR)</strong>, is the registry holds the data needed to verify credentials and their status.
+This can be government databases, distributed ledgers, or other services.
+By maintaining this information, the VDR, depending on its form, enables verification without direct communication between the <em>Issuer</em> and the <em>Verifier</em>.</p>
+   <p>Having concluded this overview of the whole ecosystem of decentralized identities, we can return to focus on the specific level of credentials.</p>
+   <h4 class="heading settled" data-level="3.3.2" id="data-flow"><span class="secno">3.3.2. </span><span class="content">Data Flow</span><a class="self-link" href="#data-flow"></a></h4>
+   <p>Here is the data flow of credentials from when they are created to when they are revoked.</p>
    <ul>
     <li data-md>
      <p><strong>Credential Issuing (CI):</strong></p>
@@ -796,7 +859,7 @@ So, the challenge is enabling this technological innovation by being aware of th
        <p>The <em>Issuer</em> can revoke a credential in various ways.</p>
      </ol>
    </ul>
-   <h5 class="heading settled" data-level="2.3.3.2" id="security-and-privacy"><span class="secno">2.3.3.2. </span><span class="content">Security and Privacy</span><a class="self-link" href="#security-and-privacy"></a></h5>
+   <h4 class="heading settled" data-level="3.3.3" id="security-and-privacy"><span class="secno">3.3.3. </span><span class="content">Security and Privacy</span><a class="self-link" href="#security-and-privacy"></a></h4>
    <p>It is interesting to reflect on how this model differs from a security and privacy perspective both from previously described models and from the use of physical identity documents, as credentials can enable this use case:</p>
    <ul>
     <li data-md>
@@ -848,7 +911,7 @@ So, the challenge is enabling this technological innovation by being aware of th
     <p>Other approaches includes the <a href="https://www.w3.org/TR/security-privacy-questionnaire/">Self-Review Questionnaire: Security and Privacy</a> and the <em>OSSTMM</em> <a data-link-type="biblio" href="#biblio-osstmm-3" title="Open Source Security Testing Methodology Manual v3">[OSSTMM-3]</a>.</p>
     <p>The Threat Model also includes a list of various mitigation techniques, particularly those based on cryptography techniques such as Zero Knowledge Proof (ZKP), and additional methods for enabling secure and privacy-preserving technology.</p>
    </div>
-   <h5 class="heading settled" data-level="2.3.3.3" id="standards"><span class="secno">2.3.3.3. </span><span class="content">Standards</span><a class="self-link" href="#standards"></a></h5>
+   <h4 class="heading settled" data-level="3.3.4" id="standards"><span class="secno">3.3.4. </span><span class="content">Standards</span><a class="self-link" href="#standards"></a></h4>
    <p>As noted, VCDM and DID define only certain elements of the architecture. Other SDOs define other elements that are essential for the architecture to function.
 Therefore, coordination between these entities is necessary to ensure everything works seamlessly. So, let us look at the standards involved for the various components needed.</p>
    <p>To understand the extent of the various standards, is it possible to refer to Michael Palage’s <a href="https://www.linkedin.com/posts/michaelpalage_eic2024-identiverse2024-iam-activity-7168002034833604608-JF5E">Digital Identity Galaxy</a>.</p>
@@ -887,7 +950,7 @@ The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3
     <p>For these reasons, the Federated Identity Working Group - which has an API to integrate federated identities and thus has a close implementation link to decentralized ones - is in a <a href="https://github.com/w3c/strategy/issues/450">rechartering process to adopt the Digital Credentials API</a>, being guided by the Threat Model to make the API secure, privacy-preserving and rights-respecting.</p>
     <p>Moreover, the group’s new scope proposal has a broader perspective. It can incorporates also the other data flows of decentralized identity model to enable all possible use cases through the web platform.</p>
    </div>
-   <h2 class="heading settled" data-level="3" id="uses-cases"><span class="secno">3. </span><span class="content">Uses cases</span><a class="self-link" href="#uses-cases"></a></h2>
+   <h2 class="heading settled" data-level="4" id="uses-cases"><span class="secno">4. </span><span class="content">Uses cases</span><a class="self-link" href="#uses-cases"></a></h2>
    <p>The world of Digital Identities is quite broad and has different uses in different industries, where it can enhance the user experience and act as a business enabler.</p>
    <p>To imagine these use cases, we can play a game: see what is inside our physical or digital wallets.</p>
    <p>For example, the driver’s license (and the international one), the passport (and the passport also have visas for entry to other countries, or if you have minor children, they can be in your passport), payment cards, cash, association cards, tickets (e.g., events, concerts, boarding passes), loyalty cards (from hotels, airlines, the grocery store), the university card, the badge to get into the office, medical insurance card and health card, emergency contacts, some receipts, public transportation card, my business card and the business cards of some people I met, the card to get into the gym and the library.</p>
@@ -904,18 +967,18 @@ The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3
     </ul>
    </div>
    <p>Let us proceed to examine the use cases for those organization-related identities.</p>
-   <h3 class="heading settled" data-level="3.1" id="organizations"><span class="secno">3.1. </span><span class="content">Organizations</span><a class="self-link" href="#organizations"></a></h3>
+   <h3 class="heading settled" data-level="4.1" id="organizations"><span class="secno">4.1. </span><span class="content">Organizations</span><a class="self-link" href="#organizations"></a></h3>
    <p>We can look at organizations from different aspects. On the one hand, they can benefit from their government-issued digital identity; on the other hand, they can issue identities themselves to better manage their identification and access systems, both for people and for identities of specific services, software, or processes. To top it off, they can leverage people’s identities for greater assurance, particularly when distributed worldwide.</p>
-   <h4 class="heading settled" data-level="3.1.1" id="organizational-identity"><span class="secno">3.1.1. </span><span class="content">Organizational Identity</span><a class="self-link" href="#organizational-identity"></a></h4>
+   <h4 class="heading settled" data-level="4.1.1" id="organizational-identity"><span class="secno">4.1.1. </span><span class="content">Organizational Identity</span><a class="self-link" href="#organizational-identity"></a></h4>
    <p>Organizations can also have a digital identity and related identfiers such as the Registration Number with the government where it was opened, possibly the VAT Number if not the Legal Entity Identifier. Although the organization has an identity of its own, it operates through individuals who, in the bylaws, have various authorizations, delegations, and signing powers. Therefore, when you do any transaction, such as opening a bank account or a business transaction, you need the organization’s and the personal documentation of the various individuals involved. The use of digital identity in a wallet, with delegation managed through Verifiable Credentials, certainly streamlines the various transactions both with governments and suppliers and with customers, particularly for those aspects of global transactions where the trust relationship goes through a digital transaction and the Association of Certified Fraud Examiners (ACFE) estimates that organizations lose 5% of revenue to fraud each year <a data-link-type="biblio" href="#biblio-acfe-occupational-fraud-2024" title="Occupational Fraud 2024: A Report To The Nations®">[acfe-occupational-fraud-2024]</a>.</p>
-   <h4 class="heading settled" data-level="3.1.2" id="identity-and-access-management"><span class="secno">3.1.2. </span><span class="content">Identity and Access Management (IAM)</span><a class="self-link" href="#identity-and-access-management"></a></h4>
+   <h4 class="heading settled" data-level="4.1.2" id="identity-and-access-management"><span class="secno">4.1.2. </span><span class="content">Identity and Access Management (IAM)</span><a class="self-link" href="#identity-and-access-management"></a></h4>
    <p>The IAM market is thriving, with an estimated growth of 43 billion USD in 2029 <a data-link-type="biblio" href="#biblio-statista-identity-and-access-management" title="Identity and Access Management - statistics &amp; facts">[statista-identity-and-access-management]</a>. Such systems enable an employee’s identification, authentication, and authorization on the organization’s platforms according to assigned roles and responsibilities. Decentralized identities enable an additional approach, such as Bring Your Own Identity (BYOI), where users can use their identity to interact with corporate assets and not just for human resource management practices.</p>
-   <h4 class="heading settled" data-level="3.1.3" id="global-workforce"><span class="secno">3.1.3. </span><span class="content">Global Workforce</span><a class="self-link" href="#global-workforce"></a></h4>
+   <h4 class="heading settled" data-level="4.1.3" id="global-workforce"><span class="secno">4.1.3. </span><span class="content">Global Workforce</span><a class="self-link" href="#global-workforce"></a></h4>
    <p>Digital Transformation has been a trend for several years and has played a crucial role, particularly in the Workforce, during the COVID-19 pandemic. Organizations could decide whether to stop operations or change as far as possible by digitizing and enabling remote work. This transformation made it clear that looking into the global workforce is possible.</p>
    <p>The fact is that, net of a further trend in the last year of "back to the office", remote workers are estimated to be 67 percent in the technology industry, and this approach is preferred by 91 percent of workers <a data-link-type="biblio" href="#biblio-statista-work-from-home" title="Work from home: remote &amp; hybrid work - Statistics &amp; Facts">[statista-work-from-home]</a>. In a global context, digital identities can help register employees and contractors by verifying their identities and qualifications, which is particularly challenging for a global workforce. This can speed up hiring, employee management, and other HR processes.</p>
-   <h3 class="heading settled" data-level="3.2" id="things"><span class="secno">3.2. </span><span class="content">Things</span><a class="self-link" href="#things"></a></h3>
+   <h3 class="heading settled" data-level="4.2" id="things"><span class="secno">4.2. </span><span class="content">Things</span><a class="self-link" href="#things"></a></h3>
    <p>Although applications with identities linked to individuals are the most studied cases and are delicate to handle, identities also find fertile ground in the <em>supply chain</em> and <em>IoT</em> world, which are decentralized and distributed by nature.</p>
-   <h4 class="heading settled" data-level="3.2.1" id="supply-chain"><span class="secno">3.2.1. </span><span class="content">Supply Chain</span><a class="self-link" href="#supply-chain"></a></h4>
+   <h4 class="heading settled" data-level="4.2.1" id="supply-chain"><span class="secno">4.2.1. </span><span class="content">Supply Chain</span><a class="self-link" href="#supply-chain"></a></h4>
    <p>A particularly common and interesting scenario is the use of identities and the identification of physical assets and other organizations in the supply chain as well as in end-user services:</p>
    <ul>
     <li data-md>
@@ -924,11 +987,11 @@ The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3
      <p><strong>Counterfeit-prone markets</strong>: such as luxury goods. Proving that the physical good has a proper digital identity and demonstrating the ownership of its Digital Twin in the form of a credential issued by the producer can benefit the end-user and mitigate fraud.</p>
    </ul>
    <p>Identifying physical goods presents unique challenges, such as associating the physical good with the credential. Some solutions include using barcodes, DNA fingerprinting of agricultural products, and radio frequency identification (RFID).</p>
-   <h4 class="heading settled" data-level="3.2.2" id="energy-devices-(iot)"><span class="secno">3.2.2. </span><span class="content">Energy Devices (IoT)</span><a class="self-link" href="#energy-devices-(iot)"></a></h4>
+   <h4 class="heading settled" data-level="4.2.2" id="energy-devices-(iot)"><span class="secno">4.2.2. </span><span class="content">Energy Devices (IoT)</span><a class="self-link" href="#energy-devices-(iot)"></a></h4>
    <p>In "Self-Sovereign Identity" <a data-link-type="biblio" href="#biblio-self-sovereign-identity" title="Self-Sovereign Identity">[self-sovereign-identity]</a>, we find an interesting pilot project in the <strong>Energy Sector</strong> initiated by the Austrian Power Grid (APG) and Energy Web Foundation (EWF) to enable small and medium-sized devices called Distributed Energetic Resources (DER), to participate in frequency regulation of the national power grid <a data-link-type="biblio" href="#biblio-distributed-energy-resources-for-frequency-regulation" title="Austrian Power Grid and Energy Web Foundation Launch Proof of Concept to Use Distributed Energy Resources for Frequency Regulation">[distributed-energy-resources-for-frequency-regulation]</a>. This response to the UN’s Sustainable Development Goal 7 "Ensure access to affordable, reliable, sustainable and modern energy for all".</p>
    <p>The challenge is that the transmission grid must maintain a consistent frequency to function properly. Power plants typically coordinate to adjust the input frequency in response to changes in energy consumption. However, this becomes particularly complex when integrating small and distributed devices.</p>
    <p>It is necessary to identify small devices correctly to avoid issues throughout the network. Verifiable Credentials are present within the devices' operating systems to ensure the IAM aspect, as well as DIDs to identify them correctly <a data-link-type="biblio" href="#biblio-energy-web-credentials-overview" title="Credentials-Overview">[energy-web-credentials-overview]</a>.</p>
-   <h4 class="heading settled" data-level="3.2.3" id="automotive-(iot)"><span class="secno">3.2.3. </span><span class="content">Automotive (IoT)</span><a class="self-link" href="#automotive-(iot)"></a></h4>
+   <h4 class="heading settled" data-level="4.2.3" id="automotive-(iot)"><span class="secno">4.2.3. </span><span class="content">Automotive (IoT)</span><a class="self-link" href="#automotive-(iot)"></a></h4>
    <p>An interesting use case for <strong>automotive</strong> can be found in "Self-Sovereign Identity - Foundations, Applications, and Potentials of Portable Digital Identities" <a data-link-type="biblio" href="#biblio-ssi-foundation-applications-and-potentials" title="Self-Sovereign Identity - Foundations, Applications, and Potentials of Portable Digital Identities">[ssi-foundation-applications-and-potentials]</a>.</p>
    <p>A car, identified by the Vehicle Identification Number (VIN), interacts with various entities throughout its lifecycle, including:</p>
    <ul>
@@ -956,7 +1019,7 @@ The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3
      <p>Completion of ownership transfer and insurance paperwork.</p>
    </ul>
    <p class="note" role="note"><span class="marker">Note:</span> The automotive case is particularly interesting. Even though it is a Non-Human Identity, being often used by humans could have serious privacy implications, as is currently the case with insurance black boxes.</p>
-   <h3 class="heading settled" data-level="3.3" id="human-identities-and-governments"><span class="secno">3.3. </span><span class="content">Human identities and governments</span><a class="self-link" href="#human-identities-and-governments"></a></h3>
+   <h3 class="heading settled" data-level="4.3" id="human-identities-and-governments"><span class="secno">4.3. </span><span class="content">Human identities and governments</span><a class="self-link" href="#human-identities-and-governments"></a></h3>
    <p>Let us return to the initial example and analyze human identities, focusing on those issued by the government. These have the most assurance and thus expose the user to the most security, privacy, and human rights threats.</p>
    <p>A government issues a human-citizen with a specific set of credentials for the purpose of identification and to outline their attributes:</p>
    <ul>
@@ -976,24 +1039,24 @@ The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3
      <p>Proof of age</p>
    </ul>
    <p>We will conduct a thorough historical analysis.</p>
-   <h4 class="heading settled" data-level="3.3.1" id="physical-identity"><span class="secno">3.3.1. </span><span class="content">Physical Identity</span><a class="self-link" href="#physical-identity"></a></h4>
+   <h4 class="heading settled" data-level="4.3.1" id="physical-identity"><span class="secno">4.3.1. </span><span class="content">Physical Identity</span><a class="self-link" href="#physical-identity"></a></h4>
    <p>Previously, individuals were known and acknowledged based on their physical attributes and voices, particularly in small, close-knit communities where mutual familiarity prevailed. Within such contexts, establishing trust among acquaintances served as an effective means of identification.</p>
    <p class="note" role="note"><span class="marker">Note:</span> Notably, the assurance of our identity in the social realm often relies on a third party, such as society as a collective entity or directly through government authorities.</p>
-   <h4 class="heading settled" data-level="3.3.2" id="textual-credentials"><span class="secno">3.3.2. </span><span class="content">Textual Credentials</span><a class="self-link" href="#textual-credentials"></a></h4>
+   <h4 class="heading settled" data-level="4.3.2" id="textual-credentials"><span class="secno">4.3.2. </span><span class="content">Textual Credentials</span><a class="self-link" href="#textual-credentials"></a></h4>
    <p>Up until the <strong>1700s-1800s</strong>, when there was a lack of direct knowledge between the parties (and thus trust), such as when traveling, to identify oneself, it began to be necessary to present credentials issued by a trusted third party, such as a government, in the form of a paper with written information proofed by the authority.</p>
    <p class="note" role="note"><span class="marker">Note:</span> A particularly well-known example of textual credentials is the first driver’s license, issued in 1888 to Karl Benz so he could use his experimental car <a data-link-type="biblio" href="#biblio-how-might-driver-licensing" title="How might Driver Licensing and Vehicle Registration evolve if we adopt Autonomous Cars and Digital Identification? [preprint]">[how-might-driver-licensing]</a>. It was a paper signed by the local authority (a trusted party), which was required after neighbors complained about noise generated by his driving, so not for identifying himself.</p>
    <p>These credentials are issued by a trusted entity (e.g., a government), carried or presented by the person in question (e.g., the user with a passport), and then verified by those in charge to authenticate (e.g., the border police) and provide something (e.g., permission to cross the border).</p>
    <p>Even then, there were security problems: on the one hand, counterfeiting—which was mitigated by using stamps, seals, or special paper—and the use of documents by persons other than the one for whom the document was issued, which was mitigated by including a written description of the owner’s facial features to bind them to the document as photography had not yet been invented.</p>
-   <h4 class="heading settled" data-level="3.3.3" id="photographic-credentials"><span class="secno">3.3.3. </span><span class="content">Photographic Credentials</span><a class="self-link" href="#photographic-credentials"></a></h4>
+   <h4 class="heading settled" data-level="4.3.3" id="photographic-credentials"><span class="secno">4.3.3. </span><span class="content">Photographic Credentials</span><a class="self-link" href="#photographic-credentials"></a></h4>
    <p>The first documented use of photography for identification was in <strong>1876</strong>, thanks to the photographer William Notman, who had used photographs to identify workers and guests at the Centennial Exposition in Philadelphia <a data-link-type="biblio" href="#biblio-the-world-of-william-notman" title="The World of William Notman">[the-world-of-william-notman]</a>.</p>
    <p>However, government-wide use was introduced only in <strong>1915</strong> after the U.S. government discovered that a German spy was using a U.S. passport because he had physical characteristics similar to those described in written words in the passport and could talk in English <a data-link-type="biblio" href="#biblio-how-have-passport-photos-changed-in-100-years" title="How have passport photos changed in 100 years?">[how-have-passport-photos-changed-in-100-years]</a>.</p>
    <p class="note" role="note"><span class="marker">Note:</span> The primary purpose of photography is to associate the passport with the individual to whom it was issued. It is essential to ensure that only the legitimate holder of the credential can utilize it.</p>
-   <h4 class="heading settled" data-level="3.3.4" id="machine-readable-credentials"><span class="secno">3.3.4. </span><span class="content">Machine Readable Credentials</span><a class="self-link" href="#machine-readable-credentials"></a></h4>
+   <h4 class="heading settled" data-level="4.3.4" id="machine-readable-credentials"><span class="secno">4.3.4. </span><span class="content">Machine Readable Credentials</span><a class="self-link" href="#machine-readable-credentials"></a></h4>
    <p>As the technology evolved, the idea was to use machines to help read the documents. This would speed up the verification process. But it was necessary to make the documents easy for machines to read.</p>
    <p>To address this, particularly for travel documents, ICAO began working on machine-readable travel documents in <strong>1968</strong>, and in <strong>1980</strong>, it published Document 9303, which contained the specification of a machine-readable code to be printed on documents <a data-link-type="biblio" href="#biblio-doc-9303" title="Machine Readable Travel Documents">[doc-9303]</a>. It is the code with many "<code>&lt;</code>"s in our passports and on some ID cards.</p>
    <p>As an evolution, in <strong>1998</strong>, Doc 9303 also included biometric information transmitted via <em>RFID</em> technology. Nowadays, other machine-readable techniques include barcodes and QR codes.</p>
    <p class="note" role="note"><span class="marker">Note:</span> ISO endorsed this document through ISO/IEC 7501-1, making the role of Standard Development Organizations (SDOs) particularly important for interoperability in this field.</p>
-   <h4 class="heading settled" data-level="3.3.5" id="physical-credentials-as-digital-credentials"><span class="secno">3.3.5. </span><span class="content">Physical Credentials as Digital Credentials</span><a class="self-link" href="#physical-credentials-as-digital-credentials"></a></h4>
+   <h4 class="heading settled" data-level="4.3.5" id="physical-credentials-as-digital-credentials"><span class="secno">4.3.5. </span><span class="content">Physical Credentials as Digital Credentials</span><a class="self-link" href="#physical-credentials-as-digital-credentials"></a></h4>
    <p>While these practices have certainly sped up reading and verification in physical contexts - when the verifier has access to the original physical document, they are inefficient if used in a digital context, in particular when the verifier has no access to the original document as the physical credential is scanned or photographed and its file is used.</p>
    <p>A classic use of government-issued documents on the Internet and the Web is enrollment in financial services.</p>
    <p>The user must indeed provide these documents. At the same time, the financial service provider must verify that they comply with Know Your Customer (KYC) and Anti-Money Laundering (AML) practices to Counter the Financing of Terrorism (CFT).</p>
@@ -1001,7 +1064,7 @@ The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3
    <p>Often, the financial provider delegates the process to specialized companies that use Machine Learning and manual control to verify the information.</p>
    <p>Thus, we have at least two problems: the entire document is sent to different places, making a data breach more likely, and Machine Learning systems often analyze it. The problem is well described in "<a href="https://www.w3.org/reports/ai-web-impact/">AI &amp; the Web</a>".</p>
    <p>Moreover, an additional privacy concern is inherent in this use case - which applies even when the document is used physically. Even if the user uses the document for a specific reason (e.g., proof of address or proof of age), they must send the whole document, thus showing more information than is needed for the specific verification, violating the <a href="https://www.w3.org/TR/privacy-principles/#data-minimization">privacy principle of data minimization</a>.</p>
-   <h4 class="heading settled" data-level="3.3.6" id="pure-digital-credentials"><span class="secno">3.3.6. </span><span class="content">Pure Digital Credentials</span><a class="self-link" href="#pure-digital-credentials"></a></h4>
+   <h4 class="heading settled" data-level="4.3.6" id="pure-digital-credentials"><span class="secno">4.3.6. </span><span class="content">Pure Digital Credentials</span><a class="self-link" href="#pure-digital-credentials"></a></h4>
    <p>Governments and regulatory bodies have also stepped up to issue digital credentials for citizens.
 Each government has made its own architectural choices and can offer different services, from centralized or federated authentication to decentralized identities giving citizens a wallet to hold one’s digital credentials.</p>
    <p>Below is a short list with some implementation examples:</p>
@@ -1055,7 +1118,7 @@ Each government has made its own architectural choices and can offer different s
     </ul>
     <p>Active cooperation between governments, SDOs, implementers and users is essential. SDOs can serve as a neutral forum to discuss these issues and create value together.</p>
    </div>
-   <h2 class="heading settled" data-level="4" id="acknowledgment"><span class="secno">4. </span><span class="content">Acknowledgment</span><a class="self-link" href="#acknowledgment"></a></h2>
+   <h2 class="heading settled" data-level="5" id="acknowledgment"><span class="secno">5. </span><span class="content">Acknowledgment</span><a class="self-link" href="#acknowledgment"></a></h2>
    <p>Several individuals contributed to the document. The editor especially thanks Pierre-Antoine Champin, Andrea D’Intino, Giuseppe De Marco, Heather Flanagan, Ivan Herman, Tommaso Innocenti, Ian Jacobs, Philippe Le Hegaret, Coralie Mercier, and Denis Roio.</p>
   </main>
 <script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script>
@@ -1080,6 +1143,10 @@ Each government has made its own architectural choices and can offer different s
    <dd>Lea Verou. <a href="https://w3ctag.github.io/design-principles/"><cite>Web Platform Design Principles</cite></a>. URL: <a href="https://w3ctag.github.io/design-principles/">https://w3ctag.github.io/design-principles/</a>
    <dt id="biblio-did-core">[DID-CORE]
    <dd>Manu Sporny; et al. <a href="https://w3c.github.io/did-core/"><cite>Decentralized Identifiers (DIDs) v1.0</cite></a>. URL: <a href="https://w3c.github.io/did-core/">https://w3c.github.io/did-core/</a>
+   <dt id="biblio-did-faq">[DID-FAQ]
+   <dd><a href="https://identity.foundation/faq/"><cite>DID FAQ</cite></a>. URL: <a href="https://identity.foundation/faq/">https://identity.foundation/faq/</a>
+   <dt id="biblio-did-intro">[DID-INTRO]
+   <dd><a href="https://www.youtube.com/watch?v=t8lMCmjPKq4"><cite>Introduction to Decentralized Identifiers (DID)</cite></a>. URL: <a href="https://www.youtube.com/watch?v=t8lMCmjPKq4">https://www.youtube.com/watch?v=t8lMCmjPKq4</a>
    <dt id="biblio-did-spec-registries">[DID-SPEC-REGISTRIES]
    <dd>Manu Sporny. <a href="https://w3c.github.io/did-spec-registries/"><cite>DID Specification Registries</cite></a>. URL: <a href="https://w3c.github.io/did-spec-registries/">https://w3c.github.io/did-spec-registries/</a>
    <dt id="biblio-digital-identities">[DIGITAL-IDENTITIES]
@@ -1100,6 +1167,8 @@ Each government has made its own architectural choices and can offer different s
    <dd><a href="https://www.eff.org/deeplinks/2020/08/digital-identification-must-be-designed-privacy-and-equity-10"><cite>Digital Identification Must Be Designed for Privacy and Equity</cite></a>. URL: <a href="https://www.eff.org/deeplinks/2020/08/digital-identification-must-be-designed-privacy-and-equity-10">https://www.eff.org/deeplinks/2020/08/digital-identification-must-be-designed-privacy-and-equity-10</a>
    <dt id="biblio-energy-web-credentials-overview">[ENERGY-WEB-CREDENTIALS-OVERVIEW]
    <dd><a href="https://energy-web-foundation.gitbook.io/energy-web/ew-dos-technology-components-2023/identity-and-access-management-iam/patterns/credential-lifecycle#credentials-overview"><cite>Credentials-Overview</cite></a>. URL: <a href="https://energy-web-foundation.gitbook.io/energy-web/ew-dos-technology-components-2023/identity-and-access-management-iam/patterns/credential-lifecycle#credentials-overview">https://energy-web-foundation.gitbook.io/energy-web/ew-dos-technology-components-2023/identity-and-access-management-iam/patterns/credential-lifecycle#credentials-overview</a>
+   <dt id="biblio-evolution-toip">[EVOLUTION-TOIP]
+   <dd><a href="https://trustoverip.org/wp-content/uploads/Evolution-of-the-ToIP-Stack-V1.0-2022-11-14.pdf"><cite>Evolution of the ToIP Stack</cite></a>. URL: <a href="https://trustoverip.org/wp-content/uploads/Evolution-of-the-ToIP-Stack-V1.0-2022-11-14.pdf">https://trustoverip.org/wp-content/uploads/Evolution-of-the-ToIP-Stack-V1.0-2022-11-14.pdf</a>
    <dt id="biblio-fedcm">[FEDCM]
    <dd><a href="https://fedidcg.github.io/FedCM/"><cite>Federated Credential Management API</cite></a>. Draft Community Group Report. URL: <a href="https://fedidcg.github.io/FedCM/">https://fedidcg.github.io/FedCM/</a>
    <dt id="biblio-harms-modeling">[HARMS-MODELING]
@@ -1116,6 +1185,8 @@ Each government has made its own architectural choices and can offer different s
    <dd><a href="https://www.worldbank.org/content/dam/Worldbank/Governance/GGP%20ID4D%20flyer.pdf"><cite>Sustainable Development Goals</cite></a>. URL: <a href="https://www.worldbank.org/content/dam/Worldbank/Governance/GGP%20ID4D%20flyer.pdf">https://www.worldbank.org/content/dam/Worldbank/Governance/GGP%20ID4D%20flyer.pdf</a>
    <dt id="biblio-identity-on-the-web">[IDENTITY-ON-THE-WEB]
    <dd>Heather Flanagan. <a href="https://www.w3.org/2024/04/AC/talk/identity"><cite>Identity on the Web</cite></a>. 2024. URL: <a href="https://www.w3.org/2024/04/AC/talk/identity">https://www.w3.org/2024/04/AC/talk/identity</a>
+   <dt id="biblio-introduction-toip">[INTRODUCTION-TOIP]
+   <dd><a href="https://trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf"><cite>Introduction to Trust Over IP</cite></a>. URL: <a href="https://trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf">https://trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf</a>
    <dt id="biblio-iso-iec-24760-1">[ISO-IEC-24760-1]
    <dd><a href="https://www.iso.org/obp/ui/#iso:std:iso-iec:24760:-1:ed-2:v1:en"><cite>IT Security and Privacy — A framework for identity management — Part 1: Terminology and concepts</cite></a>. 2019. URL: <a href="https://www.iso.org/obp/ui/#iso:std:iso-iec:24760:-1:ed-2:v1:en">https://www.iso.org/obp/ui/#iso:std:iso-iec:24760:-1:ed-2:v1:en</a>
    <dt id="biblio-linddun">[LINDDUN]
@@ -1181,7 +1252,7 @@ Each government has made its own architectural choices and can offer different s
    <dt id="biblio-threat-modeling-designing-for-security">[THREAT-MODELING-DESIGNING-FOR-SECURITY]
    <dd>Adam Shostack. <cite>Threat Modeling: Designing for Security</cite>. 
    <dt id="biblio-three-models-of-digital-identity-relationships">[THREE-MODELS-OF-DIGITAL-IDENTITY-RELATIONSHIPS]
-   <dd>Timothy Ruff. <cite>Three Models of Digital Identity</cite>. 
+   <dd>Timothy Ruff. <a href="https://medium.com/evernym/the-three-models-of-digital-identity-relationships-ca0727cb5186"><cite>Three Models of Digital Identity</cite></a>. URL: <a href="https://medium.com/evernym/the-three-models-of-digital-identity-relationships-ca0727cb5186">https://medium.com/evernym/the-three-models-of-digital-identity-relationships-ca0727cb5186</a>
    <dt id="biblio-types-of-credentials-and-authenticators">[TYPES-OF-CREDENTIALS-AND-AUTHENTICATORS]
    <dd><a href="https://id4d.worldbank.org/guide/types-credentials-and-authenticators"><cite>Types of credentials and authenticators</cite></a>. URL: <a href="https://id4d.worldbank.org/guide/types-credentials-and-authenticators">https://id4d.worldbank.org/guide/types-credentials-and-authenticators</a>
    <dt id="biblio-udhr">[UDHR]
