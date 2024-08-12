@@ -534,24 +534,28 @@ The holder has a digital passport in the form of government-issued credentials; 
 
 The problem is that, even in the last two cases, we can present potentially linkable information to us or our issuer, which the verifier can use to make correlations. For example, it is necessary to decouple the signature from the signer and not use the same identifiers in different sessions.
 
-Conversely, the verifier will have to somehow prove that he or she performed the age verification, which further complicates the matter.
+Conversely, the verifier will have to somehow prove that they performed the age verification, which further complicates the matter.
 
 Therefore, even in a scenario that may seem trivial, it requires extensive study.
 
 <div class="advisement" id="a5">
     <span class="marker">Mitigating the threats at technological and governance levels</span><br>
 
-    According to the Trust Over IP Stack, the ecosystem of Decentralized Identities is very broad and combines technological aspects such as Digital Credentials and Wallets - and those of Governancee [[introduction-toip]].
+    In the context of high-assurance credentials and particularly those issued by governments, even the solution related to a seemingly simple problem requires a thorough analysis of the impacts these solutions may have on the population.
 
-    Therefore, some threats exist at the technology level and can be managed by SDOs and implementers, but governments must manage others at the governance level. Governments provide the requirements and technology architectures that are then standardized and implemented.
+    As we have analyzed, an end-to-end solution requires the conjunction of technological aspects related to the stanzardization of technologies, their implementation, and the adoption, which is defined by elements of governance that permeate the technological aspects.
 
-    For example, a centralized identity system is prone to surveillance. Conversely, a decentralized system with certain technological features and cryptographic methods can mitigate surveillance and respect human rights.
+    In this specific case, we have different stakeholders such as SDOs, implementers, governments who through regulatory bodies defines the needs, the requirements, and the architectures, and last but not least, the users who are impacted by these solutions.
+    
+    Therefore, it is important for all these stakeholders to work together for joint value creation [[stakeholder-relationships-and-responsibilities]], also to ensure the proper handling of threats in the areas of security, privacy, and human rights: some threats exist at the technology level and can be managed by SDOs and implementers, but governments must manage others at the governance level:
 
-    Other issues are related to digital wallets. On the one hand, it is necessary to balance security and hardware and software requirements that could discriminate. On the other hand, it is important to avoid vendor lock-in and prevent what happened with the Digital Market Act and default browser choice.
+    * A cenralized system is prone to surveillance. In contrast, a decentralized system with certain technological features and cryptographic methods can mitigate surveillance and respect human rights.
 
-    Therefore, it is important to do a risk analysis with both technology and government stakeholders to mitigate threats appropriately.
+    * When a decentralized system is used there are issues related to digital wallets. On the one hand, it is necessary to balance security and hardware and software requirements that could discriminate. On the other hand, it is important to avoid vendor lock-in and prevent what happened with the Digital Market Act and default browser choice.
 
-    Suppose threats cannot be managed at the technology level. In that case, they should be managed at the governance level, for example, by banning certain uses or removing features that are not technically possible to mitigate the threat. Two-way communication between governments, SDOs and implementers is therefore needed.
+    * If threats cannot be effectively managed at the technology level, they should be addressed at the governance level. This can involve measures such as prohibiting certain uses or removing features that cannot be technically mitigated to reduce the threat.
+    
+    Active cooperation between governments, SDOs, implementers and users is essential. SDOs can serve as a neutral forum to discuss these issues and create value together.
 
 </div>
 
@@ -809,6 +813,11 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "title": "Human rights and technical standard-setting processes for new and emerging digital technologies : report of the Office of the United Nations High Commissioner for Human Rights",
     "href":"https://digitallibrary.un.org/record/4031373?v=pdf",
     "publisher" : "United Nation"
+  },
+    "stakeholder-relationships-and-responsibilities": {
+    "title": "Stakeholder Relationships and Responsibilities: A New Perspective",
+    "href":"https://doi.org/10.4468/2019.1.04civera.freeman",
+    "authors" : ["Chiara Civera", "R. Edward Freeman"]
   }
 }
 
