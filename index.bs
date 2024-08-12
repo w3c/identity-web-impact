@@ -357,7 +357,7 @@ Note: This list is representative. For more detailed information, please refer t
 
     This API will follows the *users first, developers second, and browser engines third* principle [[design-principles]], and meeting the needs of regulations (e.g. [eIDAS](https://www.european-digital-identity-regulation.com) or [Children's Online Privacy Protection Rule (COPPA)](https://www.govinfo.gov/content/pkg/PLAW-105publ277/pdf/PLAW-105publ277.pdf)) [[digital-identity-explainer]] .
 
-    For these reasons, the Federated Identity Working Group - which has ald API to integrate federated identities and thus has a close implementation link to decentralized ones - is in a [rechartering process to adopt the Digital Credentials API](https://github.com/w3c/strategy/issues/450), being guided by the Threat Model to make the API secure, privacy-preserving and rights-respecting.
+    For these reasons, the Federated Identity Working Group - which has an API to integrate federated identities and thus has a close implementation link to decentralized ones - is in a [rechartering process to adopt the Digital Credentials API](https://github.com/w3c/strategy/issues/450), being guided by the Threat Model to make the API secure, privacy-preserving and rights-respecting.
 
     Moreover, the group’s new scope proposal has a broader perspective. It can incorporates also the other data flows of decentralized identity model to enable all possible use cases through the web platform.
 
