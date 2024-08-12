@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 82ce88815, updated Thu Sep 7 16:33:55 2023 -0700" name="generator">
   <link href="https://www.w3.org/reports/identity-web-impact/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="1996f8207945b1e40d81c018c2dad6419603afe5" name="document-revision">
+  <meta content="d958c3cdb10d9e9baf2f78eb4857ffdf10804f71" name="document-revision">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -1034,16 +1034,23 @@ Each government has made its own architectural choices and can offer different s
      <p><strong>Range Proof</strong>: If we send the verifier the boolean result of a computation related to the value of a specific attribute (e.g., the verifier asks us if we are older than 21 years old, and we send the result of the computation on the date of birth).</p>
    </ul>
    <p>The problem is that, even in the last two cases, we can present potentially linkable information to us or our issuer, which the verifier can use to make correlations. For example, it is necessary to decouple the signature from the signer and not use the same identifiers in different sessions.</p>
-   <p>Conversely, the verifier will have to somehow prove that he or she performed the age verification, which further complicates the matter.</p>
+   <p>Conversely, the verifier will have to somehow prove that they performed the age verification, which further complicates the matter.</p>
    <p>Therefore, even in a scenario that may seem trivial, it requires extensive study.</p>
    <div class="advisement" id="a5">
      <span class="marker">Mitigating the threats at technological and governance levels</span><br> 
-    <p>According to the Trust Over IP Stack, the ecosystem of Decentralized Identities is very broad and combines technological aspects such as Digital Credentials and Wallets - and those of Governancee <a data-link-type="biblio" href="#biblio-introduction-toip" title="Introduction to Trust Over IP">[introduction-toip]</a>.</p>
-    <p>Therefore, some threats exist at the technology level and can be managed by SDOs and implementers, but governments must manage others at the governance level. Governments provide the requirements and technology architectures that are then standardized and implemented.</p>
-    <p>For example, a centralized identity system is prone to surveillance. Conversely, a decentralized system with certain technological features and cryptographic methods can mitigate surveillance and respect human rights.</p>
-    <p>Other issues are related to digital wallets. On the one hand, it is necessary to balance security and hardware and software requirements that could discriminate. On the other hand, it is important to avoid vendor lock-in and prevent what happened with the Digital Market Act and default browser choice.</p>
-    <p>Therefore, it is important to do a risk analysis with both technology and government stakeholders to mitigate threats appropriately.</p>
-    <p>Suppose threats cannot be managed at the technology level. In that case, they should be managed at the governance level, for example, by banning certain uses or removing features that are not technically possible to mitigate the threat. Two-way communication between governments, SDOs and implementers is therefore needed.</p>
+    <p>In the context of high-assurance credentials and particularly those issued by governments, even the solution related to a seemingly simple problem requires a thorough analysis of the impacts these solutions may have on the population.</p>
+    <p>As we have analyzed, an end-to-end solution requires the conjunction of technological aspects related to the stanzardization of technologies, their implementation, and the adoption, which is defined by elements of governance that permeate the technological aspects.</p>
+    <p>In this specific case, we have different stakeholders such as SDOs, implementers, governments who through regulatory bodies defines the needs, the requirements, and the architectures, and last but not least, the users who are impacted by these solutions.</p>
+    <p>Therefore, it is important for all these stakeholders to work together for joint value creation <a data-link-type="biblio" href="#biblio-stakeholder-relationships-and-responsibilities" title="Stakeholder Relationships and Responsibilities: A New Perspective">[stakeholder-relationships-and-responsibilities]</a>, also to ensure the proper handling of threats in the areas of security, privacy, and human rights: some threats exist at the technology level and can be managed by SDOs and implementers, but governments must manage others at the governance level:</p>
+    <ul>
+     <li data-md>
+      <p>A centralized system is prone to surveillance. In contrast, a decentralized system with certain technological features and cryptographic methods can mitigate surveillance and respect human rights.</p>
+     <li data-md>
+      <p>When a decentralized system is used there are issues related to digital wallets. On the one hand, it is necessary to balance security and hardware and software requirements that could discriminate. On the other hand, it is important to avoid vendor lock-in and prevent what happened with the Digital Market Act and default browser choice.</p>
+     <li data-md>
+      <p>If threats cannot be effectively managed at the technology level, they should be addressed at the governance level. This can involve measures such as prohibiting certain uses or removing features that cannot be technically mitigated to reduce the threat.</p>
+    </ul>
+    <p>Active cooperation between governments, SDOs, implementers and users is essential. SDOs can serve as a neutral forum to discuss these issues and create value together.</p>
    </div>
    <h2 class="heading settled" data-level="4" id="acknowledgment"><span class="secno">4. </span><span class="content">Acknowledgment</span><a class="self-link" href="#acknowledgment"></a></h2>
    <p>Several individuals contributed to the document. The editor especially thanks Pierre-Antoine Champin, Andrea D’Intino, Giuseppe De Marco, Heather Flanagan, Ivan Herman, Tommaso Innocenti, Ian Jacobs, Philippe Le Hegaret, Coralie Mercier, and Denis Roio.</p>
@@ -1096,8 +1103,6 @@ Each government has made its own architectural choices and can offer different s
    <dd><a href="https://www.worldbank.org/content/dam/Worldbank/Governance/GGP%20ID4D%20flyer.pdf"><cite>Sustainable Development Goals</cite></a>. URL: <a href="https://www.worldbank.org/content/dam/Worldbank/Governance/GGP%20ID4D%20flyer.pdf">https://www.worldbank.org/content/dam/Worldbank/Governance/GGP%20ID4D%20flyer.pdf</a>
    <dt id="biblio-identity-on-the-web">[IDENTITY-ON-THE-WEB]
    <dd>Heather Flanagan. <a href="https://www.w3.org/2024/04/AC/talk/identity"><cite>Identity on the Web</cite></a>. 2024. URL: <a href="https://www.w3.org/2024/04/AC/talk/identity">https://www.w3.org/2024/04/AC/talk/identity</a>
-   <dt id="biblio-introduction-toip">[INTRODUCTION-TOIP]
-   <dd><a href="https://trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf"><cite>Introduction to Trust Over IP</cite></a>. URL: <a href="https://trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf">https://trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf</a>
    <dt id="biblio-iso-iec-24760-1">[ISO-IEC-24760-1]
    <dd><a href="https://www.iso.org/obp/ui/#iso:std:iso-iec:24760:-1:ed-2:v1:en"><cite>IT Security and Privacy — A framework for identity management — Part 1: Terminology and concepts</cite></a>. 2019. URL: <a href="https://www.iso.org/obp/ui/#iso:std:iso-iec:24760:-1:ed-2:v1:en">https://www.iso.org/obp/ui/#iso:std:iso-iec:24760:-1:ed-2:v1:en</a>
    <dt id="biblio-marrakesh-treaty">[MARRAKESH-TREATY]
@@ -1134,6 +1139,8 @@ Each government has made its own architectural choices and can offer different s
    <dd>Alex Preukschat; Drummond Reed. <cite>Self-Sovereign Identity</cite>. 
    <dt id="biblio-ssi-foundation-applications-and-potentials">[SSI-FOUNDATION-APPLICATIONS-AND-POTENTIALS]
    <dd>Strüker, Jens; et al. <a href="https://www.researchgate.net/publication/354653404_Self-Sovereign_Identity_-_Foundations_Applications_and_Potentials_of_Portable_Digital_Identities"><cite>Self-Sovereign Identity - Foundations, Applications, and Potentials of Portable Digital Identities</cite></a>. URL: <a href="https://www.researchgate.net/publication/354653404_Self-Sovereign_Identity_-_Foundations_Applications_and_Potentials_of_Portable_Digital_Identities">https://www.researchgate.net/publication/354653404_Self-Sovereign_Identity_-_Foundations_Applications_and_Potentials_of_Portable_Digital_Identities</a>
+   <dt id="biblio-stakeholder-relationships-and-responsibilities">[STAKEHOLDER-RELATIONSHIPS-AND-RESPONSIBILITIES]
+   <dd>Chiara Civera; R. Edward Freeman. <a href="https://doi.org/10.4468/2019.1.04civera.freeman"><cite>Stakeholder Relationships and Responsibilities: A New Perspective</cite></a>. URL: <a href="https://doi.org/10.4468/2019.1.04civera.freeman">https://doi.org/10.4468/2019.1.04civera.freeman</a>
    <dt id="biblio-statista-identity-and-access-management">[STATISTA-IDENTITY-AND-ACCESS-MANAGEMENT]
    <dd>Alexandra Borgeaud. <a href="https://www.statista.com/topics/10552/identity-and-access-management/"><cite>Identity and Access Management - statistics &amp; facts</cite></a>. URL: <a href="https://www.statista.com/topics/10552/identity-and-access-management/">https://www.statista.com/topics/10552/identity-and-access-management/</a>
    <dt id="biblio-statista-work-from-home">[STATISTA-WORK-FROM-HOME]
