@@ -362,6 +362,7 @@ It is interesting to reflect on how this model differs from a security and priva
 * **Decentralized vs Physical Document**: If we instead think about the case where I have to send my passport online to open a bank account, to date, the most used method is to send the file with the passport scan. The bank usually sends the file to third-party services, often using Machine Learning systems for analysis. In addition, the file could be reused by someone who has access to it, exposing all our data and not only the one needed.
     
     Presenting a digital credential, which could also support the submission of a subset of the contained claims, can improve the situation. Still, again, we may encounter the problem of the verifier contacting the issuer for verification, a problem that is rarer when sending the file. However, databases of stolen documents do exist, and a verifier could make a request with the passport ID to verify the status.
+
 Note: Architectural change can solve some issues and generate new ones, so a thorough analysis is necessary.
 
 We can take a step back and understand what privacy properties are needed for digital identity, considering that the higher the level of credential assurance, the more threats can impact the user. Over the years, several proposals have been made to understand the properties of digital identities, such as [Kim Cameron's 7 Identity Laws](https://www.identityblog.com/?p=352) and Ben Laure's Privacy Requirements. Analyzing the latter [[selective-disclosure]]:
@@ -370,7 +371,7 @@ We can take a step back and understand what privacy properties are needed for di
 * **Minimal**: This is a privacy aspect. When we send information to the verifier, the information should be minimized as much as possible. For example, if we have to show that we are of age, it is okay to submit all the credentials or even the specific claim of the date of birth, but simply that I am of age.  
 * **Unlinkable**: This is another privacy aspect of the minimal issue anyway. Suppose any party involved in the interaction, such as the Issuer, Verifier, or even a third party, can link and correlate the information we sent. In that case, this can be done through various techniques, and privacy is compromised.
 
-So we have a several properties, both security and privacy as a starting point. How can we implement them? 
+So we have several properties, both security and privacy, as a starting point. How can we implement them? 
 First, different credential formats have different privacy and security features [[verifiable-credentials-flavors-explained]]. We can expand the discussion not only to formats but also to all other components of the architecture, which must be aligned to ensure security and privacy.
 
 <div class="advisement" id="a3">
