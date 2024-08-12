@@ -316,15 +316,20 @@ Some distinctive properties of DIDs are [[did-intro]]:
 * **Resolvable**: it is possible to find out basic set of information on the subject.
 * **Cryprographically verifable**: there is a mechanism to cryptographically prove identity and ownership.
 
-Note: Does them guarantee its untraceability and decentralization? It depends on the method, but there are also for ephemeral and peer to peer intractions.
+
+
+Note: The **ToIP Techological Stack** often icludes Identifiers also at other layers.
 
 The **Verifiable Data Registry (VDR)**, is the registry holds the data needed to verify credentials and their status.
 This can be government databases, distributed ledgers, or other services.
 By maintaining this information, the VDR, depending on its form, enables verification without direct communication between the *Issuer* and the *Verifier*. 
 
-We then conclude the part on architectural components with one last thought. Thinking about an end-to-end solution related to decentralized identities, it all depends on the context (or domain). 
+Having concluded this overview of the whole ecosystem of decentralized identities, we can return to focus on the specific level of credentials.
 
-Here is the *Data Flow*:
+### Data Flow ### {#data-flow}
+
+Here is the data flow of credentials from when they are created to when they are revoked.
+
 * **Credential Issuing (CI):**
     1. The *Issuer* requests a certain authentication mechanism from the *Holder*.
     2. After authentication, the *Holder* asks the *Issuer* for the credential, or the *Issuer* submits it.
