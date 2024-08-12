@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 82ce88815, updated Thu Sep 7 16:33:55 2023 -0700" name="generator">
   <link href="https://www.w3.org/reports/identity-web-impact/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="3d302fc06430355e5be56ad36d56feb3b2fa38a6" name="document-revision">
+  <meta content="bcd75677337932fafa4a60188255e50c1fe7aae9" name="document-revision">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -852,6 +852,7 @@ So, the challenge is enabling this technological innovation by being aware of th
    <p>As noted, VCDM and DID define only certain elements of the architecture. Other SDOs define other elements that are essential for the architecture to function.
 Therefore, coordination between these entities is necessary to ensure everything works seamlessly. So, let us look at the standards involved for the various components needed.</p>
    <p>To understand the extent of the various standards, is it possible to refer to Michael Palage’s <a href="https://www.linkedin.com/posts/michaelpalage_eic2024-identiverse2024-iam-activity-7168002034833604608-JF5E">Digital Identity Galaxy</a>.</p>
+   <p class="note" role="note"><span class="marker">Note:</span> Not all of the technologies indicated are standard, so they are not to be considered normative references. Some are drafts, and others have been indicated because, although in an embryonic state, they have interesting features.</p>
    <p>This is why several Standards Development Organizations (SDOs) such as the World Wide Web Consortium (W3C), the Internet Engineering Task Force (IETF), the OpenID Foundation (OIDF), and the Decentralized Identity Foundation (DIF) are coordinating to standardize the components and how they should communicate:</p>
    <ul>
     <li data-md>
@@ -866,7 +867,7 @@ Therefore, coordination between these entities is necessary to ensure everything
       <li data-md>
        <p><strong>Enveloped Formats (Credential Formats)</strong>: The proof wraps around the serialization of the credential.
 JSONs are enveloped using JSON Object Signing and Encryption (<a href="https://datatracker.ietf.org/wg/jose/about/">JOSE</a>), and we can find JWT, JWS, and JWK here. JOSE is <em>cryptographically agile</em> (as it can fit different cryptographic primitives) and can also have Selective Disclosure (SD) with <a href="https://www.ietf.org/archive/id/draft-fett-oauth-selective-disclosure-jwt-02.html">SD-JWT</a> (which uses HMAC). New securing mechanisms are coming up, like <a href="https://arxiv.org/abs/2406.19035">SD-BLS</a> (which uses BLS) and ongoing efforts to fit BBS#.  
-CBORs are enveloped using CBOR Object Signing and Encryption (<a href="https://www.rfc-editor.org/rfc/rfc9052">COSE</a>). Other formats include mdoc and <a href="https://datatracker.ietf.org/wg/spice/about/">SPICE</a>.  
+CBORs are enveloped using CBOR Object Signing and Encryption (<a href="https://www.rfc-editor.org/rfc/rfc9052">COSE</a>). Other formats include <a href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18013:-5:ed-1:v1:en">ISO mDocs</a> and <a href="https://datatracker.ietf.org/wg/spice/about/">SPICE</a>.  
 The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3.org/TR/vc-jose-cose/">Securing Verifiable Credentials using JOSE and COSE</a>.</p>
       <li data-md>
        <p><strong>Embedded Formats (Signature Algorithms):</strong> The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in <a href="https://www.w3.org/TR/vc-data-integrity/">Verifiable Credential Data Integrity 1.0</a>.</p>
@@ -874,7 +875,7 @@ The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3
     <li data-md>
      <p><strong>Status Information (Revocation Algorithms)</strong>: <em>Issuers</em> can implement several ways to keep the credential’s status up to date, such as a Revocation List, a Status List (e.g., <a href="https://www.w3.org/TR/vc-bitstring-status-list/">Bitstring Status List v1.0</a>), and Cryptographic Accumulators, etc..</p>
     <li data-md>
-     <p><strong>Communication Protocols</strong>: for the different phases of Issuance and Presentation (e.g., <a href="https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html">OID4VCI</a>, <a href="https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html">OID4VP</a>, <a href="https://openid.net/specs/openid-connect-self-issued-v2-1_0.html">SIOPv2</a>).</p>
+     <p><strong>Communication Protocols</strong>: for the different phases of Issuance and Presentation such as: <a href="https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html">OID4VCI</a>, <a href="https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html">OID4VP</a>, <a href="https://openid.net/specs/openid-connect-self-issued-v2-1_0.html">SIOPv2</a>, ISO REST’s API, <a href="https://github.com/w3c-ccg/vc-api">Verifiable Credentials API</a>.</p>
    </ul>
    <p class="note" role="note"><span class="marker">Note:</span> This list is representative. For more detailed information, please refer to the <a href="https://docs.google.com/spreadsheets/d/1X93ptJcmfX1NZEo5E7ElnqJ-knDS4Dj6JOYSJ_2PsUw/edit#gid=1084392809">Comparison Matrix</a>.</p>
    <div class="advisement" id="a4">
