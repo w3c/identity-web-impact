@@ -32,9 +32,9 @@ This document further develops the concepts described in "*Identity on the Web*"
 Through exploratory thinking, the following understanding emerged:
 
 * Standards can help, as they have in the past, to drive innovation while mitigating threats and to enable technical progress while having a positive impact on the world
-* The technology stack is composite and broad, and needs to be coordinated across standards and across Standards Development Organizations (SDOs)
-* People, SDOs and governments are the key actors who need to collaborate to ensure that digital credentials/identities solve more problems than they create, because identity is not only technology, but also governance
-* It is crucial to pay close attention to the impact in security, privacy, and human rights in general, and the proposed method of analysis is threat modeling
+* The technology stack is composite and broad and needs to be coordinated across standards and across Standards Development Organizations (SDOs)
+* People, SDOs, and governments are the key actors who need to collaborate to ensure that digital credentials/identities solve more problems than they create because identity is not only technology but also governance
+* It is crucial to pay close attention to the impact on security, privacy, and human rights in general, and the proposed method of analysis is threat modeling
 
 We seek [input](https://github.com/w3c/identity-web-impact/issues) from the community on proposals that could help progress on these topics and other topics that this document may contribute to identifying.
 
@@ -50,9 +50,9 @@ When we think about identity, we often think about our identity as individuals. 
 
 Analyzing the etymology, the term **identity** comes from the Latin root “*idem*”, which means “*the same*” [[oxford-etymology-identity]]. From the Cambridge Dictionary, we can say it is “*the fact of being, or feeling that you are, a particular type of person, organization, etc.; the qualities that make a person, organization, etc. different from others*” [[cambridge-dictionary-identity]].
 
-Looking more closely at the Information Technology (IT) domain, the ISO/IEC 24760-1:2019 [[ISO-IEC-24760-1]] defines **Identity** is “*a set of attributes related to an entity*”. Where the **entity** is something "*that has recognizably distinct existence*", and that can be "*logical or physical*" such as "*a person, an organization, a device, a group of such items, a human subscriber to a telecom service, a SIM card, a passport, a network interface card, a software application, a service or a website*". These **attributes** are “*characteristics or properties*” such as “*an entity type, address information, telephone number, a privilege, a MAC address, a domain name*”. To complete the definition of *entity* and *identitfiers*, it is important to note that they always refer to a **domain** of applicability, the specific *context* where they can be used (e.g., an organization, a country, a university).
+Looking more closely at the Information Technology (IT) domain, the ISO/IEC 24760-1:2019 [[ISO-IEC-24760-1]] defines **Identity** as “*a set of attributes related to an entity*”. Where the **entity** is something "*that has recognizably distinct existence*", and that can be "*logical or physical*" such as "*a person, an organization, a device, a group of such items, a human subscriber to a telecom service, a SIM card, a passport, a network interface card, a software application, a service or a website*". These **attributes** are “*characteristics or properties*” such as “*an entity type, address information, telephone number, a privilege, a MAC address, a domain name*”. To complete the definition of *entity* and *identitfiers*, it is important to note that they always refer to a **domain** of applicability, the specific *context* where they can be used (e.g., an organization, a country, a university).
 
-Thus, a particularly important point is clear: there are not only identities of people, individuals, or human beings. We can also have identities for organizations, pets, and **Non-Human Identities** (NHI). NHI are all those accounts used by widely used by “devices, services, and servers” in Networking, Cloud, and Workloads [[the-evolving-landscape-of-non-human-identity]].
+Thus, a particularly important point is clear: there are not only identities of people, individuals, or human beings. We can also have identities for organizations, pets, and **Non-Human Identities** (NHI). NHI are all those accounts widely used by “devices, services, and servers” in networking, cloud, and workloads [[the-evolving-landscape-of-non-human-identity]].
 
 Now, an important logical step. To claim our identities, we present **credentials**, whether in the physical or digital world. Just as we do not have a one-size-fits-all definition of identity, we also do not have a one-size-fits-all definition of credential, as it changes according to context. Starting with the definition from the Cambridge Dictionary, a (digital) credential is “*a piece of information that is sent from one computer to another to check that a user is who they claim to be or to allow someone to see information*” [[cambridge-dictionary-identity]]. While high-level, this definition considers two important aspects: on the one hand, the credential is used to prove our claims, such as who we are, and on the other hand, it can be used to gain access to information:
 
@@ -157,7 +157,7 @@ With these assumptions, before proceeding, it is important to understand how dig
 Let us start with the example of a person's identity given earlier and break it down. We had:
 
 * Credentials of a social network that are used on the same site.  
-* Credentials of a social network that are used on an different site.  
+* Credentials of a social network that are used on a different site.  
 * Driver's license within a digital wallet application.
 
 These examples represent the [evolutionary stages of Internet Identity](https://www.lifewithalacrity.com/article/the-path-to-self-soverereign-identity/) described by Christopher Allen at the [Internet Identity Workshop (IIW)](https://internetidentityworkshop.com). From these developmental stages, the community agrees that there are currently three models of identity relationships [[three-models-of-digital-identity-relationships]]. Let us analyze them.
@@ -174,7 +174,7 @@ The centralized identity model is the typical scenario when the user logs in to 
 </figure>
 
 Here is the *Data Flow*:
-* **Authentication**: The user authenticates themselves with the centralizdd system using their credentials.
+* **Authentication**: The user authenticates themselves with the centralized system using their credentials.
 * **Access Granting**: This system grants access to the resource.
 
 Perspectives:
@@ -458,7 +458,7 @@ We will conduct a thorough historical analysis.
 
 ### Physical Identity ### {#physical-identity}
 
-In the past, individuals were known and acknowledged based on their physical attributes and voices, particularly in small, close-knit communities where mutual familiarity prevailed. Within such contexts, the establishment of trust among acquaintances served as an effective means of identification. 
+Previously, individuals were known and acknowledged based on their physical attributes and voices, particularly in small, close-knit communities where mutual familiarity prevailed. Within such contexts, establishing trust among acquaintances served as an effective means of identification. 
 
 Note: Notably, the assurance of our identity in the social realm often relies on a third party, such as society as a collective entity or directly through government authorities.
 
@@ -484,9 +484,9 @@ Note: The primary purpose of photography is to associate the passport with the i
 
 As the technology evolved, the idea was to use machines to help read the documents. This would speed up the verification process. But it was necessary to make the documents easy for machines to read.
 
-To address this, particularly for travel documents, ICAO began working on machine-readable travel documents in **1968**, and in **1980** , it published Document 9303, which contained the specification of a machine-readable code to be printed on documents [[doc-9303]]. It is the code with many "`<`"s in our passports and on some ID cards. 
+To address this, particularly for travel documents, ICAO began working on machine-readable travel documents in **1968**, and in **1980**, it published Document 9303, which contained the specification of a machine-readable code to be printed on documents [[doc-9303]]. It is the code with many "`<`"s in our passports and on some ID cards. 
 
-As an evolution, in **1998**, Doc 9303 also included biometric information transmitted via *RFID* technology. Nowadays other machine-readable techniques include barcodes and QR codes.
+As an evolution, in **1998**, Doc 9303 also included biometric information transmitted via *RFID* technology. Nowadays, other machine-readable techniques include barcodes and QR codes.
 
 Note: ISO endorsed this document through ISO/IEC 7501-1, making the role of Standard Development Organizations (SDOs) particularly important for interoperability in this field.
 
