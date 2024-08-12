@@ -26,15 +26,15 @@ This document further develops the concepts described in "*Identity on the Web*"
 * [Enabling passwordless credentials for authentication and payments](#a1)   
 * [Enabling federated identity in the web platform without third-party cookies](#a2)  
 * [Modeling security, privacy, and human rights threats of decentralized credentials](#a3)  
-* [Avoiding discrimination by standardizing interoperability](#a4)  
+* [Mitigating surveillance, censorship, intrusion, and discrimination and ensuring interoperability by standardizing digital credentials in the web platform](#a4)  
 * [Mitigating the threats at technological and governance levels](#a5)
 
 Through exploratory thinking, the following understanding emerged:
 
 * Standards can help, as they have in the past, to drive innovation while mitigating threats and to enable technical progress while having a positive impact on the world
-* The technology stack is composite and broad, and needs to be coordinated across standards and across Standards Development Organizations (SDOs)
-* People, SDOs and governments are the key actors who need to collaborate to ensure that digital credentials/identities solve more problems than they create, because identity is not only technology, but also governance
-* It is crucial to pay close attention to the impact in security, privacy, and human rights in general, and the proposed method of analysis is threat modeling
+* The technology stack is composite and broad and needs to be coordinated across standards and across Standards Development Organizations (SDOs)
+* People, SDOs, and governments are the key actors who need to collaborate to ensure that digital credentials/identities solve more problems than they create because identity is not only technology but also governance
+* It is crucial to pay close attention to the impact on security, privacy, and human rights in general, and the proposed method of analysis is threat modeling
 
 We seek [input](https://github.com/w3c/identity-web-impact/issues) from the community on proposals that could help progress on these topics and other topics that this document may contribute to identifying.
 
@@ -48,11 +48,13 @@ The concept of identity is very broad and covers psychology, social sciences, ma
 
 When we think about identity, we often think about our identity as individuals. It is inherent, although we tend to give a different meaning to our identity according to our culture, from the Western "*Cogito ergo sum*" (I think therefore I am) [[discourse-on-the-method]] to the African "*Ubuntu*" (I am because you are) [[what-does-ubuntu-really-mean]] or the Eastern "*tat tvam asl*" (that thou art), which express two notions, the man's real self (ātman), and the Consmic Self (brahman) [[a-dictionary-of-hinduism]].
 
-Analyzing the etymology, the term **identity** comes from the Latin root “*idem*”, which means “*the same*” [[oxford-etymology-identity]]. From the Cambridge Dictionary, we can say it is “*the fact of being, or feeling that you are, a particular type of person, organization, etc.; the qualities that make a person, organization, etc. different from others*” [[cambridge-dictionary-identity]].
+Analyzing the etymology, the term **identity** comes from the Latin root “*idem*”, which means “*the same*” [[oxford-etymology-identity]] so while it's an intimate concept, we also use it to distinguish ourselves from others. This is well explained in the Cambridge Dictionary in which the identity is “*the fact of being, or feeling that you are, a particular type of person, organization, etc.; the qualities that make a person, organization, etc. different from others*” [[cambridge-dictionary-identity]].
 
-Looking more closely at the Information Technology (IT) domain, the ISO/IEC 24760-1:2019 [[ISO-IEC-24760-1]] defines **Identity** is “*a set of attributes related to an entity*”. Where the **entity** is something "*that has recognizably distinct existence*", and that can be "*logical or physical*" such as "*a person, an organization, a device, a group of such items, a human subscriber to a telecom service, a SIM card, a passport, a network interface card, a software application, a service or a website*". These **attributes** are “*characteristics or properties*” such as “*an entity type, address information, telephone number, a privilege, a MAC address, a domain name*”. To complete the definition of *entity* and *identitfiers*, it is important to note that they always refer to a **domain** of applicability, the specific *context* where they can be used (e.g., an organization, a country, a university).
+Thus, *"from a sociocultural perspective, an individual’s identity is socially constructed, forming from early childhood from their interactions and relationships with others"* [[constructing-an-identity]]. Therefore, our identity is tied to society and the third parties we interact with and which, often, provide us with an identity, the elements to refer to it and to prove who we are.
 
-Thus, a particularly important point is clear: there are not only identities of people, individuals, or human beings. We can also have identities for organizations, pets, and **Non-Human Identities** (NHI). NHI are all those accounts used by widely used by “devices, services, and servers” in Networking, Cloud, and Workloads [[the-evolving-landscape-of-non-human-identity]].
+Looking more closely at the Information Technology (IT) domain, the ISO/IEC 24760-1:2019 [[ISO-IEC-24760-1]] defines **Identity** as “*a set of attributes related to an entity*”. Where the **entity** is something "*that has recognizably distinct existence*", and that can be "*logical or physical*" such as "*a person, an organization, a device, a group of such items, a human subscriber to a telecom service, a SIM card, a passport, a network interface card, a software application, a service or a website*". These **attributes** are “*characteristics or properties*” such as “*an entity type, address information, telephone number, a privilege, a MAC address, a domain name*”. To complete the definition of *entity* and *identitfiers*, it is important to note that they always refer to a **domain** of applicability, the specific *context* where they can be used (e.g., an organization, a country, a university).
+
+Thus, a particularly important point is clear: there are not only identities of people, individuals, or human beings. We can also have identities for organizations, pets, and **Non-Human Identities** (NHI). NHI are all those accounts widely used by “devices, services, and servers” in networking, cloud, and workloads [[the-evolving-landscape-of-non-human-identity]].
 
 Now, an important logical step. To claim our identities, we present **credentials**, whether in the physical or digital world. Just as we do not have a one-size-fits-all definition of identity, we also do not have a one-size-fits-all definition of credential, as it changes according to context. Starting with the definition from the Cambridge Dictionary, a (digital) credential is “*a piece of information that is sent from one computer to another to check that a user is who they claim to be or to allow someone to see information*” [[cambridge-dictionary-identity]]. While high-level, this definition considers two important aspects: on the one hand, the credential is used to prove our claims, such as who we are, and on the other hand, it can be used to gain access to information:
 
@@ -143,7 +145,7 @@ So, the challenge is enabling this technological innovation by being aware of th
 
 Therefore, it is necessary to analyze the various threats to mitigate them at their root in designing and implementing these technologies and related standards.
 
-As an example, below is an initial analysis of threats to human rights (Harms) concerning government-issued digital identities using [Microsoft's Responsible innovation](https://learn.microsoft.com/en-us/azure/architecture/guide/responsible-innovation/#harms-modeling) toolkit:
+As an example, below is an initial analysis of threats to human rights (Harms) concerning government-issued digital identities using Microsoft's Harms Modeling [[harms-modeling]]:
 
 * **Opportunity Loss** (*Discrimination*): This complex issue spans multiple areas. *Digital divide*: if digital identities are required for access to public services and no alternatives are present, and if they depend on certain hardware, software, or stable connectivity, it can lead to discrimination for people who do not have availability of these resources. In addition to discrimination within the same country, there is further discrimination if there is no “cross-border” interoperability between the technologies and implementations used by different governments.  
 * **Economic loss** (*Discrimination*): The availability of digital identities and related credentials, which can contain a lot of information regarding wealth status, can be used to discriminate against access to credit. This can also be generalized - as was identified during a [W3C breakout session](https://github.com/w3c/breakouts-day-2024/issues/12) - and concerns the [Javons paradox](https://www.tandfonline.com/doi/abs/10.1080/15487733.2009.11908028). The more information available, the more likely it is that collection, particularly in greedy data-driven contexts, is abused.
@@ -157,7 +159,7 @@ With these assumptions, before proceeding, it is important to understand how dig
 Let us start with the example of a person's identity given earlier and break it down. We had:
 
 * Credentials of a social network that are used on the same site.  
-* Credentials of a social network that are used on an different site.  
+* Credentials of a social network that are used on a different site.  
 * Driver's license within a digital wallet application.
 
 These examples represent the [evolutionary stages of Internet Identity](https://www.lifewithalacrity.com/article/the-path-to-self-soverereign-identity/) described by Christopher Allen at the [Internet Identity Workshop (IIW)](https://internetidentityworkshop.com). From these developmental stages, the community agrees that there are currently three models of identity relationships [[three-models-of-digital-identity-relationships]]. Let us analyze them.
@@ -174,6 +176,7 @@ The centralized identity model is the typical scenario when the user logs in to 
 </figure>
 
 Here is the simplified *Data Flow*:
+
 * **Authentication**: The user authenticates themselves with the centralizdd system using their credentials.
 * **Access Granting**: This system grants access to the resource.
 
@@ -209,20 +212,20 @@ Here is the simplified *Data Flow*:
 * **Trust and Access**: The SP or the RP, trusting the IdP, accepts the Identity Assertion sent by the user and grants access.
 
 Perspectives:
-* **Security**: This model mitigate the user's issue of remembering multiple passwords, the identity fragmentation, and relieves the need for the SP or RP to manage the authentication aspects.
+* **Security**: This model mitigates the user's issue of remembering multiple passwords, the identity fragmentation, and relieves the need for the SP or RP to manage the authentication aspects.
 * **Privacy**: this model still has some implications because the IdP knows what third-party services the user has accessed. Additionally, the technology uses "*third-party (cross-site) cookies that are considered harmful to the web and must be removed*" [[third-party-cookies-must-be-removed]].
 * **Standards**: standards support interoperability between different systems. The most used in this context are [OASIS Security Assertion Markup Language (SAML)](https://www.oasis-open.org/standard/saml/) and [OpenID Connect](https://openid.net/connect/), which underpins [OAuth](https://oauth.net/) for authorization and different token formats.
 
 <div class="advisement" id="a2">
     <span class="marker">Enabling Federated identity in the Web platform without third-party cookies</span><br>
-    The [Federated Identity Community Group](https://www.w3.org/community/fed-id/) was born to resolve these privacy concerns, incubating the Federated Credential Management API [[FEDCM]] and other APIs to implement the Federated Identity Model in the Web Platform. The [Federated Identity Working Group](https://www.w3.org/groups/wg/fedid/) also came from this group to proceed with standardization.
+    The [Federated Identity Community Group](https://www.w3.org/community/fed-id/) was born to resolve these privacy concerns for this model. The Group is working on Federated Credential Management API [[FEDCM]] and other APIs such as Login Status API, to implement the Federated Identity Model in the Web Platform. The [Federated Identity Working Group](https://www.w3.org/groups/wg/fedid/) also came from this group to proceed with standardization.
 </div>
 
 ## Decentralized identity model ## {#decentralized-identity-model}
 
 In the decentralized model, also known as the Self-Sovereign Identity (SSI) or three party model, the user independently administers their identities and is the highest expression of user-centric identity. It is the newest model, and several pilot projects are underway for large-scale implementations.
 
-Note: We will examine the decentralized identity model more closely, as it is the source of a new set of challenges.
+Note: We will examine the decentralized identity model more closely, as it is the source of new challenges.
 
 ### Architecture ### {#architecture}
 
@@ -245,6 +248,7 @@ This model comprises both technology and governance aspects, sliced in different
     <img src="figures/decentralized-identity-layers.svg"></img>
     <figcaption>Decentralized Identity Architecture, inspired and adapted by ToIP [[introduction-toip]]</figcaption>
 </figure>
+
 
 Let us start by looking at the layers.
 
@@ -317,7 +321,6 @@ Some distinctive properties of DIDs are [[did-intro]]:
 * **Cryprographically verifable**: there is a mechanism to cryptographically prove identity and ownership.
 
 
-
 Note: The **ToIP Techological Stack** often icludes Identifiers also at other layers.
 
 The **Verifiable Data Registry (VDR)**, is the registry holds the data needed to verify credentials and their status.
@@ -349,7 +352,7 @@ Here is the data flow of credentials from when they are created to when they are
 
 ### Security and Privacy ### {#security-and-privacy}
 
-It is interesting reflect on how this model differs from a security and privacy perspective both from previously described models and from the use of physical identity documents, as credentials can enable this use case:
+It is interesting to reflect on how this model differs from a security and privacy perspective both from previously described models and from the use of physical identity documents, as credentials can enable this use case:
 * **Decentralized vs. Federated Model**: Let us analyze one of the privacy issues of the federated model: whoever provides the identity can track the user. This is one of the threats this model wants to mitigate since the identity is in the user’s Wallet, and they use it as they wish.
     
     Does this guarantee its untraceability? One can presume that the answer is *"it depends"*. It depends on how the architecture is defined and implemented and the technologies used. For example, when we present our credentials to log in, the verifier contacts the issuer directly, asking if the credentials are still valid, and we continue to be traceable.
@@ -357,13 +360,13 @@ It is interesting reflect on how this model differs from a security and privacy 
     
     Presenting a digital credential, which could also support the submission of a subset of the contained claims, can improve the situation but, again, we may encounter the problem of the verifier contacting the issuer for verification, a problem that is rarer to happen sending the file, although databases of stolen documents do exist and a verifier could make a request with the passport-id to verify the status.
 
-Note: Architectural change can solve some issues but can also generate new ones, this is why a thorough analysis is necessary.
+Note: Architectural change can solve some issues and generate new ones. This is why a thorough analysis is necessary.
 
-We can take a step back and understand what privacy properties are needed for digital identity, considering that the higher the level of credential assurance, the more threats can impact the user. Over the years, several proposals have been made to understand the properties of digital identities, such as [Kim Cameron's 7 Identity Laws](https://www.identityblog.com/?p=352) and Ben Laure's Three Properties. Analyzing the latter [[selective-disclosure]]:
+We can take a step back and understand what privacy properties are needed for digital identity, considering that the higher the level of credential assurance, the more threats can impact the user. Over the years, several proposals have been made to understand the properties of digital identities, such as [Kim Cameron's 7 Identity Laws](https://www.identityblog.com/?p=352) and Ben Laure's Privacy Requirements. Analyzing the latter [[selective-disclosure]]:
 
 * **Verifiable**: Identities, credentials, and various claims must be verifiable, which is possible through appropriate cryptographic proofs. This is part of the security aspects, which include cryptography.
 * **Minimal**: This is a privacy aspect. When we send information to the verifier, the information should be minimized as much as possible. For example, if we have to show that we are of age, it is okay to submit all the credentials or even the specific claim of the date of birth, but simply that I am of age.  
-* **Unlinkable**: This is another privacy aspect related to the minimal issue anyway. Suppose any party involved in the interaction, such as the Issuer or Verifier, or even a third party, can link and correlate the information we have sent. In that case, this can be done through various techniques, and privacy is compromised.
+* **Unlinkable**: This is another privacy aspect of the minimal issue anyway. Suppose any party involved in the interaction, such as the Issuer or Verifier, or even a third party, can link and correlate the information we have sent. In that case, this can be done through various techniques, and privacy is compromised.
 
 So we have a number of properties, both security and privacy as a starting point. How can we implement them? First of all, different credential formats, have different privacy and security features [[verifiable-credentials-flavors-explained]] and we can expand the discussion not only to formats but to all other components of the architecture, which must be aligned to ensure security and privacy.
 
@@ -372,7 +375,7 @@ So we have a number of properties, both security and privacy as a starting point
 
     Given the levels of complexity, a comprehensive analysis of threats to privacy, security, and human rights is necessary [[human-rights-and-technical-standards]].
 
-    This is especially important for high-assurance credentials, such as those issued by governments, as highlighted by organizations such as the Electronic Frontier Foundation (EFF)[[eff-digital-identification]] and Access Now [[access-now-whyid]].
+    This is especially important for high-assurance credentials, such as those issued by governments, as highlighted by organizations such as the Electronic Frontier Foundation (EFF) [[eff-digital-identification]] and Access Now [[access-now-whyid]].
     
     W3C recognized the [need for rights-respecting digital credentials](https://github.com/w3c/strategy/issues/458) and started a joint [Threat Model for Decentralized Identities](https://github.com/w3c-cg/threat-modeling/blob/main/models/decentralized-identities.md):
     * [Technical Architecture Group (TAG)](https://www.w3.org/groups/other/tag/)
@@ -383,10 +386,11 @@ So we have a number of properties, both security and privacy as a starting point
     * [Threat Modeling Community Group (TMCG)](https://www.w3.org/community/tmcg/) (open to all privacy, security and human rights experts).
 
     **Threat Modeling** is "*a family of structured, repeatable processes that allows to make rational decisions to secure applications, software, and systems*" [[threat-modeling-designing-for-security]]. This Threat Model is using different frameworks and toolkits to cover the different threat types, such as:
-        * **Security**: *STRIDE* (Spoof, Tamper, Repudiation, Denial of service, Escalation of privileges), *RFC 3552*.
-        * **Privacy**: *LINNDUN* (Linking, Identifying, Non-Repudiation, Detecting, Data Disclosure, Unawareness & Inintervenability, Non-Compliance), *RFC 6973*.
-        * **Human Rights**: *Microsoft's Types of Harm*, and *Access Now #WhyID*.
-       Other approaches includes the [Self-Review Questionnaire: Security and Privacy](https://www.w3.org/TR/security-privacy-questionnaire/) and the *OSSTMM*.
+        * **Security**: *STRIDE* (Spoofing, Tampering, Repudiation, Denial of service, Escalation of privileges) [[STRIDE]], and *Guidelines for Writing RFC Text on Security Considerations* [[RFC3552]].
+        * **Privacy**: *LINNDUN* (Linking, Identifying, Non-Repudiation, Detecting, Data Disclosure, Unawareness & Inintervenability, Non-Compliance) [[LINDDUN]], and *Privacy Considerations for Internet Protocols* [[RFC6973]].
+        * **Human Rights**: *Harms Modeling* [[harms-modeling]], and *Access Now #WhyID* [[access-now-whyid]].
+
+       Other approaches includes the [Self-Review Questionnaire: Security and Privacy](https://www.w3.org/TR/security-privacy-questionnaire/) and the *OSSTMM* [[OSSTMM-3]].
 
     The Threat Model also includes a list of various mitigation techniques, particularly those based on cryptography techniques such as Zero Knowledge Proof (ZKP), and additional methods for enabling secure and privacy-preserving technology.
   
@@ -395,10 +399,13 @@ So we have a number of properties, both security and privacy as a starting point
 
 ### Standards ### {#standards}
 
+
 As noted, VCDM and DID define only certain elements of the architecture. Other SDOs define other elements that are essential for the architecture to function. 
 Therefore, coordination between these entities is necessary to ensure everything works seamlessly. So, let us look at the standards involved for the various components needed.
 
 To understand the extent of the various standards, is it possible to refer to Michael Palage's [Digital Identity Galaxy](https://www.linkedin.com/posts/michaelpalage_eic2024-identiverse2024-iam-activity-7168002034833604608-JF5E).
+
+Note: Not all of the technologies indicated are standard, so they are not to be considered normative references. Some are drafts, and others have been indicated because, although in an embryonic state, they have interesting features.
 
 This is why several Standards Development Organizations (SDOs) such as the World Wide Web Consortium (W3C), the Internet Engineering Task Force (IETF), the OpenID Foundation (OIDF), and the Decentralized Identity Foundation (DIF) are coordinating to standardize the components and how they should communicate:
 
@@ -408,25 +415,28 @@ This is why several Standards Development Organizations (SDOs) such as the World
 * **Securing Mechanisms:** Each mechanism may or may not support different privacy features or be quantum-resistant:  
     * **Enveloped Formats (Credential Formats)**: The proof wraps around the serialization of the credential.  
         JSONs are enveloped using JSON Object Signing and Encryption (&#91;JOSE](https://datatracker.ietf.org/wg/jose/about/)), and we can find JWT, JWS, and JWK here. JOSE is *cryptographically agile* (as it can fit different cryptographic primitives) and can also have Selective Disclosure (SD) with &#91;SD-JWT](https://www.ietf.org/archive/id/draft-fett-oauth-selective-disclosure-jwt-02.html) (which uses HMAC). New securing mechanisms are coming up, like &#91;SD-BLS](https://arxiv.org/abs/2406.19035) (which uses BLS) and ongoing efforts to fit BBS#.  
-        CBORs are enveloped using CBOR Object Signing and Encryption (&#91;COSE](https://www.rfc-editor.org/rfc/rfc9052)). Other formats include mdoc and &#91;SPICE](https://datatracker.ietf.org/wg/spice/about/).  
+        CBORs are enveloped using CBOR Object Signing and Encryption (&#91;COSE](https://www.rfc-editor.org/rfc/rfc9052)). Other formats include [ISO mDocs](https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18013:-5:ed-1:v1:en) and &#91;SPICE](https://datatracker.ietf.org/wg/spice/about/).  
         The mechanism to use VCDM with JOSE/COSE is described in [Securing Verifiable Credentials using JOSE and COSE](https://www.w3.org/TR/vc-jose-cose/).  
     * **Embedded Formats (Signature Algorithms):** The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in [Verifiable Credential Data Integrity 1.0](https://www.w3.org/TR/vc-data-integrity/).  
 * **Status Information (Revocation Algorithms)**: *Issuers* can implement several ways to keep the credential's status up to date, such as a Revocation List, a Status List (e.g., [Bitstring Status List v1.0](https://www.w3.org/TR/vc-bitstring-status-list/)), and Cryptographic Accumulators, etc..
-* **Communication Protocols**: for the different phases of Issuance and Presentation (e.g., &#91;OID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html), &#91;OID4VP](https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html), [SIOPv2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html)).
+* **Communication Protocols**: for the different phases of Issuance and Presentation such as: \[OID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html), \[OID4VP](https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html), [SIOPv2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html), ISO REST’s API, [Verifiable Credentials API](https://github.com/w3c-ccg/vc-api).
 
 Note: This list is representative. For more detailed information, please refer to the [Comparison Matrix](https://docs.google.com/spreadsheets/d/1X93ptJcmfX1NZEo5E7ElnqJ-knDS4Dj6JOYSJ_2PsUw/edit#gid=1084392809).
 
 <div class="advisement" id="a4">
-    <span class="marker">Avoiding discrimination by standardizing interoperability</span><br>
+    <span class="marker">Mitigating surveillance, censorship, intrusion, and discrimination and ensuring interoperability by standardizing digital credentials in the web platform</span><br>
     
-    One of the significant challenges today is the interoperability of various technologies. This issue becomes particularly evident in the context of government-issued digital credentials when comparing the interoperability of physical documents such as Passports.
+    It's not easy to manage digital identities. In particular, if they are related to humans, it's important to *give people control over the identifying information about themselves they are presenting in different contexts on the web, and be transparent about it* [[design-principles]]. 
 
-    The threat here is clear: if a service supports only a specific format, it excludes and discriminates against users who use a different format due to their government’s decisions rather than their own. Consequently, this limitation affects users and restricts the service’s business potential.
+    Given that, a *user agent should help its user present the identity they want in each context they are in, and should prevent or support recognition as appropriate* [[privacy-principles]], the [Web Platform Incubator Community Group (WICG)](https://www.w3.org/groups/cg/wicg/), incubated the Digital Credentials API [[DIGITAL-IDENTITIES]], a browser API to mediate the use of Digital Credentials between websites and wallets, to mitigate different threats to the users and promoting interoperability, and it is already working on the [Profile for OpenID4VP](https://github.com/openid/OpenID4VP/issues/125). 
 
-    To address these concerns, there are ongoing discussions about standardizing credential presentation at the web platform level through the [Digital Credentials API](https://github.com/w3c/strategy/issues/450).
-    The Working Group already on the Federated Identity Model is undertaking this standardization effort as the API is similar. The goal is to provide an optimal user experience by ensuring user agents operate securely and in privacy-preserving ways.
+    The interoperability is important: if a service supports only a specific format, it excludes and discriminates against users who use a different format due to their government’s decisions rather than their own. Consequently, this limitation affects users and restricts the service’s business potential.
 
-    Moreover, the Group’s new scope proposal aims to adopt this API with a broader perspective. It suggests incorporating the "Issuance" aspect to enable all possible use cases through the web platform.
+    This API will follows the *users first, developers second, and browser engines third* principle [[design-principles]], and meeting the needs of regulations (e.g. [eIDAS](https://www.european-digital-identity-regulation.com) or [Children's Online Privacy Protection Rule (COPPA)](https://www.govinfo.gov/content/pkg/PLAW-105publ277/pdf/PLAW-105publ277.pdf)) [[digital-identity-explainer]] .
+
+    For these reasons, the Federated Identity Working Group - which has an API to integrate federated identities and thus has a close implementation link to decentralized ones - is in a [rechartering process to adopt the Digital Credentials API](https://github.com/w3c/strategy/issues/450), being guided by the Threat Model to make the API secure, privacy-preserving and rights-respecting.
+
+    Moreover, the group’s new scope proposal has a broader perspective. It can incorporates also the other data flows of decentralized identity model to enable all possible use cases through the web platform.
 
 </div>
 
@@ -496,7 +506,7 @@ A car, identified by the Vehicle Identification Number (VIN), interacts with var
 - **Manufacturer, vendors and workshops**: Tracking maintenance and service history.
 - **Governmental Entities**: Registration and tax payment.
 - **Owners and Users**: Ownership verification and usage rights.
-- **Road Infrastracture**: Toll payments and other interactions during use.
+- **Road Infrastructure**: Toll payments and other interactions during use.
 - **Insurance Companies**: Policy management and claims processing.
 
 It could also be opened and closed directly through the owner’s Wallet, making the car a *Verifier* during unlocking and a *Subject* in the owner's wallet.
@@ -527,7 +537,7 @@ We will conduct a thorough historical analysis.
 
 ### Physical Identity ### {#physical-identity}
 
-In the past, individuals were known and acknowledged based on their physical attributes and voices, particularly in small, close-knit communities where mutual familiarity prevailed. Within such contexts, the establishment of trust among acquaintances served as an effective means of identification. 
+Previously, individuals were known and acknowledged based on their physical attributes and voices, particularly in small, close-knit communities where mutual familiarity prevailed. Within such contexts, establishing trust among acquaintances served as an effective means of identification. 
 
 Note: Notably, the assurance of our identity in the social realm often relies on a third party, such as society as a collective entity or directly through government authorities.
 
@@ -553,9 +563,9 @@ Note: The primary purpose of photography is to associate the passport with the i
 
 As the technology evolved, the idea was to use machines to help read the documents. This would speed up the verification process. But it was necessary to make the documents easy for machines to read.
 
-To address this, particularly for travel documents, ICAO began working on machine-readable travel documents in **1968**, and in **1980** , it published Document 9303, which contained the specification of a machine-readable code to be printed on documents [[doc-9303]]. It is the code with many "`<`"s in our passports and on some ID cards. 
+To address this, particularly for travel documents, ICAO began working on machine-readable travel documents in **1968**, and in **1980**, it published Document 9303, which contained the specification of a machine-readable code to be printed on documents [[doc-9303]]. It is the code with many "`<`"s in our passports and on some ID cards. 
 
-As an evolution, in **1998**, Doc 9303 also included biometric information transmitted via *RFID* technology. Nowadays other machine-readable techniques include barcodes and QR codes.
+As an evolution, in **1998**, Doc 9303 also included biometric information transmitted via *RFID* technology. Nowadays, other machine-readable techniques include barcodes and QR codes.
 
 Note: ISO endorsed this document through ISO/IEC 7501-1, making the role of Standard Development Organizations (SDOs) particularly important for interoperability in this field.
 
@@ -571,7 +581,7 @@ Then, the user photographs or scans the documents (rendering ineffective the ant
 
 Often, the financial provider delegates the process to specialized companies that use Machine Learning and manual control to verify the information.
 
-TThus, we have at least two problems: the entire document is sent to different places, making a data breach more likely, and Machine Learning systems often analyze it. The problem is well described in "[AI & the Web](https://www.w3.org/reports/ai-web-impact/)".
+Thus, we have at least two problems: the entire document is sent to different places, making a data breach more likely, and Machine Learning systems often analyze it. The problem is well described in "[AI & the Web](https://www.w3.org/reports/ai-web-impact/)".
 
 Moreover, an additional privacy concern is inherent in this use case - which applies even when the document is used physically. Even if the user uses the document for a specific reason (e.g., proof of address or proof of age), they must send the whole document, thus showing more information than is needed for the specific verification, violating the [privacy principle of data minimization](https://www.w3.org/TR/privacy-principles/#data-minimization).
 
@@ -583,7 +593,7 @@ Each government has made its own architectural choices and can offer different s
 Below is a short list with some implementation examples:
 
 * **Estonia**: [Estonian e-Identity](https://www.id.ee/en/).
-* **Europe**: &#91;EUDI-ARF](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework) (electronic IDentification, Authentication, and trust Services, implementation of EU’s eIDAS 2.0 legislation).  
+* **Europe**: [European Digital Identity Architecture Reference Framework (EUDI-ARF)](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework).  
 * **India**: [Aadhaar](https://uidai.gov.in).
 * **Italy**: [Italy's Public Digital Identity System (SPID)](https://www.spid.gov.it/en/). 
 * **Nigeria**: [Nigeria's eID](https://nimc.gov.ng/digital-identity-ecosystem/).
@@ -598,29 +608,33 @@ Let's delve into an extensively debated use case requiring a solution: age verif
 
 The holder has a digital passport in the form of government-issued credentials; this credential, in its claims, also contains age information.
 * **Full Credential**: It is possible to send the full credential since it also contains the date of birth, from which the verifier can derive the age. This doesn’t meet the principle of Data Minimization, though, as I’m sending a lot of other information that can be misused and make us traceable.
-* **Selective Disclosure**: If only the date of birth is submitted, we still have a minor data release, as the verifier is interested not in the date of birth but in whether the person is of age. If the credential provided supports this privacy feature, which allows us to send individual attributes/claims, we can send only the date of birth, by which the verifier can derive the age. It certainly improves the situation concerning Data Minimization, but it does not solve it totally. To overcome this problem, some credentials have specific attributes with boolean values to present that our age exceeds a certain value (e.g., 16, 18, 21).
-* **Range Proof**: If we send the verifier the boolean result of a computation related to the value of a specific attribute (e.g., the verifier asks us if we are older than 21 years old, and we send the result of the computation on the date of birth).
+* **Selective Disclosure** [[selective-disclosure]]: If only the date of birth is submitted, we still have a minor data release, as the verifier is interested not in the date of birth but in whether the person is of age. If the credential provided supports this privacy feature, which allows us to send individual attributes/claims, we can send only the date of birth, by which the verifier can derive the age. It certainly improves the situation concerning Data Minimization, but it does not solve it totally. To overcome this problem, some credentials have specific attributes with boolean values to present that our age exceeds a certain value (e.g., 16, 18, 21).
+* **Range Proof** [[range-proofs]]: If we send the verifier the boolean result of a computation related to the value of a specific attribute (e.g., the verifier asks us if we are older than 21 years old, and we send the result of the computation on the date of birth).
 
 The problem is that, even in the last two cases, we can present potentially linkable information to us or our issuer, which the verifier can use to make correlations. For example, it is necessary to decouple the signature from the signer and not use the same identifiers in different sessions.
 
-Conversely, the verifier will have to somehow prove that he or she performed the age verification, which further complicates the matter.
+Conversely, the verifier will have to somehow prove that they performed the age verification, which further complicates the matter.
 
 Therefore, even in a scenario that may seem trivial, it requires extensive study.
 
 <div class="advisement" id="a5">
     <span class="marker">Mitigating the threats at technological and governance levels</span><br>
 
-    According to the Trust Over IP Stack, the ecosystem of Decentralized Identities is very broad and combines technological aspects such as Digital Credentials and Wallets - and those of Governancee [[introduction-toip]].
+    In the context of high-assurance credentials and particularly those issued by governments, even the solution related to a seemingly simple problem requires a thorough analysis of the impacts these solutions may have on the population.
 
-    Therefore, some threats exist at the technology level and can be managed by SDOs and implementers, but governments must manage others at the governance level. Governments provide the requirements and technology architectures that are then standardized and implemented.
+    As we have analyzed, an end-to-end solution requires the conjunction of technological aspects related to the stanzardization of technologies, their implementation, and the adoption, which is defined by elements of governance that permeate the technological aspects.
 
-    For example, a centralized identity system is prone to surveillance. Conversely, a decentralized system with certain technological features and cryptographic methods can mitigate surveillance and respect human rights.
+    In this specific case, we have different stakeholders such as SDOs, implementers, governments who through regulatory bodies defines the needs, the requirements, and the architectures, and last but not least, the users who are impacted by these solutions.
+    
+    Therefore, it is important for all these stakeholders to work together for joint value creation [[stakeholder-relationships-and-responsibilities]], also to ensure the proper handling of threats in the areas of security, privacy, and human rights: some threats exist at the technology level and can be managed by SDOs and implementers, but governments must manage others at the governance level:
 
-    Other issues are related to digital wallets. On the one hand, it is necessary to balance security and hardware and software requirements that could discriminate. On the other hand, it is important to avoid vendor lock-in and prevent what happened with the Digital Market Act and default browser choice.
+    * A centralized system is prone to surveillance. In contrast, a decentralized system with certain technological features and cryptographic methods can mitigate surveillance and respect human rights.
 
-    Therefore, it is important to do a risk analysis with both technology and government stakeholders to mitigate threats appropriately.
+    * When a decentralized system is used there are issues related to digital wallets. On the one hand, it is necessary to balance security and hardware and software requirements that could discriminate. On the other hand, it is important to avoid vendor lock-in and prevent what happened with the Digital Market Act and default browser choice.
 
-    Suppose threats cannot be managed at the technology level. In that case, they should be managed at the governance level, for example, by banning certain uses or removing features that are not technically possible to mitigate the threat. Two-way communication between governments, SDOs and implementers is therefore needed.
+    * If threats cannot be effectively managed at the technology level, they should be addressed at the governance level. This can involve measures such as prohibiting certain uses or removing features that cannot be technically mitigated to reduce the threat.
+    
+    Active cooperation between governments, SDOs, implementers and users is essential. SDOs can serve as a neutral forum to discuss these issues and create value together.
 
 </div>
 
@@ -907,6 +921,42 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "href":"https://identity.foundation/faq/",
     "publisher" : "Decentralized Identity Foundation",
     "author" : ["Juan Caballero"]
+  },
+    "LINDDUN": {
+    "title": "LINDDUN: PRIVACY THREAT MODELING",
+    "href":"https://linddun.org",
+    "publisher" : "DistriNet Research Unit"
+  },
+    "STRIDE": {
+    "title": "STRIDE model",
+    "href":"https://shostack.org/files/microsoft/The-Threats-To-Our-Products.docx",
+    "publisher" : "Microsoft"
+  },
+    "range-proofs": {
+    "authors": ["Miranda Christ","Foteini Baldimtsi","Konstantinos Kryptos Chalkias","Deepak Maram","Arnab Roy","Joy Wang"],
+    "title": "SoK: Zero-Knowledge Range Proofs",
+    "href":"https://eprint.iacr.org/2024/430",
+    "publisher" : "Cryptology"
+  },
+  "harms-modeling": {
+    "title": "Harms modeling",
+    "href" : "https://learn.microsoft.com/en-us/azure/architecture/guide/responsible-innovation/harms-modeling/",
+    "publisher" : "Microsoft"
+  },
+  "digital-identity-explainer": {
+    "title": "Digital Credentials API Explainer",
+    "href" : "https://github.com/WICG/digital-credentials/blob/main/explainer.md",
+    "publisher" : "WICG"
+  },
+  "constructing-an-identity": {
+    "author" : ["Sharon Fraser"],
+    "title": "Constructing an Identity. In: Fan, S., Fielding-Wells, J. (eds) What is Next in Educational Research?",
+    "href":"https://doi.org/10.1007/978-94-6300-524-1_8"
+  },
+    "stakeholder-relationships-and-responsibilities": {
+    "title": "Stakeholder Relationships and Responsibilities: A New Perspective",
+    "href":"https://doi.org/10.4468/2019.1.04civera.freeman",
+    "authors" : ["Chiara Civera", "R. Edward Freeman"]
   }
 
 }
