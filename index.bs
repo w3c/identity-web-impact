@@ -105,7 +105,7 @@ There are several aspects, first of all, the *context* and *domain* in which the
 
 This is why we also need **governance frameworks** or **trust frameworks**. These frameworks include business, legal, and technical rules that help establish and maintain trust in the issuers of credentials. 
 
-This includes establishing the **levels of assurance (LOA)**. Follow as an example the *Identity Assurance Level (IAL)* from NIST-SP-800-63-3 [[NIST-SP-800-63-3]]:
+This includes establishing the **Levels of (identity) Assurance (LOA)**. Follow as an example the *Identity Assurance Level (IAL)* from NIST-SP-800-63-3 [[NIST-SP-800-63-3]]:
 * **IAL1**: No requirement to prove a specific real-life identity, e.g., identity can be self-asserted.
 * **IAL2**: Remote or in-person identity proofing with supporting evidence is required.
 * **IAL3**: Physical presence is required for identity proofing, with proper verification of evidence.
@@ -152,7 +152,7 @@ As an example, below is an initial analysis of threats to human rights (Harms) c
 * **Dignity loss** (*Dehumanization*): For example, if the vocabulary used does not correctly describe people’s characteristics, this can reduce or obscure people’s humanity and characteristics.
 * **Privacy Loss** (*Surveillance*): if this technology is not designed and implemented properly, it can lead to surveillance by state and non-state actors such as government and private technology providers. For example, centralized or federated models are more prone to these threats, while decentralized models are less so, but it depends on how they are implemented. Therefore, it is necessary to provide privacy-preserving technologies and implement them properly.
 
-## Digital identity management models ## {#digital-identity-management-models}
+# Digital identity management models # {#digital-identity-management-models}
 
 With these assumptions, before proceeding, it is important to understand how digital identities are managed and how they have evolved over the years. 
 
@@ -164,7 +164,7 @@ Let us start with the example of a person's identity given earlier and break it 
 
 These examples represent the [evolutionary stages of Internet Identity](https://www.lifewithalacrity.com/article/the-path-to-self-soverereign-identity/) described by Christopher Allen at the [Internet Identity Workshop (IIW)](https://internetidentityworkshop.com). From these developmental stages, the community agrees that there are currently three models of identity relationships [[three-models-of-digital-identity-relationships]]. Let us analyze them.
 
-### Centralized identity model ### {#centralized-identity-model}
+## Centralized identity model ## {#centralized-identity-model}
 
 In the centralized identity model, also known as siloed or traditional, a single provider offers both the identity (and its credentials, typically a username and password) and the service. This older model was used in the early days of the Internet and the Web and is still used today.
 
@@ -175,8 +175,9 @@ The centralized identity model is the typical scenario when the user logs in to 
     <figcaption>Centralized Identity Management</figcaption>
 </figure>
 
-Here is the *Data Flow*:
-* **Authentication**: The user authenticates themselves with the centralized system using their credentials.
+Here is the simplified *Data Flow*:
+
+* **Authentication**: The user authenticates themselves with the centralizdd system using their credentials.
 * **Access Granting**: This system grants access to the resource.
 
 Perspectives:
@@ -191,7 +192,7 @@ Perspectives:
     The [W3C Web Authentication Working Group](https://www.w3.org/groups/wg/webauthn/) brought to the Web Platform standardizing Web Authentication Level 2 [[webauthn-2]], and is developing Level 3 [[webauthn-3]]. This technology, moreover, can also be used to make online transactions more secure by using the same underlying technology to confirm payments, such as the "payment" extension for Secure Payment Confirmation [[secure-payment-confirmation]].
 </div>
 
-### Federated identity model ### {#federated-identity-model}
+## Federated identity model ## {#federated-identity-model}
 
 In the federated identity model, also known as a third-party **Identity Provider (IdP)**, the function of *making available identity information* is separated from the one *which provides a service to the user* - the **Service Provider (SP) or Relying Party (RP)** [[ISO-IEC-24760-1]].
 
@@ -220,49 +221,118 @@ Perspectives:
     The [Federated Identity Community Group](https://www.w3.org/community/fed-id/) was born to resolve these privacy concerns for this model. The Group is working on Federated Credential Management API [[FEDCM]] and other APIs such as Login Status API, to implement the Federated Identity Model in the Web Platform. The [Federated Identity Working Group](https://www.w3.org/groups/wg/fedid/) also came from this group to proceed with standardization.
 </div>
 
-### Decentralized identity model ### {#decentralized-identity-model}
+## Decentralized identity model ## {#decentralized-identity-model}
 
-In the decentralized model, also known as the Self-Sovereign Identity (SSI) model, the user independently administers their identities and is the highest expression of user-centric identity. It is the newest model, and several pilot projects are underway for large-scale implementations.
+In the decentralized model, also known as the Self-Sovereign Identity (SSI) or three party model, the user independently administers their identities and is the highest expression of user-centric identity. It is the newest model, and several pilot projects are underway for large-scale implementations.
 
 Note: We will examine the decentralized identity model more closely, as it is the source of new challenges.
 
-#### Architecture #### {#architecture}
+### Architecture ### {#architecture}
 
-The decentralized identity model introduces a significant shift in the architecture, moving away from federated IdPs, SPs, or RPs.
+The decentralized identity model marks a significant shift in architecture. Moving away from federated Identity Providers (IdPs) and Service Providers (SPs) or Relying Parties (RPs), the focus now centers on the user. 
+
+In this model, the user *controls* their credentials, acquires them from an *Issuer*, stores them in their *wallet*, and presents *them* to a Verifier. Verification activities are mediated by a *Verifiable Data Registry*, which contains the various information needed.
 
 <figure id="fig-decentralized-identity-model">
-    <img src="https://www.w3.org/TR/vc-data-model-2.0/diagrams/ecosystem.svg"></img>
-    <figcaption>Decentralized Identity Management [[vc-data-model-2.0]]</figcaption>
+    <img src="figures/decentralized-identity-model.svg">
+    <figcaption>
+        Decentralized Identity Model, adapted from Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]]</a>
+    </figcaptsion>
 </figure>
 
-Instead, it involves a new set of actors and dynamics, described in the W3C Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]]:
+To best understand the decentralized model and its end-to-end operation, we can refer to the model by Decentralized Identity Fundation [[did-faq]] build on the Trust Over IP architecture [[introduction-toip]] [[evolution-toip]].
 
-* The **Holder** (the *user*), who stores their credentials in a **Digital Wallet**, is at the heart of this architecture. This wallet, whether a native app or a web-based application, operates much like a physical wallet. Just as a physical wallet holds more than just IDs, the digital wallet can store various credentials and information. The transformation from physical to digital doesn’t change the wallet's fundamental role but enhances its capabilities with digital features.
+This model comprises both technology and governance aspects, sliced in different layers.We will then provide an overview of the various layers, focusing on specific elements related to credentials and identifiers, which are considered the two pillars of decentralized identities.
 
-* The **Issuer** is the entity that creates and issues credentials to the *Holder*. This can be a trusted *third-party* entity like governments or  universities. In some cases, credentials can be *self-issued* by the user, e.g., to represent informal skills or competencies. This flexibility allows for a broader range of credentials and applications.
+<figure id="fig-decentralized-identity-model-01">
+    <img src="figures/decentralized-identity-layers.svg"></img>
+    <figcaption>Decentralized Identity Architecture, inspired and adapted by ToIP [[introduction-toip]]</figcaption>
+</figure>
 
-* The **Verifier** in this model is akin to an SP or RP in federated models. It receives the credentials presented by the *Holder* and verifies them. Importantly, this process does not necessarily involve informing the *Issuer*. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.
 
-* The **Verifiable Data Registry (VRP)**, a crucial entity of this architecture. This registry holds the data needed to verify credentials and their status. This can be government databases, distributed ledgers, or other services. By maintaining this information, the VRP, depending on its form, enables verification without direct communication between the *Issuer* and the *Verifier*. 
+Let us start by looking at the layers.
+
+#### Layer 5: Trust Frameworks and Ecosystems  #### {#trust-layer}
+
+At this level we find compliance and regulation, governance and trust frameworks, which tell us who we can trust such as a particular issuer that follows specific Level of Assurance. These trust elements depend on the context - or domain - of reference. We can have different contexts such as state, government, as well as university contexts.
+
+Each context is governed by one or more governance or trust frameworks. For example, for the domain of credentials issued by governments in Europe we have [EU Digital Wallet](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/Technical+Specifications) and we can have others related to other states, as well as other domains such as individual organizations, enterprises or universities.
+
+Therefore, in the various architectures, *"Trust"* and its framework permeates all layers.
+
+Note: There are differences between the levels of DIF and with **ToIP Techological Stack**: *Governance* is a parallel halves and have specific frameworks for each level.
+
+#### Layer 4: Applications, Wallets, Products  #### {#application-layer}
+
+At this level we find the various applications, accessible to end users, that implement the model:
+ * **Applications**: that can be Native, Web Based, and it is possible to interact with them in different ways.
+ * **Digital Wallets**: in which the Holder stores their credentials.
+    Just as a physical wallet holds more than just IDs, the digital wallet can store various credentials and information. We can classify the wallets depending on several factors
+        * *Technology*: Wallets can be Native Applications (e.g., Mobile), Web Application (e.g, Cloud).
+        * *Cryptographic Key location*: Custodial (e.g, the key is stored in the Cloud) or Non-Custodial (e.g., the key is stored in a device in possession of the end-user)
+    Simplifying their structure, is composed by a secure storage and then an Agent that manages interactions.
+
+Note: There are differences between the levels of DIF and with **ToIP Techological Stack**: *Wallets* are at [Layer 2](#agents-and-infrastructure). *Layer 4* is for practical applications, which we cover in [Use cases](#uses-cases).
+
+#### Layer 3: Credential Layer #### {#credential-layer}
+
+At this level, the various actors exchange credentials. Let's see what happens, using the specific definitions of the W3C Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]]
+
+The actors are:
+* The **Issuer** creates and *issues credentials* to the *Holder*. It also writes the necessary information within the *Verifiable Data Registry*. This can be a trusted third-party entity like governments or  universities. In some cases, credentials can be *self-issued* by the user e.g., to represent informal skills or competencies. This flexibility allows for a broader range of credentials and applications.
+* The **Holder** (the *user*), at the heart of this architecture, receives the credentials from the Issuer, stores them in a *Digital Wallet*, and *presents credentials* to the *Verifier*.
+* The **Verifier** receives the presented credentials by the *Holder* and verifies them. In this model is akin to an SP or RP in federated models. This process does not necessarily involve informing the *Issuer*. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.
 
 Note: In this model, the definition of a **credential** shifts to a set of *claims* (attributes) linked to *identifiers* controlled by the user. While credentials represent identities, not all claims within a credential are used for identification. They can describe various characteristics, extending the application of credentials beyond mere identification.
 
-The VCDM defines two basic concepts: the *Verifiable Credentials* and the *Verifiable Presentation*.
-
-* **Verifiable Credential** is what the holder stores in the Wallet. It contains:
+The actors exchanges:
+* **Verifiable Credential (VC)**: when the Issuer sends the credential to the Holder, who then stores it in their Wallet. It is called *Verifiable* because adds *technologies, such as digital signatures, makes verifiable credentials more tamper-evident and more trustworthy than their physical counterparts*.
     * **Metadata**: of the Credentials.
     * **Claim(s)**: one or more assertions where a characteristic of a subject is described (e.g., the subject is a citizen of a certain state, was born in a certain place on a certain day, month, and year, and can drive cars of this type).  
     * **Proof(s)**: cryptographic proof of the integrity of the credential, typically via a digital signature.
-* **Verifiable Presentation** is what the holder sends to the verifier to show their credentials. The basic case is to present the credential as is. However, in many scenarios, the holder may wish to present only a subset of the claims of a credential to the verifier - this is called *Selective Disclosure (SD)* - or a combination of information from different credentials. It contains:
+
+* **Verifiable Presentation (VP) **: when the Holder sends a credential to the Verfier which then verifies it. The basic case is to present the credential as is. However, in many scenarios, the holder may wish to present only a subset of the claims of a credential to the verifier - this is called *Selective Disclosure (SD)* - or a combination of information from different credentials. It contains:
     * **Metadata**: of the presentation.  
     * **Credential(s)**: information derived or combined from one or more credentials.  
     * **Proof(s)**: cryptographic proof of the integrity of the credential(s) and the presentation.
 
-Note: For a comprehensive overview of Verifiable Credentials (VCs), refer to Ivan Herman's [W3C Verifiable Credentials Overview](https://www.w3.org/TR/vc-overview/).
+Note: For a comprehensive overview of Verifiable Credentials, refer to Ivan Herman's [W3C Verifiable Credentials Overview](https://www.w3.org/TR/vc-overview/).
 
-Another pillar of this architecture is **Decentralized Identifiers (DIDs)**, an Uniform Resource Identifier (URI) [[RFC3986]] type that allows entities and resources to be identified through various methods [[did-core]]. These methods can rely on various technologies, including blockchains such as Bitcoin or Ethereum, the web, InterPlanetary File System (IPFS), and Domain Name System (DNS) [[did-spec-registries]]. Does this guarantee its untraceability?. All methods allow cryptographical control over the identifier. Still, they vary in how decentralized they are and the features they support (e.g., key rotation and revocation).
+Obviously the Issuer, the Holder and the Verifier needs a **credential exchange protocol** for VCs and VPs. This is not described in VCDM, but it is defined by other standards such as VC API and OpenID4VC.
 
-Here's the *Data Flow*:
+#### Layer 2: Agent Frameworks and Infrastructure #### {#agents-and-infrastructure}
+
+At this level, the software responsible for the interaction between the various actors communicates by processing the identifiers in the credentials. Agents do content retrivals, resolve them, render them, and facilitate interactions between the various actors and the lower-levels.     
+
+#### Layer 1: Identifiers and Namespaces #### {#identifiers-and-namespaces}
+
+At this level we find identifiers - which are considered, along with Verifiable Credentials, one of the two pillars of decentralized models - and the Verifiable Data Registry (VDR) where referenced information is written, updated, read, and deleted.
+
+As indentifiers, we mainly refer to the **Decentralized Identifiers (DIDs)**, a new Uniform Resource Identifier (URI) [[RFC3986]] type that allows entities and resources to be identified.
+
+One of the powers of DIDs, is to provide for different methods of referencing resources [[did-core]]. 
+
+These methods can rely on various technologies, including blockchains such as Bitcoin or Ethereum, the web, InterPlanetary File System (IPFS), and Domain Name System (DNS) [[did-spec-registries]] and it is possible to write your own method.
+
+Some distinctive properties of DIDs are [[did-intro]]:
+* **Decentralized**: do not depend on centralized registries, identity providers, authorities, etc.
+* **Persistent**: once created, it is permanently assigned to the subject.
+* **Resolvable**: it is possible to find out basic set of information on the subject.
+* **Cryprographically verifable**: there is a mechanism to cryptographically prove identity and ownership.
+
+
+Note: The **ToIP Techological Stack** often icludes Identifiers also at other layers.
+
+The **Verifiable Data Registry (VDR)**, is the registry holds the data needed to verify credentials and their status.
+This can be government databases, distributed ledgers, or other services.
+By maintaining this information, the VDR, depending on its form, enables verification without direct communication between the *Issuer* and the *Verifier*. 
+
+Having concluded this overview of the whole ecosystem of decentralized identities, we can return to focus on the specific level of credentials.
+
+### Data Flow ### {#data-flow}
+
+Here is the data flow of credentials from when they are created to when they are revoked.
+
 * **Credential Issuing (CI):**
     1. The *Issuer* requests a certain authentication mechanism from the *Holder*.
     2. After authentication, the *Holder* asks the *Issuer* for the credential, or the *Issuer* submits it.
@@ -280,7 +350,7 @@ Here's the *Data Flow*:
 * **Credential-Revocation (CR)**
     1. The *Issuer* can revoke a credential in various ways.
 
-#### Security and Privacy #### {#security-and-privacy}
+### Security and Privacy ### {#security-and-privacy}
 
 It is interesting to reflect on how this model differs from a security and privacy perspective both from previously described models and from the use of physical identity documents, as credentials can enable this use case:
 * **Decentralized vs. Federated Model**: Let us analyze one of the privacy issues of the federated model: whoever provides the identity can track the user. This is one of the threats this model wants to mitigate since the identity is in the user’s Wallet, and they use it as they wish.
@@ -326,7 +396,9 @@ So we have a number of properties, both security and privacy as a starting point
   
 </div>
 
-#### Standards #### {#standards}
+
+### Standards ### {#standards}
+
 
 As noted, VCDM and DID define only certain elements of the architecture. Other SDOs define other elements that are essential for the architecture to function. 
 Therefore, coordination between these entities is necessary to ensure everything works seamlessly. So, let us look at the standards involved for the various components needed.
@@ -712,7 +784,9 @@ Several individuals contributed to the document. The editor especially thanks Pi
   "three-models-of-digital-identity-relationships": {
     "authors": ["Timothy Ruff"],
     "title": "Three Models of Digital Identity",
-    "year" : "2018"
+    "year" : "2018",
+    "href" : "https://medium.com/evernym/the-three-models-of-digital-identity-relationships-ca0727cb5186"
+
   },
   "passkeys-101": {
     "title": "Passkeys 101",
@@ -820,6 +894,33 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "title": "Human rights and technical standard-setting processes for new and emerging digital technologies : report of the Office of the United Nations High Commissioner for Human Rights",
     "href":"https://digitallibrary.un.org/record/4031373?v=pdf",
     "publisher" : "United Nation"
+  },
+    "did-intro": {
+    "author" : ["Ivan Herman"],
+    "title": "Introduction to Decentralized Identifiers (DID)",
+    "href":"https://www.youtube.com/watch?v=t8lMCmjPKq4",
+    "publisher" : "W3C"
+  },
+    "sovrin-infrastructure-layers": {
+    "title": "Sovrin Infrastructure Layers in Sovrin Glossary V3",
+    "href":"https://docs.google.com/document/d/1gfIz5TT0cNp2kxGMLFXr19x1uoZsruUe_0glHst2fZ8/edit#heading=h.n5k2u6fkhf744",
+    "publisher" : "Sovrin Foundation"
+  },
+    "did-fundamental-ssi": {
+    "title": "Decentralized Identifiers (DIDs): The Fundamental Building Block of Self-Sovereign Identity (SSI)",
+    "href":"https://www.slideshare.net/SSIMeetup/decentralized-identifiers-dids-the-fundamental-building-block-of-selfsovereign-identity-ssi",
+    "author" : ["Drummond Reed"]
+  },
+    "evolution-toip": {
+    "title": "Evolution of the ToIP Stack",
+    "href":"https://trustoverip.org/wp-content/uploads/Evolution-of-the-ToIP-Stack-V1.0-2022-11-14.pdf",
+    "publisher" : "ToIP Foundation"
+  },
+    "did-faq": {
+    "title": "DID FAQ",
+    "href":"https://identity.foundation/faq/",
+    "publisher" : "Decentralized Identity Foundation",
+    "author" : ["Juan Caballero"]
   },
     "LINDDUN": {
     "title": "LINDDUN: PRIVACY THREAT MODELING",
