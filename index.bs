@@ -31,10 +31,10 @@ This document further develops the concepts described in "*Identity on the Web*"
 
 Through exploratory thinking, the following understanding emerged:
 
-* Standards can help, as they have in the past, to drive innovation while mitigating threats and to enable technical progress while having a positive impact on the world
-* The technology stack is composite and broad and needs to be coordinated across standards and across Standards Development Organizations (SDOs)
-* People, SDOs, and governments are the key actors who need to collaborate to ensure that digital credentials/identities solve more problems than they create because identity is not only technology but also governance
-* It is crucial to pay close attention to the impact on security, privacy, and human rights in general, and the proposed method of analysis is threat modeling
+* Standards can help, as they have in the past, to drive innovation while mitigating threats and to enable technical progress while having a positive impact on the world.
+* The technology stack is composite and broad and needs to be coordinated across standards and Standards Development Organizations (SDOs).
+* People, SDOs, and governments are the key actors who need to collaborate to ensure that digital credentials/identities solve more problems than they create because identity is not only technology but also governance.
+* It is crucial to pay close attention to the impact on security, privacy, and human rights in general. The proposed method of analysis is threat modeling.
 
 We seek [input](https://github.com/w3c/identity-web-impact/issues) from the community on proposals that could help progress on these topics and other topics that this document may contribute to identifying.
 
@@ -46,13 +46,13 @@ Digital Identities have been in development for decades, and at this moment in h
 
 The concept of identity is very broad and covers psychology, social sciences, mathematics, and logic. There is no agreed-upon definition of all the terminology. Let us start with a set of definitions to have a common ground in this paper.
 
-When we think about identity, we often think about our identity as individuals. It is inherent, although we tend to give a different meaning to our identity according to our culture, from the Western "*Cogito ergo sum*" (I think therefore I am) [[discourse-on-the-method]] to the African "*Ubuntu*" (I am because you are) [[what-does-ubuntu-really-mean]] or the Eastern "*tat tvam asl*" (that thou art), which express two notions, the man's real self (ātman), and the Consmic Self (brahman) [[a-dictionary-of-hinduism]].
+When we think about identity, we often think about our identity as individuals. It is inherent, although we tend to give a different meaning to our identity according to our culture, from the Western "*Cogito ergo sum*" (I think therefore I am) [[discourse-on-the-method]] to the African "*Ubuntu*" (I am because you are) [[what-does-ubuntu-really-mean]] or the Eastern "*tat tvam asl*" (that thou art), which express two notions, the man's real self (ātman), and the Cosmic Self (brahman) [[a-dictionary-of-hinduism]].
 
-Analyzing the etymology, the term **identity** comes from the Latin root “*idem*”, which means “*the same*” [[oxford-etymology-identity]] so while it's an intimate concept, we also use it to distinguish ourselves from others. This is well explained in the Cambridge Dictionary in which the identity is “*the fact of being, or feeling that you are, a particular type of person, organization, etc.; the qualities that make a person, organization, etc. different from others*” [[cambridge-dictionary-identity]].
+Analyzing the etymology, the term **identity** comes from the Latin root “*idem*”, which means “*the same*” [[oxford-etymology-identity]], so while it is an intimate concept, we also use it to distinguish ourselves from others. This is well explained in the Cambridge Dictionary in which the identity is “*the fact of being, or feeling that you are, a particular type of person, organization, etc.; the qualities that make a person, organization, etc. different from others*” [[cambridge-dictionary-identity]].
 
-Thus, *"from a sociocultural perspective, an individual’s identity is socially constructed, forming from early childhood from their interactions and relationships with others"* [[constructing-an-identity]]. Therefore, our identity is tied to society and the third parties we interact with, which often provide us with an identity, the elements to refer to it, and to prove who we are.
+Thus, *"from a sociocultural perspective, an individual’s identity is socially constructed, forming from early childhood from their interactions and relationships with others"* [[constructing-an-identity]]. Therefore, our identity is tied to society and the third parties we interact with. These parties often give us an identity and the elements to refer to and prove who we are.
 
-Looking more closely at the Information Technology (IT) domain, the ISO/IEC 24760-1:2019 [[ISO-IEC-24760-1]] defines **Identity** as “*a set of attributes related to an entity*”. Where the **entity** is something "*that has recognizably distinct existence*", and that can be "*logical or physical*" such as "*a person, an organization, a device, a group of such items, a human subscriber to a telecom service, a SIM card, a passport, a network interface card, a software application, a service or a website*". These **attributes** are “*characteristics or properties*” such as “*an entity type, address information, telephone number, a privilege, a MAC address, a domain name*”. To complete the definition of *entity* and *identitfiers*, it is important to note that they always refer to a **domain** of applicability, the specific *context* where they can be used (e.g., an organization, a country, a university).
+Looking more closely at the Information Technology (IT) domain, the ISO/IEC 24760-1:2019 [[ISO-IEC-24760-1]] defines **Identity** as “*a set of attributes related to an entity*”. Where the **entity** is something "*that has recognizably distinct existence*", and that can be "*logical or physical*" such as "*a person, an organization, a device, a group of such items, a human subscriber to a telecom service, a SIM card, a passport, a network interface card, a software application, a service or a website*". These **attributes** are “*characteristics or properties*” such as “*an entity type, address information, telephone number, a privilege, a MAC address, a domain name*”. To complete the definition of *entity* and *identifiers*, it is important to note that they always refer to a **domain** of applicability, the specific *context* where they can be used (e.g., an organization, a country, a university).
 
 Thus, a particularly important point is clear: there are not only identities of people, individuals, or human beings. We can also have identities for organizations, pets, and **Non-Human Identities** (NHI). NHI are all those accounts widely used by “devices, services, and servers” in networking, cloud, and workloads [[the-evolving-landscape-of-non-human-identity]].
 
@@ -97,16 +97,16 @@ Therefore, it’s important to remember that we can have digital credentials tha
 
 We introduce the last topic with the example of credentials that universities can issue. In addition to degree certificates, universities usually have student ID cards containing information such as first name, last name, and photo.
 
-Why can a driver’s license and a student ID card, having the same attributes and being cryptographically verifiable, only allow the driver’s license to open a bank account?
+Why can a driver’s license and a student ID card, having similar attributes and being cryptographically verifiable, only allow the driver’s license to open a bank account?
 
 There are several aspects, first of all, the *context* and *domain* in which the credential lives. The key difference lies in the **trust** we place in the issuers of these credentials. Trust can be defined as "*the belief that someone is good and honest and will not harm you, or that something is safe and reliable*" [[cambridge-dictionary-trust]]. Essentially, trust is a choice we make; we choose to trust or not trust someone or something [[OSSTMM-3]], and often, it is not a binary question.
 
-*Cryptographic trust*, such as verifying a credential, is different from *human trust* [[self-sovereign-identity]]. Cryptographic methods ensure that the credentials haven’t been tampered with. Human trust involves trusting the entity that issued the credential and that the issuer provided the credential to the legitimate user.
+*Cryptographic trust*, such as verifying the signature of a credential, differs from *human trust* [[self-sovereign-identity]]. Cryptographic methods ensure that the credentials haven’t been tampered with. Human trust involves trusting the entity that issued the credential and that the issuer provided the credential to the legitimate user.
 
-This is why we also need **governance frameworks** or **trust frameworks**. These frameworks include business, legal, and technical rules that help establish and maintain trust in the issuers of credentials. 
+This is why we also need **governance frameworks** or **trust frameworks**. These frameworks include business, legal, and technical rules that help establish and maintain trust in credential issuers. 
 
 This includes establishing the **Levels of (identity) Assurance (LOA)**. Follow as an example the *Identity Assurance Level (IAL)* from NIST-SP-800-63-3 [[NIST-SP-800-63-3]]:
-* **IAL1**: No requirement to prove a specific real-life identity, e.g., identity can be self-asserted.
+* **IAL1**: No requirement to prove a specific real life identity, e.g., identity can be self-asserted.
 * **IAL2**: Remote or in-person identity proofing with supporting evidence is required.
 * **IAL3**: Physical presence is required for identity proofing, with proper verification of evidence.
  
@@ -136,7 +136,7 @@ However, target 16.9 of the 2030 United Nations Sustainable Development Goals (S
 
 Digital identities and credentials are powerful business enablers and offer significant opportunities for individuals, governments, and organizations. 
 
-They can guarantee other rights, such as the right to accessibility promoted by the *Marrakesh Treaty* [[marrakesh-treaty]] and the right to "*empower refugees, stateless individuals, and forcibly displaced persons*" [[UNHCR-digital-identity]]. 
+They can guarantee other rights, such as the right to accessibility promoted by the *Marrakesh Treaty* [[marrakesh-treaty]]. They can also "*empower refugees, stateless individuals, and forcibly displaced persons*" [[UNHCR-digital-identity]]. 
 
 These technologies can also be used on a humanitarian level. Referring to the NHIs, the International Committee of Red Cross (ICRC) investigated *Digital Emblems* [[ADEM]] to identify ICT assets protected under international law [[digitalizing-report]].
 
@@ -183,13 +183,13 @@ Here is the simplified *Data Flow*:
 Perspectives:
 * **Security**: there are different issues. For the *user*: password re-use in case of compromised password, so the user should use different passwords for different providers; there are also Phishing and Man-in-The-Middle attacks. From the provider’s point of view, as the passwords are stored on their systems, they need to implement proper security measures to protect them at rest and during transport.
 * **Privacy**: the centralized system can completely track the user.
-* **Standards**: Standards intervene at different levels. In how credentials are exchanged and sent: historically, *Basic Authentication* [[RFC1945]], *Digest Authentication* [[RFC2069 obsolete]] (and related updates), and via *HTML forms* with `input type=password` and `Cookies` for maintaining the session information on the Client. Other standards for increasing authentication factors such as HTOP [[RFC4226 obsolete]] and TOTP [[RFC6238]]. Also, with with SSL/TLS [[RFC2246 obsolete]] (and related updates) for the protection of credential transport and and traffic in general. Other standards protecting the credentials at rest such as the (now obsolete) MD5 [[RFC1321]] and other [hashing algorithms by NIST](https://csrc.nist.gov/projects/hash-functions).
+* **Standards**: Standards intervene at different levels. In how credentials are exchanged and sent: historically, *Basic Authentication* [[RFC1945]], *Digest Authentication* [[RFC2069 obsolete]] (and related updates), and via *HTML forms* with `input type=password` and `Cookies` for maintaining the session information on the Client. Other standards for increasing authentication factors include HTOP [[RFC4226 obsolete]] and TOTP [[RFC6238]]. Also, with SSL/TLS [[RFC2246 obsolete]] (and related updates) for credential transport and general traffic protection. . Other standards protecting the credentials at rest such as the (now obsolete) MD5 [[RFC1321]] and other [hashing algorithms by NIST](https://csrc.nist.gov/projects/hash-functions).
 
 <div class="advisement" id="a1">
     <span class="marker">Enabling passwordless credentials for authentication and payments</span><br>
     To mitigate security threats, in particular the use of multiple passwords and phishing, FIDO Alliance created **Passkeys**, "*a replacement for passwords that provide faster, easier, and more secure sign-ins to websites and apps across a user’s devices*" [[passkeys-101]].
     
-    The [W3C Web Authentication Working Group](https://www.w3.org/groups/wg/webauthn/) brought to the Web Platform standardizing Web Authentication Level 2 [[webauthn-2]], and is developing Level 3 [[webauthn-3]]. This technology, moreover, can also be used to make online transactions more secure by using the same underlying technology to confirm payments, such as the "payment" extension for Secure Payment Confirmation [[secure-payment-confirmation]].
+    The [W3C Web Authentication Working Group](https://www.w3.org/groups/wg/webauthn/) brought to the Web Platform to standardize Web Authentication Level 2 [[webauthn-2]], and is developing Level 3 [[webauthn-3]]. This technology, moreover, can also be used to make online transactions more secure by using the same underlying technology to confirm payments, such as the "payment" extension for Secure Payment Confirmation [[secure-payment-confirmation]].
 </div>
 
 ## Federated identity model ## {#federated-identity-model}
@@ -212,13 +212,14 @@ Here is the simplified *Data Flow*:
 * **Trust and Access**: The SP or the RP, trusting the IdP, accepts the user's Identity Assertion and grants access.
 
 Perspectives:
-* **Security**: This model mitigates the user's issue of remembering multiple passwords and identity fragmentation and relieves the need for the SP or RP to manage the authentication aspects.
+* **Security**: This model mitigates the user’s remembering multiple passwords and identity fragmentation issues and relieves the need for the SP or RP to manage the authentication aspects.
 * **Privacy**: this model still has some implications because the IdP knows what third-party services the user has accessed. Additionally, the technology uses "*third-party (cross-site) cookies that are considered harmful to the web and must be removed*" [[third-party-cookies-must-be-removed]].
 * **Standards**: standards support interoperability between different systems. The most used in this context are [OASIS Security Assertion Markup Language (SAML)](https://www.oasis-open.org/standard/saml/) and [OpenID Connect](https://openid.net/connect/), which underpins [OAuth](https://oauth.net/) for authorization and different token formats.
 
 <div class="advisement" id="a2">
     <span class="marker">Enabling Federated identity in the Web platform without third-party cookies</span><br>
-    The [Federated Identity Community Group](https://www.w3.org/community/fed-id/) was born to resolve these privacy concerns for this model. The Group is working on Federated Credential Management API [[FEDCM]] and other APIs, such as Login Status API, to implement the Federated Identity Model in the Web Platform. The [Federated Identity Working Group](https://www.w3.org/groups/wg/fedid/) also came from this group to proceed with standardization.
+    The [Federated Identity Community Group](https://www.w3.org/community/fed-id/) was created to resolve these privacy concerns for this model. 
+    The Group is working on Federated Credential Management API [[FEDCM]] and other APIs, such as Login Status API, to implement the Federated Identity Model in the Web Platform. The [Federated Identity Working Group](https://www.w3.org/groups/wg/fedid/) also came from this group to proceed with standardization.
 </div>
 
 ## Decentralized identity model ## {#decentralized-identity-model}
@@ -229,7 +230,7 @@ Note: We will examine the decentralized identity model more closely, as it is th
 
 ### Architecture ### {#architecture}
 
-The decentralized identity model marks a significant shift in architecture. Instead of federated Identity Providers (IdPs) and Service Providers (SPs) or Relying Parties (RPs), the focus now centers on the user. 
+The decentralized identity model marks a significant shift in architecture. Instead of federated Identity Providers (IdPs) and Service Providers (SPs) or Relying Parties (RPs), the focus now centers on the user.
 
 In this model, the user *controls* their credentials acquires them from an *Issuer*, stores them in their *wallet*, and presents *them* to a Verifier. Verification activities are mediated by a *Verifiable Data Registry*, containing the necessary information.
 
@@ -240,9 +241,10 @@ In this model, the user *controls* their credentials acquires them from an *Issu
     </figcaptsion>
 </figure>
 
-To best understand the decentralized model and its end-to-end operation, we can refer to the model by Decentralized Identity Foundation [[did-faq]] build on the Trust Over IP architecture [[introduction-toip]] [[evolution-toip]].
+To best understand the decentralized model and its end-to-end operation, we can refer to the model by the Decentralized Identity Foundation (DIF) [[did-faq]] build on the Trust Over IP architecture [[introduction-toip]] [[evolution-toip]].
 
-This model comprises both technology and governance aspects, sliced into different layers. We will then provide an overview of the various layers, focusing on specific elements related to credentials and identifiers, considered the two pillars of decentralized identities.
+This model comprises both technology and governance aspects, sliced into different layers. 
+We will then provide an overview of the various layers, focusing on specific elements related to credentials and identifiers, considered the two pillars of decentralized identities.
 
 <figure id="fig-decentralized-identity-model-01">
     <img src="figures/decentralized-identity-layers.svg"></img>
@@ -254,55 +256,59 @@ Let us start by looking at the layers.
 
 #### Layer 5: Trust Frameworks and Ecosystems  #### {#trust-layer}
 
-At this level, we find compliance and regulation, governance, and trust frameworks, which tell us who we can trust, such as a particular issuer that follows a specific Level of Assurance. These trust elements depend on the context—or domain—of reference. We can have different contexts, such as state, government, and university contexts.
+At this level, we find compliance and regulation, governance, and trust frameworks, which tell us who we can trust, such as a particular issuer that follows a specific Level of Assurance. 
+These trust elements depend on the context — or domain — of reference. 
+We can have different contexts, such as state, government, and university contexts.
 
-Each context is governed by one or more governance or trust frameworks. For example, for the domain of credentials issued by governments in Europe, we have [EU Digital Wallet](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/Technical+Specifications), and we can have others related to other states, as well as other domains such as individual organizations, enterprises or universities.
+Each context is governed by one or more governance or trust frameworks.
+For example, for the domain of credentials issued by governments in Europe, we have the [EU Digital Wallet](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/Technical+Specifications), and we can have others related to other states.
+As well as other domains such as individual organizations, enterprises or universities.
+So, a critical issue is interoperability across states.
 
-Therefore, in the various architectures, *"Trust"* and its framework permeates all layers.
-
-Note: There are differences between the levels of DIF and the **ToIP Technological Stack**: *Governance* is divided into parallel halves, with specific frameworks for each level.
+Note: There are differences between the levels of DIF and the **ToIP Technology Stack**: *Governance* is divided into parallel halves, with specific frameworks for each level.
 
 #### Layer 4: Applications, Wallets, Products  #### {#application-layer}
 
-At this level, we find the various applications accessible to end users that implement the model:
- * **Applications**: These can be Native or Web, and it is possible to interact with them differently.
- * **Digital Wallets**: in which the Holder stores their credentials.
-    Just as a physical wallet holds more than just IDs, the digital wallet can store various credentials and information. We can classify the wallets depending on several factors
+At this level, we find the various applications accessible to end users:
+ * **Applications**: These can be Native or Web-based, and it is possible to interact with them differently.
+ * **Digital Wallets**: These are where the Holder stores their credentials.
+    Just as a physical wallet holds more than just IDs, the digital wallet can store various credentials and information. We can classify the wallets depending on several factors:
         * *Technology*: Wallets can be native applications (e.g., Mobile) or web applications (e.g., Cloud).
         * *Cryptographic Key location*: Custodial (e.g., the key is stored in the Cloud) or Non-Custodial (e.g., the key is stored in a device in possession of the end-user)
-    Simplifying their structure comprises a secure storage and an agent that manages interactions.
+    Simplifying, the Wallet structure comprises secure storage and an agent managing interactions. 
 
-Note: There are differences between the levels of DIF and with **ToIP Techological Stack**: *Wallets* are at [Layer 2](#agents-and-infrastructure). *Layer 4* is for practical applications, which we cover in [Use cases](#uses-cases).
+Note: There are differences between the levels of DIF and with **ToIP Technology Stack**: *Wallets* are at [Layer 2](#agents-and-infrastructure). *Layer 4* is for practical applications, which we cover in [Use cases](#uses-cases).
 
 #### Layer 3: Credential Layer #### {#credential-layer}
 
-At this level, the various actors exchange credentials. Let's see what happens using the specific definitions of the W3C Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]]
+At this level, the various actors exchange credentials. Let us see what happens using the specific definitions of the W3C Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]].
 
 The actors are:
-* The **Issuer** creates and *issues credentials* to the *Holder*. It also writes the necessary information within the *Verifiable Data Registry*. This can be a trusted third-party entity like governments or  universities. In some cases, credentials can be *self-issued* by the user, e.g., to represent informal skills or competencies. This flexibility allows for a broader range of credentials and applications.
-* The **Holder** (the *user*), at the heart of this architecture, receives the credentials from the Issuer, stores them in a *Digital Wallet*, and *presents*  them to the *Verifier*.
-* The **Verifier** receives the presented credentials by the* Holder* and verifies them. In this model, it is akin to an SP or RP in federated models. This process does not necessarily involve informing the *Issuer*. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.
+* The **Issuer** creates and *issues credentials* to the *Holder* and writes the necessary information within the *Verifiable Data Registry*. This can be a trusted third-party entity like governments or  universities. In some cases, credentials can be *self-issued* by the user, e.g., to represent informal skills or competencies. This flexibility allows for a broader range of credentials and applications.
+* The **Holder** (the *user*), at the heart of this architecture, receives the credentials from the Issuer, stores them in a *Digital Wallet*, and *presents* them to the *Verifier*.
+* The **Verifier** receives the presented credentials by the* Holder* and verifies them. This actor is akin to an SP or RP in federated models. This process does not necessarily involve informing the *Issuer*. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.
 
 Note: In this model, the definition of a **credential** shifts to a set of *claims* (attributes) linked to *identifiers* controlled by the user. While credentials represent identities, not all claims within a credential are used for identification. They can describe various characteristics, extending the application of credentials beyond mere identification.
 
-The actors' exchange:
-* **Verifiable Credential (VC)**: when the Issuer sends the credential to the Holder, who then stores it in their Wallet. Credential is called *Verifiable* because has *technologies, such as digital signatures, makes verifiable credentials more tamper-evident and more trustworthy than their physical counterparts*.
+The actors exchange:
+* **Verifiable Credential (VC)**: When the Issuer sends them to the Holder, who then stores it in their Wallet. Credential is called *Verifiable* because has *technologies, such as digital signatures, makes verifiable credentials more tamper-evident and more trustworthy than their physical counterparts*.
     * **Metadata**: of the Credentials.
     * **Claim(s)**: one or more assertions where a characteristic of a subject is described (e.g., the subject is a citizen of a certain state, was born in a certain place on a certain day, month, and year, and can drive cars of this type).  
     * **Proof(s)**: cryptographic proof of the integrity of the credential, typically via a digital signature.
 
-* **Verifiable Presentation (VP) **: when the Holder sends a credential to the Verifier, which then verifies it. The basic case is to present the credential as is. However, in many scenarios, the holder may wish to present only a subset of the claims of a credential to the verifier - this is called *Selective Disclosure (SD)* - or a combination of information from different credentials. It contains:
+* **Verifiable Presentation (VP)**: When the Holder sends a credential to the Verifier, which then verifies it. The basic case is to present the credential as is. However, in many scenarios, the holder may wish to present only a subset of the credential claims to the verifier - called *Selective Disclosure (SD)* - or a combination of information from different credentials. It contains:
     * **Metadata**: of the presentation.  
     * **Credential(s)**: information derived or combined from one or more credentials.  
     * **Proof(s)**: cryptographic proof of the integrity of the credential(s) and the presentation.
 
-Note: For a comprehensive overview of Verifiable Credentials, refer to Ivan Herman's [W3C Verifiable Credentials Overview](https://www.w3.org/TR/vc-overview/).
+Note: Refer to Ivan Herman’s  [W3C Verifiable Credentials Overview](https://www.w3.org/TR/vc-overview/) for a comprehensive overview of Verifiable Credentials.
 
 Obviously, the Issuer, the Holder, and the Verifier need a **credential exchange protocol** for VCs and VPs. This is not described in VCDM but is defined by other standards, such as VC API and OpenID4VC.
 
 #### Layer 2: Agent Frameworks and Infrastructure #### {#agents-and-infrastructure}
 
-At this level, the software responsible for the interaction between the various actors communicates by processing the identifiers in the credentials. Agents retrieve content, resolve it, render it, and facilitate interactions between the various actors and the lower levels.     
+At this level, the software responsible for the interaction between the various actors communicates by processing the identifiers in the credentials. 
+Agents retrieve content, resolve it, render it, and facilitate interactions between the various actors and the lower levels.     
 
 #### Layer 1: Identifiers and Namespaces #### {#identifiers-and-namespaces}
 
@@ -310,7 +316,7 @@ At this level, we find identifiers and the Verifiable Data Registry (VDR), where
 
 As identifiers, we mainly refer to the **Decentralized Identifiers (DIDs)**, a new Uniform Resource Identifier (URI) [[RFC3986]] type that allows entities and resources to be identified. DIDs, along with Verifiable Credentials, are considered one of the two pillars of decentralized models — 
 
-DIDs provide for different methods of referencing resources [[did-core]], called methods. These methods can rely on various technologies, including blockchains such as Bitcoin or Ethereum, the web, InterPlanetary File System (IPFS), and Domain Name System (DNS) [[did-spec-registries]], and it is possible to write your own method.
+DIDs provide for different methods of referencing resources [[did-core]], called methods. These methods can rely on various technologies, including blockchains such as Bitcoin or Ethereum, the web, InterPlanetary File System (IPFS), and Domain Name System (DNS) [[did-spec-registries]], and it is possible to write your method.
 
 Some distinctive properties of DIDs are [[did-intro]]:
 * **Decentralized**: do not depend on centralized registries, identity providers, authorities, etc.
@@ -318,8 +324,7 @@ Some distinctive properties of DIDs are [[did-intro]]:
 * **Resolvable**: it is possible to find out a basic set of information on the subject.
 * **Cryptographically verifiable**: there is a mechanism to prove identity and ownership cryptographically.
 
-
-Note: The **ToIP Techological Stack** often includes Identifiers at other layers.
+Note: The **ToIP Technology Stack** also includes Identifiers at other layers.
 
 The **Verifiable Data Registry (VDR)** holds the data needed to verify credentials and their status.
 This can be government databases, distributed ledgers, or other services.
@@ -333,7 +338,7 @@ Here is the data flow of credentials from when they are created to when they are
 
 * **Credential Issuing (CI):**
     1. The *Issuer* requests a certain authentication mechanism from the *Holder*.
-    2. After authentication, the *Holder* asks the *Issuer* for the credential, or the *Issuer* submits it.
+    2. After authentication, the *Holder* asks the *Issuer* for the credential or the *Issuer* submits it.
     4. If both parties agree, the *Issuer* sends the credential to the Holder in a specific format.
     5. The *Holder* enters their credential into the *Wallet*.
 * **Credential-Presentation (CP)**
@@ -356,8 +361,7 @@ It is interesting to reflect on how this model differs from a security and priva
     Does this guarantee its untraceability? One can presume that the answer is *"it depends"*. It depends on how the architecture is defined and implemented and the technologies used. For example, when we present our credentials to log in, the verifier contacts the issuer directly, asking if the credentials are still valid, and we continue to be traceable.
 * **Decentralized vs Physical Document**: If we instead think about the case where I have to send my passport online to open a bank account, to date, the most used method is to send the file with the passport scan. The bank usually sends the file to third-party services, often using Machine Learning systems for analysis. In addition, the file could be reused by someone who has access to it, exposing all our data and not only the one needed.
     
-    Presenting a digital credential, which could also support the submission of a subset of the contained claims, can improve the situation, but, again, we may encounter the problem of the verifier contacting the issuer for verification, a problem that is rarer to happen to send the file. However, databases of stolen documents do exist and a verifier could make a request with the passport-id to verify the status.
-
+    Presenting a digital credential, which could also support the submission of a subset of the contained claims, can improve the situation. Still, again, we may encounter the problem of the verifier contacting the issuer for verification, a problem that is rarer when sending the file. However, databases of stolen documents do exist, and a verifier could make a request with the passport ID to verify the status.
 Note: Architectural change can solve some issues and generate new ones, so a thorough analysis is necessary.
 
 We can take a step back and understand what privacy properties are needed for digital identity, considering that the higher the level of credential assurance, the more threats can impact the user. Over the years, several proposals have been made to understand the properties of digital identities, such as [Kim Cameron's 7 Identity Laws](https://www.identityblog.com/?p=352) and Ben Laure's Privacy Requirements. Analyzing the latter [[selective-disclosure]]:
@@ -366,7 +370,8 @@ We can take a step back and understand what privacy properties are needed for di
 * **Minimal**: This is a privacy aspect. When we send information to the verifier, the information should be minimized as much as possible. For example, if we have to show that we are of age, it is okay to submit all the credentials or even the specific claim of the date of birth, but simply that I am of age.  
 * **Unlinkable**: This is another privacy aspect of the minimal issue anyway. Suppose any party involved in the interaction, such as the Issuer, Verifier, or even a third party, can link and correlate the information we sent. In that case, this can be done through various techniques, and privacy is compromised.
 
-So we have a number of properties, both security and privacy as a starting point. How can we implement them? First of all, different credential formats, have different privacy and security features [[verifiable-credentials-flavors-explained]] and we can expand the discussion not only to formats but to all other components of the architecture, which must be aligned to ensure security and privacy.
+So we have a several properties, both security and privacy as a starting point. How can we implement them? 
+First, different credential formats have different privacy and security features [[verifiable-credentials-flavors-explained]]. We can expand the discussion not only to formats but also to all other components of the architecture, which must be aligned to ensure security and privacy.
 
 <div class="advisement" id="a3">
     <span class="marker">Modeling security, privacy, and human rights threats of decentralized credentials</span><br>    
@@ -381,7 +386,7 @@ So we have a number of properties, both security and privacy as a starting point
     * [Federated Identity Working Group (FedID WG)](https://www.w3.org/groups/wg/fedid/)
     * [Verifiable Credentials Working Group (VCWG)](https://www.w3.org/groups/wg/vc/)
     * [Credentials Community Group (CCG)](https://www.w3.org/groups/cg/credentials/)
-    * [Threat Modeling Community Group (TMCG)](https://www.w3.org/community/tmcg/) (open to all privacy, security and human rights experts).
+    * [Threat Modeling Community Group (TMCG)](https://www.w3.org/community/tmcg/) (open to all privacy, security, and human rights experts).
 
     **Threat Modeling** is "*a family of structured, repeatable processes that allows to make rational decisions to secure applications, software, and systems*" [[threat-modeling-designing-for-security]]. This Threat Model is using different frameworks and toolkits to cover the different threat types, such as:
         * **Security**: *STRIDE* (Spoofing, Tampering, Repudiation, Denial of service, Escalation of privileges) [[STRIDE]], and *Guidelines for Writing RFC Text on Security Considerations* [[RFC3552]].
@@ -390,7 +395,7 @@ So we have a number of properties, both security and privacy as a starting point
 
        Other approaches include the [Self-Review Questionnaire: Security and Privacy](https://www.w3.org/TR/security-privacy-questionnaire/) and the *OSSTMM* [[OSSTMM-3]].
 
-    The Threat Model also includes a list of various mitigation techniques, particularly those based on cryptography techniques such as Zero Knowledge Proof (ZKP), and additional methods for enabling secure and privacy-preserving technology.
+    The Threat Model also includes a list of various mitigation techniques, particularly those based on cryptography techniques such as Zero Knowledge Proof (ZKP) and additional methods for enabling secure and privacy-preserving technology.
   
 </div>
 
@@ -417,7 +422,7 @@ This is why several Standards Development Organizations (SDOs) such as the World
         The mechanism to use VCDM with JOSE/COSE is described in [Securing Verifiable Credentials using JOSE and COSE](https://www.w3.org/TR/vc-jose-cose/).  
     * **Embedded Formats (Signature Algorithms):** The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in [Verifiable Credential Data Integrity 1.0](https://www.w3.org/TR/vc-data-integrity/).  
 * **Status Information (Revocation Algorithms)**: *Issuers* can implement several ways to keep the credential's status up to date, such as a Revocation List, a Status List (e.g., [Bitstring Status List v1.0](https://www.w3.org/TR/vc-bitstring-status-list/)), and Cryptographic Accumulators, etc..
-* **Communication Protocols**: for the different phases of Issuance and Presentation such as: \[OID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html), \[OID4VP](https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html), [SIOPv2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html), ISO REST’s API, [Verifiable Credentials API](https://github.com/w3c-ccg/vc-api).
+* **Communication Protocols**: for the different phases of Issuance and Presentation such as \[OID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html), \[OID4VP](https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html), [SIOPv2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html), ISO REST’s API, and [Verifiable Credentials API](https://github.com/w3c-ccg/vc-api).
 
 Note: This list is representative. For more detailed information, please refer to the [Comparison Matrix](https://docs.google.com/spreadsheets/d/1X93ptJcmfX1NZEo5E7ElnqJ-knDS4Dj6JOYSJ_2PsUw/edit#gid=1084392809).
 
