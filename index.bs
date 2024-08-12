@@ -319,6 +319,7 @@ So we have a number of properties, both security and privacy as a starting point
         * **Security**: *STRIDE* (Spoofing, Tampering, Repudiation, Denial of service, Escalation of privileges) [[STRIDE]], and *Guidelines for Writing RFC Text on Security Considerations* [[RFC3552]].
         * **Privacy**: *LINNDUN* (Linking, Identifying, Non-Repudiation, Detecting, Data Disclosure, Unawareness & Inintervenability, Non-Compliance) [[LINDDUN]], and *Privacy Considerations for Internet Protocols* [[RFC6973]].
         * **Human Rights**: *Harms Modeling* [[harms-modeling]], and *Access Now #WhyID* [[access-now-whyid]].
+
        Other approaches includes the [Self-Review Questionnaire: Security and Privacy](https://www.w3.org/TR/security-privacy-questionnaire/) and the *OSSTMM* [[OSSTMM-3]].
 
     The Threat Model also includes a list of various mitigation techniques, particularly those based on cryptography techniques such as Zero Knowledge Proof (ZKP), and additional methods for enabling secure and privacy-preserving technology.
@@ -840,7 +841,6 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "title": "Harms modeling",
     "href" : "https://learn.microsoft.com/en-us/azure/architecture/guide/responsible-innovation/harms-modeling/",
     "publisher" : "Microsoft"
-
   },
   "digital-identity-explainer": {
     "title": "Digital Credentials API Explainer",
