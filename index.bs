@@ -209,7 +209,7 @@ Here is the simplified *Data Flow*:
 * **Trust and Access**: The SP or the RP, trusting the IdP, accepts the Identity Assertion sent by the user and grants access.
 
 Perspectives:
-* **Security**: This model mitigate the user's issue of remembering multiple passwords, the identity fragmentation, and relieves the need for the SP or RP to manage the authentication aspects.
+* **Security**: This model mitigates the user's issue of remembering multiple passwords, the identity fragmentation, and relieves the need for the SP or RP to manage the authentication aspects.
 * **Privacy**: this model still has some implications because the IdP knows what third-party services the user has accessed. Additionally, the technology uses "*third-party (cross-site) cookies that are considered harmful to the web and must be removed*" [[third-party-cookies-must-be-removed]].
 * **Standards**: standards support interoperability between different systems. The most used in this context are [OASIS Security Assertion Markup Language (SAML)](https://www.oasis-open.org/standard/saml/) and [OpenID Connect](https://openid.net/connect/), which underpins [OAuth](https://oauth.net/) for authorization and different token formats.
 
@@ -222,7 +222,7 @@ Perspectives:
 
 In the decentralized model, also known as the Self-Sovereign Identity (SSI) model, the user independently administers their identities and is the highest expression of user-centric identity. It is the newest model, and several pilot projects are underway for large-scale implementations.
 
-Note: We will examine the decentralized identity model more closely, as it is the source of a new set of challenges.
+Note: We will examine the decentralized identity model more closely, as it is the source of new challenges.
 
 #### Architecture #### {#architecture}
 
@@ -237,7 +237,7 @@ Instead, it involves a new set of actors and dynamics, described in the W3C Veri
 
 * The **Holder** (the *user*), who stores their credentials in a **Digital Wallet**, is at the heart of this architecture. This wallet, whether a native app or a web-based application, operates much like a physical wallet. Just as a physical wallet holds more than just IDs, the digital wallet can store various credentials and information. The transformation from physical to digital doesn’t change the wallet's fundamental role but enhances its capabilities with digital features.
 
-* The **Issuer** is the entity that creates and issues credentials to the *Holder*. This can be a trusted *third-party* entity like governments or  universities. In some cases, credentials can be *self-issued* by the user e.g., to represent informal skills or competencies. This flexibility allows for a broader range of credentials and applications.
+* The **Issuer** is the entity that creates and issues credentials to the *Holder*. This can be a trusted *third-party* entity like governments or  universities. In some cases, credentials can be *self-issued* by the user, e.g., to represent informal skills or competencies. This flexibility allows for a broader range of credentials and applications.
 
 * The **Verifier** in this model is akin to an SP or RP in federated models. It receives the credentials presented by the *Holder* and verifies them. Importantly, this process does not necessarily involve informing the *Issuer*. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.
 
@@ -258,7 +258,7 @@ The VCDM defines two basic concepts: the *Verifiable Credentials* and the *Verif
 
 Note: For a comprehensive overview of Verifiable Credentials (VCs), refer to Ivan Herman's [W3C Verifiable Credentials Overview](https://www.w3.org/TR/vc-overview/).
 
-Another pillar of important element of this architecture are the **Decentralized Identifiers (DIDs)**, a new Uniform Resource Identifier (URI) type that allows entities and resources to be identified through various methods [[did-core]]. These methods can rely on various technologies, including blockchains such as Bitcoin or Ethereum, the web, InterPlanetary File System (IPFS), and Domain Name System (DNS) [[did-spec-registries]]. Does this guarantee its untraceability?. All methods allow cryptographical control over the identifier. Still, they vary in how decentralized they are and the features they support (e.g., key rotation and revocation).
+Another important pillar of this architecture is the **Decentralized Identifiers (DIDs)**, a new Uniform Resource Identifier (URI) type that allows entities and resources to be identified through various methods [[did-core]]. These methods can rely on various technologies, including blockchains such as Bitcoin or Ethereum, the web, InterPlanetary File System (IPFS), and Domain Name System (DNS) [[did-spec-registries]]. Does this guarantee its untraceability?. All methods allow cryptographical control over the identifier. Still, they vary in how decentralized they are and the features they support (e.g., key rotation and revocation).
 
 Here's the *Data Flow*:
 * **Credential Issuing (CI):**
@@ -280,7 +280,7 @@ Here's the *Data Flow*:
 
 #### Security and Privacy #### {#security-and-privacy}
 
-It is interesting reflect on how this model differs from a security and privacy perspective both from previously described models and from the use of physical identity documents, as credentials can enable this use case:
+It is interesting to reflect on how this model differs from a security and privacy perspective both from previously described models and from the use of physical identity documents, as credentials can enable this use case:
 * **Decentralized vs. Federated Model**: Let us analyze one of the privacy issues of the federated model: whoever provides the identity can track the user. This is one of the threats this model wants to mitigate since the identity is in the user’s Wallet, and they use it as they wish.
     
     Does this guarantee its untraceability? One can presume that the answer is *"it depends"*. It depends on how the architecture is defined and implemented and the technologies used. For example, when we present our credentials to log in, the verifier contacts the issuer directly, asking if the credentials are still valid, and we continue to be traceable.
@@ -288,13 +288,13 @@ It is interesting reflect on how this model differs from a security and privacy 
     
     Presenting a digital credential, which could also support the submission of a subset of the contained claims, can improve the situation but, again, we may encounter the problem of the verifier contacting the issuer for verification, a problem that is rarer to happen sending the file, although databases of stolen documents do exist and a verifier could make a request with the passport-id to verify the status.
 
-Note: Architectural change can solve some issues but can also generate new ones, this is why a thorough analysis is necessary.
+Note: Architectural change can solve some issues and generate new ones. This is why a thorough analysis is necessary.
 
 We can take a step back and understand what privacy properties are needed for digital identity, considering that the higher the level of credential assurance, the more threats can impact the user. Over the years, several proposals have been made to understand the properties of digital identities, such as [Kim Cameron's 7 Identity Laws](https://www.identityblog.com/?p=352) and Ben Laure's Three Properties. Analyzing the latter [[selective-disclosure]]:
 
 * **Verifiable**: Identities, credentials, and various claims must be verifiable, which is possible through appropriate cryptographic proofs. This is part of the security aspects, which include cryptography.
 * **Minimal**: This is a privacy aspect. When we send information to the verifier, the information should be minimized as much as possible. For example, if we have to show that we are of age, it is okay to submit all the credentials or even the specific claim of the date of birth, but simply that I am of age.  
-* **Unlinkable**: This is another privacy aspect related to the minimal issue anyway. Suppose any party involved in the interaction, such as the Issuer or Verifier, or even a third party, can link and correlate the information we have sent. In that case, this can be done through various techniques, and privacy is compromised.
+* **Unlinkable**: This is another privacy aspect of the minimal issue anyway. Suppose any party involved in the interaction, such as the Issuer or Verifier, or even a third party, can link and correlate the information we have sent. In that case, this can be done through various techniques, and privacy is compromised.
 
 So we have a number of properties, both security and privacy as a starting point. How can we implement them? First of all, different credential formats, have different privacy and security features [[verifiable-credentials-flavors-explained]] and we can expand the discussion not only to formats but to all other components of the architecture, which must be aligned to ensure security and privacy.
 
@@ -317,7 +317,7 @@ So we have a number of properties, both security and privacy as a starting point
         * **Security**: *STRIDE* (Spoof, Tamper, Repudiation, Denial of service, Escalation of privileges), *RFC 3552*.
         * **Privacy**: *LINNDUN* (Linking, Identifying, Non-Repudiation, Detecting, Data Disclosure, Unawareness & Inintervenability, Non-Compliance), *RFC 6973*.
         * **Human Rights**: *Microsoft's Types of Harm*, and *Access Now #WhyID*.
-       Other approaches includes the [Self-Review Questionnaire: Security and Privacy](https://www.w3.org/TR/security-privacy-questionnaire/) and the *OSSTMM*.
+       Other approaches include the [Self-Review Questionnaire: Security and Privacy](https://www.w3.org/TR/security-privacy-questionnaire/) and the *OSSTMM*.
 
     The Threat Model also includes a list of various mitigation techniques, particularly those based on cryptography techniques such as Zero Knowledge Proof (ZKP), and additional methods for enabling secure and privacy-preserving technology.
   
@@ -427,7 +427,7 @@ A car, identified by the Vehicle Identification Number (VIN), interacts with var
 - **Manufacturer, vendors and workshops**: Tracking maintenance and service history.
 - **Governmental Entities**: Registration and tax payment.
 - **Owners and Users**: Ownership verification and usage rights.
-- **Road Infrastracture**: Toll payments and other interactions during use.
+- **Road Infrastructure**: Toll payments and other interactions during use.
 - **Insurance Companies**: Policy management and claims processing.
 
 It could also be opened and closed directly through the owner’s Wallet, making the car a *Verifier* during unlocking and a *Subject* in the owner's wallet.
@@ -502,7 +502,7 @@ Then, the user photographs or scans the documents (rendering ineffective the ant
 
 Often, the financial provider delegates the process to specialized companies that use Machine Learning and manual control to verify the information.
 
-TThus, we have at least two problems: the entire document is sent to different places, making a data breach more likely, and Machine Learning systems often analyze it. The problem is well described in "[AI & the Web](https://www.w3.org/reports/ai-web-impact/)".
+Thus, we have at least two problems: the entire document is sent to different places, making a data breach more likely, and Machine Learning systems often analyze it. The problem is well described in "[AI & the Web](https://www.w3.org/reports/ai-web-impact/)".
 
 Moreover, an additional privacy concern is inherent in this use case - which applies even when the document is used physically. Even if the user uses the document for a specific reason (e.g., proof of address or proof of age), they must send the whole document, thus showing more information than is needed for the specific verification, violating the [privacy principle of data minimization](https://www.w3.org/TR/privacy-principles/#data-minimization).
 
