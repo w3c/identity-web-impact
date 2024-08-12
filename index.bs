@@ -48,7 +48,9 @@ The concept of identity is very broad and covers psychology, social sciences, ma
 
 When we think about identity, we often think about our identity as individuals. It is inherent, although we tend to give a different meaning to our identity according to our culture, from the Western "*Cogito ergo sum*" (I think therefore I am) [[discourse-on-the-method]] to the African "*Ubuntu*" (I am because you are) [[what-does-ubuntu-really-mean]] or the Eastern "*tat tvam asl*" (that thou art), which express two notions, the man's real self (ātman), and the Consmic Self (brahman) [[a-dictionary-of-hinduism]].
 
-Analyzing the etymology, the term **identity** comes from the Latin root “*idem*”, which means “*the same*” [[oxford-etymology-identity]]. From the Cambridge Dictionary, we can say it is “*the fact of being, or feeling that you are, a particular type of person, organization, etc.; the qualities that make a person, organization, etc. different from others*” [[cambridge-dictionary-identity]].
+Analyzing the etymology, the term **identity** comes from the Latin root “*idem*”, which means “*the same*” [[oxford-etymology-identity]] so while it's an intimate concept, we also use it to distinguish ourselves from others. This is well explained in the Cambridge Dictionary in which the identity is “*the fact of being, or feeling that you are, a particular type of person, organization, etc.; the qualities that make a person, organization, etc. different from others*” [[cambridge-dictionary-identity]].
+
+Thus, *"from a sociocultural perspective, an individual’s identity is socially constructed, forming from early childhood from their interactions and relationships with others"* [[constructing-an-identity]]. Therefore, our identity is tied to society and the third parties we interact with and which, often, provide us with an identity, the elements to refer to it and to prove who we are.
 
 Looking more closely at the Information Technology (IT) domain, the ISO/IEC 24760-1:2019 [[ISO-IEC-24760-1]] defines **Identity** as “*a set of attributes related to an entity*”. Where the **entity** is something "*that has recognizably distinct existence*", and that can be "*logical or physical*" such as "*a person, an organization, a device, a group of such items, a human subscriber to a telecom service, a SIM card, a passport, a network interface card, a software application, a service or a website*". These **attributes** are “*characteristics or properties*” such as “*an entity type, address information, telephone number, a privilege, a MAC address, a domain name*”. To complete the definition of *entity* and *identitfiers*, it is important to note that they always refer to a **domain** of applicability, the specific *context* where they can be used (e.g., an organization, a country, a university).
 
@@ -813,6 +815,11 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "title": "Human rights and technical standard-setting processes for new and emerging digital technologies : report of the Office of the United Nations High Commissioner for Human Rights",
     "href":"https://digitallibrary.un.org/record/4031373?v=pdf",
     "publisher" : "United Nation"
+  },
+  "constructing-an-identity": {
+    "author" : ["Sharon Fraser"],
+    "title": "Constructing an Identity. In: Fan, S., Fielding-Wells, J. (eds) What is Next in Educational Research?",
+    "href":"https://doi.org/10.1007/978-94-6300-524-1_8"
   },
     "stakeholder-relationships-and-responsibilities": {
     "title": "Stakeholder Relationships and Responsibilities: A New Perspective",
