@@ -189,7 +189,9 @@ Perspectives:
     <span class="marker">Enabling passwordless credentials for authentication and payments</span><br>
     To mitigate security threats, in particular the use of multiple passwords and phishing, FIDO Alliance created **Passkeys**, "*a replacement for passwords that provide faster, easier, and more secure sign-ins to websites and apps across a user’s devices*" [[passkeys-101]].
     
-    The [W3C Web Authentication Working Group](https://www.w3.org/groups/wg/webauthn/) brought to the Web Platform to standardize Web Authentication Level 2 [[webauthn-2]], and is developing Level 3 [[webauthn-3]]. This technology, moreover, can also be used to make online transactions more secure by using the same underlying technology to confirm payments, such as the "payment" extension for Secure Payment Confirmation [[secure-payment-confirmation]].
+    The [W3C Web Authentication Working Group](https://www.w3.org/groups/wg/webauthn/) brought strong authentication to the Web Platform through Web Authentication Level 2 [[webauthn-2]] and is developing Level 3 [[webauthn-3]]. 
+
+    Synchronized Web Authentication credentials &mdash;passkeys&mdash; are well-suited for login authentication but less well-suited for some regulated high-assurance use cases, notably payments. To fulfill additional requirements of  payments ecosystems, the [W3C Web Payments Working Group](https://www.w3.org/Payments/WG/) is developing Secure Payment Confirmation [[secure-payment-confirmation]] to support multi-factor authentication and  requirements for cryptographic evidence of user consent to the terms of a transaction.
 </div>
 
 ## Federated identity model ## {#federated-identity-model}
@@ -212,7 +214,7 @@ Here is the simplified *Data Flow*:
 * **Trust and Access**: The SP or the RP, trusting the IdP, accepts the user's Identity Assertion and grants access.
 
 Perspectives:
-* **Security**: This model mitigates the user’s remembering multiple passwords and identity fragmentation issues and relieves the need for the SP or RP to manage the authentication aspects.
+* **Security**: This model mitigates the user’s need to remember multiple passwords and identity fragmentation issues and relieves the need for the SP or RP to manage the authentication aspects.
 * **Privacy**: this model still has some implications because the IdP knows what third-party services the user has accessed. Additionally, the technology uses "*third-party (cross-site) cookies that are considered harmful to the web and must be removed*" [[third-party-cookies-must-be-removed]].
 * **Standards**: standards support interoperability between different systems. The most used in this context are [OASIS Security Assertion Markup Language (SAML)](https://www.oasis-open.org/standard/saml/) and [OpenID Connect](https://openid.net/connect/), which underpins [OAuth](https://oauth.net/) for authorization and different token formats.
 
@@ -455,9 +457,10 @@ For example, the driver’s license (and the international one), the passport (a
 If we extend this concept to include those documents that are often too large to be put inside a physical wallet if not unfolded but which we use during the day, we also have employment contracts, house contracts, utility bills, ​​the papers of our pet (which, if it travels, has a chip and a passport), marriage certificate (for those who are married), a power of attorney to sign the documents of a company, the tax return, bank statements, amateur radio license or other licenses, medical prescriptions, exam results (both medical and college), degree, professional qualifications (e.g., medical doctor, lawyer, psychologist), warranty certificates of the items I bought and much more.
 
 <div class="note">
-    From this scraping, we can reason about several aspects:
-    * We use only some digital credentials to verify our identity (e.g., driver's license, passport), which have additional attributes that can be useful other than identification.
-    * Many other credentials are related to our features or entitlements (e.g., degree certificate, work permit), which allow us to do many things but not identify ourselves.
+    Although this is only a partial list, it already allows us to make several observations:
+    * The first is that not every credential is suited to every use case. I cannot generally use a college diploma to cross the border to another country. 
+       * The second is that the value of a credential increases with its interoperability. The fact that passports are recognized across many countries makes them extremely powerful, including for purposes other than establishing national identity (e.g., for proving age).
+    * The third is that credential reuse is often tied to the strength of its subproperties. For example, a utility bill may be used to prove our physical address in a KYC context (because it is tied to the mail system) but may not be sufficient in a KYC context to prove our name or surname.
     * We are not the subjects of some credentials, as in the case of pet travel documents.
 </div>
 
@@ -477,9 +480,16 @@ The IAM market is thriving, with an estimated growth of 43 billion USD in 2029 [
 
 ### Global Workforce ### {#global-workforce}
 
-Digital Transformation has been a trend for several years and has played a crucial role, particularly in the Workforce, during the COVID-19 pandemic. Organizations could decide whether to stop operations or change as far as possible by digitizing and enabling remote work. This transformation made it clear that looking into the global workforce is possible.
+Digital Transformation has been a trend for several years and has played a crucial role, particularly in the Workforce, during the COVID-19 pandemic. 
+The pandemic accelerated a variety of phenomena including the trend to remote work. 
+Because remote work implies fewer geography-based constraints, there will be demands for other forms of identification, and for interoperable credentials, in order to meet the demands of a more mobile workforce.
 
-The fact is that, net of a further trend in the last year of "back to the office", remote workers are estimated to be 67 percent in the technology industry, and this approach is preferred by 91 percent of workers [[statista-work-from-home]]. In a global context, digital identities can help register employees and contractors by verifying their identities and qualifications, which is particularly challenging for a global workforce. This can speed up hiring, employee management, and other HR processes.
+The fact is that, net of a further trend in the last year of "back to the office", remote workers are estimated to be 67 percent in the technology industry, and this approach is preferred by 91 percent of workers [[statista-work-from-home]]. 
+
+In a global context, digital identities can help register employees and contractors by verifying their identities and qualifications, which is particularly challenging for a global workforce. 
+
+Note: By using together the identities issued by governments to both people and organizations, it is possible to make hiring processes smoother with benefits for organizations and people often subject to scams. 
+To enable this scenario, it's important to have interoperability at both the technical and governance levels.
 
 ## Things ## {#things}
 
@@ -553,6 +563,8 @@ Note: A particularly well-known example of textual credentials is the first driv
 
 These credentials are issued by a trusted entity (e.g., a government), carried or presented by the person in question (e.g., the user with a passport), and then verified by those in charge to authenticate (e.g., the border police) and provide something (e.g., permission to cross the border).
 
+Note: the process used by text credentials has the same structure as that used for digital credentials described above.
+
 Even then, there were security problems: on the one hand, counterfeiting—which was mitigated by using stamps, seals, or special paper—and the use of documents by persons other than the one for whom the document was issued, which was mitigated by including a written description of the owner’s facial features to bind them to the document as photography had not yet been invented.
 
 ### Photographic Credentials ### {#photographic-credentials}
@@ -608,7 +620,7 @@ Below is a short list with some implementation examples:
 
 Some governments are doing pilot projects with Decentralized Identities, providing their citizens with Digital Wallets and IDs.
 
-Let's delve into an extensively debated use case requiring a solution: age verification.
+Let us delve into an extensively debated use case requiring a solution: age verification.
 
 The holder has a digital passport in the form of government-issued credentials; these credentials, in their claims, also contain age information.
 * **Full Credential**: It is possible to send the full credential since it also contains the date of birth, from which the verifier can derive the age. However, this doesn’t meet the principle of Data Minimization, as I’m sending a lot of other information that can be misused and make us traceable.
