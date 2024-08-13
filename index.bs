@@ -460,7 +460,7 @@ If we extend this concept to include those documents that are often too large to
     Although this is only a partial list, it already allows us to make several observations:
     * The first is that not every credential is suited to every use case. I cannot generally use a college diploma to cross the border to another country. 
        * The second is that the value of a credential increases with its interoperability. The fact that passports are recognized across many countries makes them extremely powerful, including for purposes other than establishing national identity (e.g., for proving age).
-    * Conversely, we can use a utility bill to prove our physical address, even though the bill was not created for that purpose. 
+    * The third is that credential reuse is often tied to the strength of its subproperties. For example, a utility bill may be used to prove our physical address in a KYC context (because it is tied to the mail system) but may not be sufficient in a KYC context to prove our name or surname.
         However, in the KYC context, it is accepted to provide the bills as a proof of physical address, but not as a main source of our name and surname verification.
     * We are not the subjects of some credentials, as in the case of pet travel documents.
 </div>
