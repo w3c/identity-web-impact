@@ -191,7 +191,7 @@ Perspectives:
     
     The [W3C Web Authentication Working Group](https://www.w3.org/groups/wg/webauthn/) brought strong authentication to the Web Platform through Web Authentication Level 2 [[webauthn-2]] and is developing Level 3 [[webauthn-3]]. 
 
-    The [W3C Web Payments Working Group](https://www.w3.org/Payments/WG/) is developing Secure Payment Confirmation [[secure-payment-confirmation]] to have a secure, privacy-preserving, web-based payment experience with frictionless usability.
+    Synchronized Web Authentication credentials &mdash;passkeys&mdash; are well-suited for login authentication but less well-suited for some regulated high-assurance use cases, notably payments. To fulfill additional requirements of  payments ecosystems, the [W3C Web Payments Working Group](https://www.w3.org/Payments/WG/) is developing Secure Payment Confirmation [[secure-payment-confirmation]] to support multi-factor authenticati and  requirements for cryptographic evidence of user consent to the terms of a transaction.
 </div>
 
 ## Federated identity model ## {#federated-identity-model}
