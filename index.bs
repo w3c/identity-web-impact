@@ -189,7 +189,7 @@ Perspectives:
     <span class="marker">Enabling passwordless credentials for authentication and payments</span><br>
     To mitigate security threats, in particular the use of multiple passwords and phishing, FIDO Alliance created **Passkeys**, "*a replacement for passwords that provide faster, easier, and more secure sign-ins to websites and apps across a user’s devices*" [[passkeys-101]].
     
-    The [W3C Web Authentication Working Group](https://www.w3.org/groups/wg/webauthn/) brought to the Web Platform to standardize Web Authentication Level 2 [[webauthn-2]] and is developing Level 3 [[webauthn-3]]. 
+    The [W3C Web Authentication Working Group](https://www.w3.org/groups/wg/webauthn/) brought strong authentication to the Web Platform through Web Authentication Level 2 [[webauthn-2]] and is developing Level 3 [[webauthn-3]]. 
 
     The [W3C Web Payments Working Group](https://www.w3.org/Payments/WG/) is developing Secure Payment Confirmation [[secure-payment-confirmation]] to have a secure, privacy-preserving, web-based payment experience with frictionless usability.
 </div>
