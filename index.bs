@@ -482,7 +482,7 @@ The IAM market is thriving, with an estimated growth of 43 billion USD in 2029 [
 
 Digital Transformation has been a trend for several years and has played a crucial role, particularly in the Workforce, during the COVID-19 pandemic. 
 The pandemic accelerated a variety of phenomena including the trend to remote work. 
-This transformation made it clear that looking into the global workforce is possible.
+Because remote work implies fewer geography-based constraints, there will be demands for other forms of identification, and for interoperable credentials, in order to meet the demands of a more mobile workforce.
 
 The fact is that, net of a further trend in the last year of "back to the office", remote workers are estimated to be 67 percent in the technology industry, and this approach is preferred by 91 percent of workers [[statista-work-from-home]]. 
 
