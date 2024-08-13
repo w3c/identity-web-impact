@@ -458,7 +458,7 @@ If we extend this concept to include those documents that are often too large to
 
 <div class="note">
     Although this is only a partial list, it already allows us to make several observations:
-    * All credentials describe some of our properties, but we can only use some of them to identify ourselves, and that depends on the specific context. 
+    * The first is that not every credential is suited to every use case. I cannot generally use a college diploma to cross the border to another country. 
         For example, credentials like a passport is accepted everywhere (according to agreements between governments).
     * Conversely, we can use a utility bill to prove our physical address, even though the bill was not created for that purpose. 
         However, in the KYC context, it is accepted to provide the bills as a proof of physical address, but not as a main source of our name and surname verification.
