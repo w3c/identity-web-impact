@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 82ce88815, updated Thu Sep 7 16:33:55 2023 -0700" name="generator">
   <link href="https://www.w3.org/reports/identity-web-impact/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="44012867d5d932f33925c6b0864d98cf2612267b" name="document-revision">
+  <meta content="dc31667938bee3cc4f3111655976e0c1e35dfc3c" name="document-revision">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -413,7 +413,7 @@ dfn > a.self-link::before      { content: "#"; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Identity &amp; the Web</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/staff/">W3C Team</a>, <time class="dt-updated" datetime="2024-08-12">12 August 2024</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/staff/">W3C Team</a>, <time class="dt-updated" datetime="2024-08-13">13 August 2024</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -685,7 +685,8 @@ So, the challenge is enabling this technological innovation by being aware of th
    </ul>
    <div class="advisement" id="a1">
      <span class="marker">Enabling passwordless credentials for authentication and payments</span><br> To mitigate security threats, in particular the use of multiple passwords and phishing, FIDO Alliance created <strong>Passkeys</strong>, "<em>a replacement for passwords that provide faster, easier, and more secure sign-ins to websites and apps across a user’s devices</em>" <a data-link-type="biblio" href="#biblio-passkeys-101" title="Passkeys 101">[passkeys-101]</a>. 
-    <p>The <a href="https://www.w3.org/groups/wg/webauthn/">W3C Web Authentication Working Group</a> brought to the Web Platform to standardize Web Authentication Level 2 <a data-link-type="biblio" href="#biblio-webauthn-2" title="Web Authentication: An API for accessing Public Key Credentials - Level 2">[webauthn-2]</a>, and is developing Level 3 <a data-link-type="biblio" href="#biblio-webauthn-3" title="Web Authentication: An API for accessing Public Key Credentials - Level 3">[webauthn-3]</a>. This technology, moreover, can also be used to make online transactions more secure by using the same underlying technology to confirm payments, such as the "payment" extension for Secure Payment Confirmation <a data-link-type="biblio" href="#biblio-secure-payment-confirmation" title="Secure Payment Confirmation">[secure-payment-confirmation]</a>.</p>
+    <p>The <a href="https://www.w3.org/groups/wg/webauthn/">W3C Web Authentication Working Group</a> brought strong authentication to the Web Platform through Web Authentication Level 2 <a data-link-type="biblio" href="#biblio-webauthn-2" title="Web Authentication: An API for accessing Public Key Credentials - Level 2">[webauthn-2]</a> and is developing Level 3 <a data-link-type="biblio" href="#biblio-webauthn-3" title="Web Authentication: An API for accessing Public Key Credentials - Level 3">[webauthn-3]</a>.</p>
+    <p>Synchronized Web Authentication credentials —passkeys— are well-suited for login authentication but less well-suited for some regulated high-assurance use cases, notably payments. To fulfill additional requirements of  payments ecosystems, the <a href="https://www.w3.org/Payments/WG/">W3C Web Payments Working Group</a> is developing Secure Payment Confirmation <a data-link-type="biblio" href="#biblio-secure-payment-confirmation" title="Secure Payment Confirmation">[secure-payment-confirmation]</a> to support multi-factor authentication and  requirements for cryptographic evidence of user consent to the terms of a transaction.</p>
    </div>
    <h3 class="heading settled" data-level="3.2" id="federated-identity-model"><span class="secno">3.2. </span><span class="content">Federated identity model</span><a class="self-link" href="#federated-identity-model"></a></h3>
    <p>In the federated identity model, also known as a third-party <strong>Identity Provider (IdP)</strong>, the function of <em>making available identity information</em> is separated from the one <em>which provides a service to the user</em> - the <strong>Service Provider (SP) or Relying Party (RP)</strong> <a data-link-type="biblio" href="#biblio-iso-iec-24760-1" title="IT Security and Privacy — A framework for identity management — Part 1: Terminology and concepts">[ISO-IEC-24760-1]</a>.</p>
@@ -709,7 +710,7 @@ So, the challenge is enabling this technological innovation by being aware of th
    <p>Perspectives:</p>
    <ul>
     <li data-md>
-     <p><strong>Security</strong>: This model mitigates the user’s remembering multiple passwords and identity fragmentation issues and relieves the need for the SP or RP to manage the authentication aspects.</p>
+     <p><strong>Security</strong>: This model mitigates the user’s need to remember multiple passwords and identity fragmentation issues and relieves the need for the SP or RP to manage the authentication aspects.</p>
     <li data-md>
      <p><strong>Privacy</strong>: this model still has some implications because the IdP knows what third-party services the user has accessed. Additionally, the technology uses "<em>third-party (cross-site) cookies that are considered harmful to the web and must be removed</em>" <a data-link-type="biblio" href="#biblio-third-party-cookies-must-be-removed" title="Third Party Cookies Must Be Removed">[third-party-cookies-must-be-removed]</a>.</p>
     <li data-md>
@@ -963,12 +964,14 @@ The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3
    <p>For example, the driver’s license (and the international one), the passport (and the passport also has visas for entry to other countries, or if you have minor children, they can be in your passport), payment cards, cash, association cards, tickets (e.g., events, concerts, boarding passes), loyalty cards (from hotels, airlines, the grocery store), the university card, the badge to get into the office, medical insurance card and health card, emergency contacts, some receipts, public transportation card, my business card and the business cards of some people I met, the card to get into the gym and the library.</p>
    <p>If we extend this concept to include those documents that are often too large to be put inside a physical wallet if not unfolded but which we use during the day, we also have employment contracts, house contracts, utility bills, ​​the papers of our pet (which, if it travels, has a chip and a passport), marriage certificate (for those who are married), a power of attorney to sign the documents of a company, the tax return, bank statements, amateur radio license or other licenses, medical prescriptions, exam results (both medical and college), degree, professional qualifications (e.g., medical doctor, lawyer, psychologist), warranty certificates of the items I bought and much more.</p>
    <div class="note" role="note">
-     From this scraping, we can reason about several aspects: 
+     Although this is only a partial list, it already allows us to make several observations: 
     <ul>
      <li data-md>
-      <p>We use only some digital credentials to verify our identity (e.g., driver’s license, passport), which have additional attributes that can be useful other than identification.</p>
+      <p>The first is that not every credential is suited to every use case. I cannot generally use a college diploma to cross the border to another country.</p>
      <li data-md>
-      <p>Many other credentials are related to our features or entitlements (e.g., degree certificate, work permit), which allow us to do many things but not identify ourselves.</p>
+      <p>The second is that the value of a credential increases with its interoperability. The fact that passports are recognized across many countries makes them extremely powerful, including for purposes other than establishing national identity (e.g., for proving age).</p>
+     <li data-md>
+      <p>The third is that credential reuse is often tied to the strength of its subproperties. For example, a utility bill may be used to prove our physical address in a KYC context (because it is tied to the mail system) but may not be sufficient in a KYC context to prove our name or surname.</p>
      <li data-md>
       <p>We are not the subjects of some credentials, as in the case of pet travel documents.</p>
     </ul>
@@ -981,8 +984,13 @@ The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3
    <h4 class="heading settled" data-level="4.1.2" id="identity-and-access-management"><span class="secno">4.1.2. </span><span class="content">Identity and Access Management (IAM)</span><a class="self-link" href="#identity-and-access-management"></a></h4>
    <p>The IAM market is thriving, with an estimated growth of 43 billion USD in 2029 <a data-link-type="biblio" href="#biblio-statista-identity-and-access-management" title="Identity and Access Management - statistics &amp; facts">[statista-identity-and-access-management]</a>. Such systems enable an employee’s identification, authentication, and authorization on the organization’s platforms according to assigned roles and responsibilities. Decentralized identities enable an additional approach, such as Bring Your Own Identity (BYOI), where users can use their identity to interact with corporate assets and not just for human resource management practices.</p>
    <h4 class="heading settled" data-level="4.1.3" id="global-workforce"><span class="secno">4.1.3. </span><span class="content">Global Workforce</span><a class="self-link" href="#global-workforce"></a></h4>
-   <p>Digital Transformation has been a trend for several years and has played a crucial role, particularly in the Workforce, during the COVID-19 pandemic. Organizations could decide whether to stop operations or change as far as possible by digitizing and enabling remote work. This transformation made it clear that looking into the global workforce is possible.</p>
-   <p>The fact is that, net of a further trend in the last year of "back to the office", remote workers are estimated to be 67 percent in the technology industry, and this approach is preferred by 91 percent of workers <a data-link-type="biblio" href="#biblio-statista-work-from-home" title="Work from home: remote &amp; hybrid work - Statistics &amp; Facts">[statista-work-from-home]</a>. In a global context, digital identities can help register employees and contractors by verifying their identities and qualifications, which is particularly challenging for a global workforce. This can speed up hiring, employee management, and other HR processes.</p>
+   <p>Digital Transformation has been a trend for several years and has played a crucial role, particularly in the Workforce, during the COVID-19 pandemic.
+The pandemic accelerated a variety of phenomena including the trend to remote work. 
+Because remote work implies fewer geography-based constraints, there will be demands for other forms of identification, and for interoperable credentials, in order to meet the demands of a more mobile workforce.</p>
+   <p>The fact is that, net of a further trend in the last year of "back to the office", remote workers are estimated to be 67 percent in the technology industry, and this approach is preferred by 91 percent of workers <a data-link-type="biblio" href="#biblio-statista-work-from-home" title="Work from home: remote &amp; hybrid work - Statistics &amp; Facts">[statista-work-from-home]</a>.</p>
+   <p>In a global context, digital identities can help register employees and contractors by verifying their identities and qualifications, which is particularly challenging for a global workforce.</p>
+   <p class="note" role="note"><span class="marker">Note:</span> By using together the identities issued by governments to both people and organizations, it is possible to make hiring processes smoother with benefits for organizations and people often subject to scams.
+To enable this scenario, it’s important to have interoperability at both the technical and governance levels.</p>
    <h3 class="heading settled" data-level="4.2" id="things"><span class="secno">4.2. </span><span class="content">Things</span><a class="self-link" href="#things"></a></h3>
    <p>Although applications with identities linked to individuals are the most studied cases and are delicate to handle, identities also find fertile ground in the <em>supply chain</em> and <em>IoT</em> world, which is decentralized and distributed by nature.</p>
    <h4 class="heading settled" data-level="4.2.1" id="supply-chain"><span class="secno">4.2.1. </span><span class="content">Supply Chain</span><a class="self-link" href="#supply-chain"></a></h4>
@@ -1053,6 +1061,7 @@ The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3
    <p>Up until the <strong>1700s-1800s</strong>, when there was a lack of direct knowledge between the parties (and thus trust), such as when traveling, to identify oneself, it began to be necessary to present credentials issued by a trusted third party, such as a government, in the form of a paper with written information proofed by the authority.</p>
    <p class="note" role="note"><span class="marker">Note:</span> A particularly well-known example of textual credentials is the first driver’s license, issued in 1888 to Karl Benz so he could use his experimental car <a data-link-type="biblio" href="#biblio-how-might-driver-licensing" title="How might Driver Licensing and Vehicle Registration evolve if we adopt Autonomous Cars and Digital Identification? [preprint]">[how-might-driver-licensing]</a>. It was a paper signed by the local authority (a trusted party), which was required after neighbors complained about noise generated by his driving, so not for identifying himself.</p>
    <p>These credentials are issued by a trusted entity (e.g., a government), carried or presented by the person in question (e.g., the user with a passport), and then verified by those in charge to authenticate (e.g., the border police) and provide something (e.g., permission to cross the border).</p>
+   <p class="note" role="note"><span class="marker">Note:</span> the process used by text credentials has the same structure as that used for digital credentials described above.</p>
    <p>Even then, there were security problems: on the one hand, counterfeiting—which was mitigated by using stamps, seals, or special paper—and the use of documents by persons other than the one for whom the document was issued, which was mitigated by including a written description of the owner’s facial features to bind them to the document as photography had not yet been invented.</p>
    <h4 class="heading settled" data-level="4.3.3" id="photographic-credentials"><span class="secno">4.3.3. </span><span class="content">Photographic Credentials</span><a class="self-link" href="#photographic-credentials"></a></h4>
    <p>The first documented use of photography for identification was in <strong>1876</strong>, thanks to the photographer William Notman, who had used photographs to identify workers and guests at the Centennial Exposition in Philadelphia <a data-link-type="biblio" href="#biblio-the-world-of-william-notman" title="The World of William Notman">[the-world-of-william-notman]</a>.</p>
@@ -1096,7 +1105,7 @@ Each government has made its own architectural choices and can offer different s
      <p><strong>United States of America</strong>: <a href="https://www.dhs.gov/science-and-technology/digital-identity-and-trust">U.S. DHS on Digital Identities</a> and Mobile Driving Licence (e.g., <a href="https://mva.maryland.gov/Pages/mdMobileID.aspx">Maryland</a>, <a href="https://azdot.gov/mvd/mobile-driver-license">Arizona</a>, <a href="https://dld.utah.gov/utahmdl/">Utah</a>, <a href="https://www.dmv.ca.gov/portal/ca-dmv-wallet/">California</a>).</p>
    </ul>
    <p>Some governments are doing pilot projects with Decentralized Identities, providing their citizens with Digital Wallets and IDs.</p>
-   <p>Let’s delve into an extensively debated use case requiring a solution: age verification.</p>
+   <p>Let us delve into an extensively debated use case requiring a solution: age verification.</p>
    <p>The holder has a digital passport in the form of government-issued credentials; these credentials, in their claims, also contain age information.</p>
    <ul>
     <li data-md>
