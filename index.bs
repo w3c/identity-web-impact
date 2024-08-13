@@ -457,7 +457,7 @@ For example, the driver’s license (and the international one), the passport (a
 If we extend this concept to include those documents that are often too large to be put inside a physical wallet if not unfolded but which we use during the day, we also have employment contracts, house contracts, utility bills, ​​the papers of our pet (which, if it travels, has a chip and a passport), marriage certificate (for those who are married), a power of attorney to sign the documents of a company, the tax return, bank statements, amateur radio license or other licenses, medical prescriptions, exam results (both medical and college), degree, professional qualifications (e.g., medical doctor, lawyer, psychologist), warranty certificates of the items I bought and much more.
 
 <div class="note">
-    From this scraping, we can reason about several aspects:
+    Although this is only a partial list, it already allows us to make several observations:
     * All credentials describe some of our properties, but we can only use some of them to identify ourselves, and that depends on the specific context. 
         For example, credentials like a passport is accepted everywhere (according to agreements between governments).
     * Conversely, we can use a utility bill to prove our physical address, even though the bill was not created for that purpose. 
