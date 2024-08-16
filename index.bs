@@ -271,7 +271,7 @@ Note: There are differences between the levels of DIF and the **ToIP Technology 
 
 #### Layer 4: Applications, Wallets, Products  #### {#application-layer}
 
-At this level, we find the various applications accessible to end users:
+At this level, we find the various applications available to end users:
  * **Applications**: These can be Native or Web-based, and it is possible to interact with them differently.
  * **Digital Wallets**: These are where the Holder stores their credentials.
     Just as a physical wallet holds more than just IDs, the digital wallet can store various credentials and information. We can classify the wallets depending on several factors:
