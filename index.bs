@@ -118,9 +118,9 @@ Human identities are a very special case, particularly those issued by governmen
 
 ### Human rights ### {#human-rights}
 
-Identity is a fundamental human right that underpins personal *dignity* and *autonomy*. Article 6 of the Universal Declaration of Human Rights states, "*Everyone has the right to recognition everywhere as a person before the law*" [[UDHR]]. 
+Identity is a fundamental human right that underpins personal *dignity* and *autonomy*. Article 6 of the Universal Declaration of Human Rights states, "*Everyone has the right to recognition everywhere as a person before the law*" [[UDHR]]. This principle is reinforced by Article 16 of the International Covenant on Civil and Political Rights, which similarly reads: "*Everyone shall have the right to recognition everywhere as a person before the law*" [[ICCPR]]. 
 
-This principle is reinforced by Article 16 of the International Covenant on Civil and Political Rights, which states that "*everyone has the right to recognition everywhere as a person before the law*" [[ICCPR]]. Although the term "identity" is not explicitly used, its concept is inherent in recognizing the identity as a person.
+Although the term "identity" is not explicitly used here, its concept is inherent in recognizing the identity as a person.
 
 ### Sustainable development goal ### {#sustainable-development-goal}
 
