@@ -11,8 +11,8 @@ Abstract:
 Status Text: 
   <p>This document is intended to capture the current shared understanding of the [W3C Team](https://www.w3.org/staff/) on the current and expected impact of developments linked to identity on the Web and identifying explorations the World Wide Web Consortium and its community have started or ought to be starting to manage that impact. It does not represent any consensus from the W3C Membership, nor is it a standardization document.</p>
   <p>The document was authored by Simone Onofri ([simone@w3.org](mailto:simone@w3.org)), with significant contributions from the W3C Team and people listed in the Acknowledgements section.</p>
-  <p>If it's not feasible for you to use GitHub, send comments in e-mail to: <a href="mailto:public-team-report-comments@w3.org">public-team-report-comments@w3.org</a>. Please put your comments in the body of the message, not as an attachment. Start your e-mail subject line with: [identity-web-impact].</p>
   <p>This document helps structure discussions on what may be needed at the standardization level to make Identity's systemic impact less harmful or more manageable. It is bound to be incomplete and sometimes wrong — we are gathering input and feedback in [GitHub](https://github.com/w3c/identity-web-impact/issues), preferably before October 6, 2024.</p>
+  <p>If it's not feasible for you to use GitHub, send comments in e-mail to: <a href="mailto:public-team-report-comments@w3.org">public-team-report-comments@w3.org</a>. Please put your comments in the body of the message, not as an attachment. Start your e-mail subject line with: [identity-web-impact].</p>
   <p>Depending on the feedback received, possible next steps include more in-depth stakeholder interviews, a dedicated W3C Workshop, or developing a standardization roadmap.</p>
 Markup Shorthands: markdown on, biblio yes
 Boilerplate: omit issues-index, omit conformance, repository-issue-tracking off
