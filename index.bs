@@ -5,7 +5,7 @@ ED: https://www.w3.org/reports/identity-web-impact/
 Shortname: identity-web-impact
 Issue Tracking: GitHub https://github.com/w3c/identity-web-impact/issues
 Level: 1
-Editor: Simone Onofri, w3cid 38211, W3C, simone@w3.org
+Editor: Simone Onofri, w3cid 38211, W3C, https://w3.org, simone@w3.org
 Abstract:
   <p>This document proposes an overview of Digital Identities on the Web and an analysis through different use cases of the systemic impact on both the market side and the human side, as well as the role that Web standardization may play in managing that impact.</p>
 Status Text: 
