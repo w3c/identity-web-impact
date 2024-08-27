@@ -272,7 +272,7 @@ We can have different contexts, such as state, government, and university contex
 
 Each context is governed by one or more governance or trust frameworks.
 For example, for the domain of credentials issued by governments in Europe, we have the [EU Digital Wallet](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/Technical+Specifications), and we can have others related to other states.
-As well as other domains such as individual organizations, enterprises or universities.
+As well as other domains such as individual organizations, enterprises, or universities.
 So, a critical issue is interoperability across states.
 
 Note: There are differences between the levels of DIF and the **ToIP Technology Stack**: *Governance* is divided into parallel halves, with specific frameworks for each level.
@@ -619,7 +619,7 @@ Below is a short list with some implementation examples:
 * **Canada**: [Pan-Canadian Trust Framework™](https://diacc.ca/trust-framework/)
 * **China**: [IIFAA Decentralized Trusted Authentication Technical Specification - Part 1: General Requirements](https://w3c-cg.github.io/cndid/CG-DRAFT-iifaa-did-20240725).
 * **Estonia**: [Estonian e-Identity](https://www.id.ee/en/).
-* **Europe**: [European Digital Identity Architecture Reference Framework (EUDI-ARF)](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework).  
+* **Europe**: [European Digital Identity Architecture and Reference Framework (EUDI-ARF)](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework).  
 * **India**: [Aadhaar](https://uidai.gov.in).
 * **Italy**: [Italy's Public Digital Identity System (SPID)](https://www.spid.gov.it/en/). 
 * **Nigeria**: [Nigeria's eID](https://nimc.gov.ng/digital-identity-ecosystem/).
