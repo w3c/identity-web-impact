@@ -616,6 +616,8 @@ Each government has made its own architectural choices and can offer different s
 
 Below is a short list with some implementation examples:
 
+* **Canada**: [Pan-Canadian Trust Framework™](https://diacc.ca/trust-framework/)
+* **China**: [IIFAA Decentralized Trusted Authentication Technical Specification - Part 1: General Requirements](https://w3c-cg.github.io/cndid/CG-DRAFT-iifaa-did-20240725).
 * **Estonia**: [Estonian e-Identity](https://www.id.ee/en/).
 * **Europe**: [European Digital Identity Architecture Reference Framework (EUDI-ARF)](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework).  
 * **India**: [Aadhaar](https://uidai.gov.in).
@@ -623,6 +625,7 @@ Below is a short list with some implementation examples:
 * **Nigeria**: [Nigeria's eID](https://nimc.gov.ng/digital-identity-ecosystem/).
 * **Singapore**: [Singpass](https://www.singpass.gov.sg/main).
 * **Spain**: [Cl@ve](https://clave.gob.es/clave_Home/en/clave.html).
+* **Switzerland**: [Swiss E-ID & Trust Infrastructure](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/tech-roadmap.md)
 * **United Arab Emirates**: [UAE Pass](https://uaepass.ae).
 * **United States of America**: [U.S. DHS on Digital Identities](https://www.dhs.gov/science-and-technology/digital-identity-and-trust) and Mobile Driving Licence (e.g., [Maryland](https://mva.maryland.gov/Pages/mdMobileID.aspx), [Arizona](https://azdot.gov/mvd/mobile-driver-license), [Utah](https://dld.utah.gov/utahmdl/), [California](https://www.dmv.ca.gov/portal/ca-dmv-wallet/)).
 
