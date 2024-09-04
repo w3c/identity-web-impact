@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 82ce88815, updated Thu Sep 7 16:33:55 2023 -0700" name="generator">
   <link href="https://www.w3.org/reports/identity-web-impact/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="be55a5c8c8408b0fa7b3f615532c53e1d23038b8" name="document-revision">
+  <meta content="9afdccb5467986357e1f7a53c245f95124724d79" name="document-revision">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -413,7 +413,7 @@ dfn > a.self-link::before      { content: "#"; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Identity &amp; the Web</h1>
-   <p id="w3c-state"><time class="dt-updated" datetime="2024-08-30">30 August 2024</time></p>
+   <p id="w3c-state"><time class="dt-updated" datetime="2024-09-04">4 September 2024</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -611,7 +611,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p>We introduce the last topic with the example of credentials that universities can issue. In addition to degree certificates, universities usually have student ID cards containing information such as first name, last name, and photo.</p>
    <p>Why can a driver’s license and a student ID card, having similar attributes and being cryptographically verifiable, only allow the driver’s license to open a bank account?</p>
    <p>There are several aspects, first of all, the <em>context</em> and <em>domain</em> in which the credential lives. The key difference lies in the <strong>trust</strong> we place in the issuers of these credentials. Trust can be defined as "<em>the belief that someone is good and honest and will not harm you, or that something is safe and reliable</em>" <a data-link-type="biblio" href="#biblio-cambridge-dictionary-trust" title="trusT | English meaning">[cambridge-dictionary-trust]</a>. Essentially, trust is a choice we make; we choose to trust or not trust someone or something <a data-link-type="biblio" href="#biblio-osstmm-3" title="Open Source Security Testing Methodology Manual v3">[OSSTMM-3]</a>, and often, it is not a binary question.</p>
-   <p><em>Cryptographic trust</em>, such as verifying the signature of a credential, differs from <em>human trust</em> <a data-link-type="biblio" href="#biblio-self-sovereign-identity" title="Self-Sovereign Identity">[self-sovereign-identity]</a>. Cryptographic methods ensure that the credentials haven’t been tampered with. Human trust involves trusting the entity that issued the credential and that the issuer provided the credential to the legitimate user.</p>
+   <p><em>Cryptographic trust</em>, such as verifying the signature of a credential, differs from <em>human trust</em> <a data-link-type="biblio" href="#biblio-self-sovereign-identity" title="Self-Sovereign Identity">[self-sovereign-identity]</a>. Cryptographic methods ensure that the credentials haven’t been tampered with and that they have been issued by a trusted issuer. Human trust involves trusting the entity that issued the credential or, in the case of an issuer chain, trusting the root, and that the issuer provided the credential to the legitimate user.</p>
    <p>This is why we also need <strong>governance frameworks</strong> or <strong>trust frameworks</strong>. These frameworks include business, legal, and technical rules that help establish and maintain trust in credential issuers.</p>
    <p>This includes establishing the <strong>Levels of (identity) Assurance (LOA)</strong>. Follow as an example the <em>Identity Assurance Level (IAL)</em> from NIST-SP-800-63-3 <a data-link-type="biblio" href="#biblio-nist-sp-800-63-3" title="Types of credentials and authenticators">[NIST-SP-800-63-3]</a>:</p>
    <ul>
