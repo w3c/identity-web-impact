@@ -109,7 +109,7 @@ Why can a driver’s license and a student ID card, having similar attributes an
 
 There are several aspects, first of all, the *context* and *domain* in which the credential lives. The key difference lies in the **trust** we place in the issuers of these credentials. Trust can be defined as "*the belief that someone is good and honest and will not harm you, or that something is safe and reliable*" [[cambridge-dictionary-trust]]. Essentially, trust is a choice we make; we choose to trust or not trust someone or something [[OSSTMM-3]], and often, it is not a binary question.
 
-*Cryptographic trust*, such as verifying the signature of a credential, differs from *human trust* [[self-sovereign-identity]]. Cryptographic methods ensure that the credentials haven’t been tampered with. Human trust involves trusting the entity that issued the credential and that the issuer provided the credential to the legitimate user.
+*Cryptographic trust*, such as verifying the signature of a credential, differs from *human trust* [[self-sovereign-identity]]. Cryptographic methods ensure that the credentials haven’t been tampered with and that they have been issued by a trusted issuer. Human trust involves trusting the entity that issued the credential or, in the case of an issuer chain, trusting the root, and that the issuer provided the credential to the legitimate user.
 
 This is why we also need **governance frameworks** or **trust frameworks**. These frameworks include business, legal, and technical rules that help establish and maintain trust in credential issuers. 
 
