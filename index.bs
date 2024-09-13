@@ -149,7 +149,6 @@ They can guarantee other rights, such as the right to accessibility promoted by 
 These technologies can also be used on a humanitarian level. Referring to the NHIs, the International Committee of Red Cross (ICRC) investigated *Digital Emblems* [[ADEM]] to identify ICT assets protected under international law [[digitalizing-report]].
 
 Note: However, like all innovations, these technologies can have downsides. To paraphrase Paul Watzlawick, the innovation of these technologies must not become “*ultra-solutions*” where “*operation successful, patient dead*” [[ultra-solutions]]. So, the challenge is to enable this technological innovation by being aware of the threats to privacy, security, and human rights.
-So, the challenge is enabling this technological innovation by being aware of the threats to Privacy, security, and Human Rights.
 
 Therefore, it is necessary to analyze the various threats to mitigate them at their root in designing and implementing these technologies and related standards.
 
@@ -204,7 +203,7 @@ Perspectives:
 
 ## Federated identity model ## {#federated-identity-model}
 
-In the federated identity model, also known as a third-party **Identity Provider (IdP)**, the function of *making available identity information* is separated from the one *which provides a service to the user* - the **Service Provider (SP) or Relying Party (RP)** [[ISO-IEC-24760-1]].
+In the federated identity model, the function of *making available identity information*, also known as a third-party **Identity Provider (IdP)**, is separated from the one *which provides a service to the user* - the **Service Provider (SP) or Relying Party (RP)** [[ISO-IEC-24760-1]].
 
 The federated identity model is the typical scenario when a user logs into a third-party site using a social network's "Sign in with..." feature or through Single Sign-On (SSO) in enterprise environments.
 
@@ -242,7 +241,7 @@ Note: We will examine the decentralized identity model more closely, as it is th
 
 The decentralized identity model marks a significant shift in architecture. Instead of federated Identity Providers (IdPs) and Service Providers (SPs) or Relying Parties (RPs), the focus now centers on the user.
 
-In this model, the user *controls* their credentials acquires them from an *Issuer*, stores them in their *wallet*, and presents *them* to a Verifier. Verification activities are mediated by a *Verifiable Data Registry*, containing the necessary information.
+In this model, the user, also known as *Holder*, *controls* their credentials acquires them from an *Issuer*, stores them in their *wallet*, and presents *them* to a Verifier. Verification activities are mediated by a *Verifiable Data Registry*, containing the necessary information.
 
 <figure id="fig-decentralized-identity-model">
     <img src="figures/decentralized-identity-model.svg">
@@ -296,7 +295,7 @@ At this level, the various actors exchange credentials. Let us see what happens 
 The actors are:
 * The **Issuer** creates and *issues credentials* to the *Holder* and writes the necessary information within the *Verifiable Data Registry*. This can be a trusted third-party entity like governments or  universities. In some cases, credentials can be *self-issued* by the user, e.g., to represent informal skills or competencies. This flexibility allows for a broader range of credentials and applications.
 * The **Holder** (the *user*), at the heart of this architecture, receives the credentials from the Issuer, stores them in a *Digital Wallet*, and *presents* them to the *Verifier*.
-* The **Verifier** receives the presented credentials by the* Holder* and verifies them. This actor is akin to an SP or RP in federated models. This process does not necessarily involve informing the *Issuer*. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.
+* The **Verifier** receives the presented credentials by the *Holder* and verifies them. This actor is akin to an SP or RP in federated models. This process does not necessarily involve informing the *Issuer*. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.
 
 Note: In this model, the definition of a **credential** shifts to a set of *claims* (attributes) linked to *identifiers* controlled by the user. While credentials represent identities, not all claims within a credential are used for identification. They can describe various characteristics, extending the application of credentials beyond mere identification.
 
