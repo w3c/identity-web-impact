@@ -22,7 +22,7 @@ Text Macro: LONGSTATUS W3C Team
 Text Macro: W3C-STATUS-URL https://www.w3.org/staff/
 Mailing List: public-team-report-comments@w3.org
 Mailing List Archives: https://lists.w3.org/Archives/Public/public-team-report-comments/ 
-</pre>
+</pre> 
 
 # Executive summary # {#executive-summary}
 
