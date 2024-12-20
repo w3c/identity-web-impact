@@ -1,6 +1,5 @@
 <pre class='metadata'>
 Title: Identity & the Web
-Status: w3c/UD
 ED: https://www.w3.org/reports/identity-web-impact/
 Shortname: identity-web-impact
 Issue Tracking: GitHub https://github.com/w3c/identity-web-impact/issues
