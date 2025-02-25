@@ -5,10 +5,10 @@
   <title>Identity &amp; the Web</title>
   <meta content="LD" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/base.css" rel="stylesheet">
-  <meta content="Bikeshed version ac5ea272d, updated Fri Dec 6 15:45:15 2024 -0800" name="generator">
+  <meta content="Bikeshed version 60c422380, updated Thu Feb 20 19:11:22 2025 -0800" name="generator">
   <link href="https://www.w3.org/reports/identity-web-impact/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="04b3510151040b9a3a9449b511a53cd4d56a23e6" name="revision">
+  <meta content="956a267a7a51eb58df691bbf16e107167d12bedc" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -413,7 +413,7 @@ dfn > a.self-link::before      { content: "#"; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Identity &amp; the Web</h1>
-   <p id="w3c-state"><time class="dt-updated" datetime="2024-12-20">20 December 2024</time></p>
+   <p id="w3c-state"><time class="dt-updated" datetime="2025-02-25">25 February 2025</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -430,7 +430,7 @@ dfn > a.self-link::before      { content: "#"; }
     </div>
    </details>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/policies/#copyright">Copyright</a> © 2024 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/copyright/software-license/" rel="license" title="W3C Software and Document License">permissive document license</a> rules apply. </p>
+   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/policies/#copyright">Copyright</a> © 2025 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/copyright/software-license/" rel="license" title="W3C Software and Document License">permissive document license</a> rules apply. </p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
@@ -939,16 +939,16 @@ So, coordination between these entities is necessary to ensure smooth operation.
      <ul>
       <li data-md>
        <p><strong>Enveloped Formats (Credential Formats)</strong>: The proof wraps around the serialization of the credential.
-JSONs are enveloped using JSON Object Signing and Encryption (<a href="https://datatracker.ietf.org/wg/jose/about/">JOSE</a>), and we can find JWT, JWS, and JWK here. JOSE is <em>cryptographically agile</em> (as it can fit different cryptographic primitives) and can also have Selective Disclosure (SD) with <a href="https://www.ietf.org/archive/id/draft-fett-oauth-selective-disclosure-jwt-02.html">SD-JWT</a> (which uses HMAC). New securing mechanisms are coming up, like <a href="https://arxiv.org/abs/2406.19035">SD-BLS</a> (which uses BLS) and ongoing efforts to fit BBS.  
-CBORs are enveloped using CBOR Object Signing and Encryption (<a href="https://www.rfc-editor.org/rfc/rfc9052">COSE</a>). Other formats include <a href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18013:-5:ed-1:v1:en">ISO mDocs</a> and <a href="https://datatracker.ietf.org/wg/spice/about/">SPICE</a>.  
+JSONs are enveloped using JSON Object Signing and Encryption ([JOSE](https://datatracker.ietf.org/wg/jose/about/)), and we can find JWT, JWS, and JWK here. JOSE is <em>cryptographically agile</em> (as it can fit different cryptographic primitives) and can also have Selective Disclosure (SD) with [SD-JWT](https://www.ietf.org/archive/id/draft-fett-oauth-selective-disclosure-jwt-02.html) (which uses HMAC). New securing mechanisms are coming up, like [SD-BLS](https://arxiv.org/abs/2406.19035) (which uses BLS) and ongoing efforts to fit BBS.  
+CBORs are enveloped using CBOR Object Signing and Encryption ([COSE](https://www.rfc-editor.org/rfc/rfc9052)). Other formats include <a href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18013:-5:ed-1:v1:en">ISO mDocs</a> and [SPICE](https://datatracker.ietf.org/wg/spice/about/).  
 The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3.org/TR/vc-jose-cose/">Securing Verifiable Credentials using JOSE and COSE</a>.</p>
       <li data-md>
-       <p><strong>Embedded Formats (Signature Algorithms):</strong> The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in <a href="https://www.w3.org/TR/vc-data-integrity/">Verifiable Credential Data Integrity 1.0</a>.</p>
+       <p><strong>Embedded Formats (Signature Algorithms):</strong> The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in <a href="https://www.w3.org/TR/vc-data-integrity/">Verifiable Credential Data Integrity 1.0</a>. New securing mechanisms are coming up, like [SD-BLS](https://arxiv.org/abs/2406.19035) (which uses BLS), and ongoing efforts to use BBS.</p>
      </ul>
     <li data-md>
-     <p><strong>Status Information (Revocation Algorithms)</strong>: <em>Issuers</em> can implement several ways to keep the credential’s status up to date, such as a Revocation List, a Status List (e.g., <a href="https://www.w3.org/TR/vc-bitstring-status-list/">Bitstring Status List v1.0</a>), and Cryptographic Accumulators, etc..</p>
+     <p><strong>Status Information (Revocation Algorithms)</strong>: <em>Issuers</em> can implement several ways to keep the credential’s status up to date, such as a Revocation List, a Status List (e.g., <a href="https://www.w3.org/TR/vc-bitstring-status-list/">W3C Bitstring Status List v1.0</a>, <a href="https://datatracker.ietf.org/doc/html/draft-demarco-oauth-status-assertions">Status Assertions</a>, <a href="https://datatracker.ietf.org/doc/html/draft-ietf-oauth-status-list-03">Token Status List</a>), and Cryptographic Accumulators, etc..</p>
     <li data-md>
-     <p><strong>Communication Protocols</strong>: for the different phases of Issuance and Presentation such as <a href="https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html">OID4VCI</a>, <a href="https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html">OID4VP</a>, <a href="https://openid.net/specs/openid-connect-self-issued-v2-1_0.html">SIOPv2</a>, ISO REST’s API, and <a href="https://github.com/w3c-ccg/vc-api">Verifiable Credentials API</a>.</p>
+     <p><strong>Communication Protocols</strong>: for the different phases of Issuance and Presentation such as [OID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html), [OID4VP](https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html), <a href="https://openid.net/specs/openid-connect-self-issued-v2-1_0.html">SIOPv2</a>, ISO REST’s API, and <a href="https://github.com/w3c-ccg/vc-api">Verifiable Credentials API</a>.</p>
    </ul>
    <p class="note" role="note"><span class="marker">Note:</span> This list is representative. For more detailed information, please refer to the <a href="https://docs.google.com/spreadsheets/d/1X93ptJcmfX1NZEo5E7ElnqJ-knDS4Dj6JOYSJ_2PsUw/edit#gid=1084392809">Comparison Matrix</a>.</p>
    <div class="advisement" id="a4">
@@ -1164,7 +1164,7 @@ Each government has made its own architectural choices and can offer different s
    <dt id="biblio-constructing-an-identity">[CONSTRUCTING-AN-IDENTITY]
    <dd><a href="https://doi.org/10.1007/978-94-6300-524-1_8"><cite>Constructing an Identity. In: Fan, S., Fielding-Wells, J. (eds) What is Next in Educational Research?</cite></a>. URL: <a href="https://doi.org/10.1007/978-94-6300-524-1_8">https://doi.org/10.1007/978-94-6300-524-1_8</a>
    <dt id="biblio-design-principles">[DESIGN-PRINCIPLES]
-   <dd>Lea Verou. <a href="https://w3ctag.github.io/design-principles/"><cite>Web Platform Design Principles</cite></a>. URL: <a href="https://w3ctag.github.io/design-principles/">https://w3ctag.github.io/design-principles/</a>
+   <dd>Lea Verou; Martin Thomson; Jeffrey Yasskin. <a href="https://w3ctag.github.io/design-principles/"><cite>Web Platform Design Principles</cite></a>. URL: <a href="https://w3ctag.github.io/design-principles/">https://w3ctag.github.io/design-principles/</a>
    <dt id="biblio-did-core">[DID-CORE]
    <dd>Manu Sporny; et al. <a href="https://w3c.github.io/did-core/"><cite>Decentralized Identifiers (DIDs) v1.0</cite></a>. URL: <a href="https://w3c.github.io/did-core/">https://w3c.github.io/did-core/</a>
    <dt id="biblio-did-faq">[DID-FAQ]
@@ -1292,7 +1292,7 @@ Each government has made its own architectural choices and can offer different s
    <dt id="biblio-webauthn-2">[WEBAUTHN-2]
    <dd>Jeff Hodges; et al. <a href="https://w3c.github.io/webauthn/"><cite>Web Authentication: An API for accessing Public Key Credentials - Level 2</cite></a>. URL: <a href="https://w3c.github.io/webauthn/">https://w3c.github.io/webauthn/</a>
    <dt id="biblio-webauthn-3">[WEBAUTHN-3]
-   <dd>Michael Jones; Akshay Kumar; Emil Lundberg. <a href="https://w3c.github.io/webauthn/"><cite>Web Authentication: An API for accessing Public Key Credentials - Level 3</cite></a>. URL: <a href="https://w3c.github.io/webauthn/">https://w3c.github.io/webauthn/</a>
+   <dd>Tim Cappalli; et al. <a href="https://w3c.github.io/webauthn/"><cite>Web Authentication: An API for accessing Public Key Credentials - Level 3</cite></a>. URL: <a href="https://w3c.github.io/webauthn/">https://w3c.github.io/webauthn/</a>
    <dt id="biblio-what-does-ubuntu-really-mean">[WHAT-DOES-UBUNTU-REALLY-MEAN]
    <dd>Nkem Ifejika. <a href="https://www.theguardian.com/theguardian/2006/sep/29/features11.g2"><cite>What does ubuntu really mean?</cite></a>. 2006. URL: <a href="https://www.theguardian.com/theguardian/2006/sep/29/features11.g2">https://www.theguardian.com/theguardian/2006/sep/29/features11.g2</a>
   </dl>
