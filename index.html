@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 60c422380, updated Thu Feb 20 19:11:22 2025 -0800" name="generator">
   <link href="https://www.w3.org/reports/identity-web-impact/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="db5f5870bb2ea9f64d12032294ba36b0f315e87b" name="revision">
+  <meta content="f1eec77842a37391cd787486a7e937b115570ec7" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -940,8 +940,8 @@ So, coordination between these entities is necessary to ensure smooth operation.
      <ul>
       <li data-md>
        <p><strong>Enveloped Formats (Credential Formats)</strong>: The proof wraps around the serialization of the credential.
-JSONs are enveloped using JSON Object Signing and Encryption ([JOSE](https://datatracker.ietf.org/wg/jose/about/)), and we can find JWT, JWS, and JWK here. JOSE is <em>cryptographically agile</em> (as it can fit different cryptographic primitives) and can also have Selective Disclosure (SD) with [SD-JWT](https://www.ietf.org/archive/id/draft-fett-oauth-selective-disclosure-jwt-02.html) (which uses HMAC). New securing mechanisms are coming up, like [SD-BLS](https://arxiv.org/abs/2406.19035) (which uses BLS) and ongoing efforts to fit BBS.  
-CBORs are enveloped using CBOR Object Signing and Encryption ([COSE](https://www.rfc-editor.org/rfc/rfc9052)). Other formats include <a href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18013:-5:ed-1:v1:en">ISO mDocs</a> and [SPICE](https://datatracker.ietf.org/wg/spice/about/).  
+JSONs are enveloped using JSON Object Signing and Encryption (<a href="https://datatracker.ietf.org/wg/jose/about/">JOSE</a>), and we can find JWT, JWS, and JWK here. JOSE is <em>cryptographically agile</em> (as it can fit different cryptographic primitives) and can also have Selective Disclosure (SD) with <a href="https://www.ietf.org/archive/id/draft-fett-oauth-selective-disclosure-jwt-02.html">SD-JWT</a> (which uses HMAC). New securing mechanisms are coming up, like <a href="https://arxiv.org/abs/2406.19035">SD-BLS</a> (which uses BLS) and ongoing efforts to fit BBS.  
+CBORs are enveloped using CBOR Object Signing and Encryption (<a href="https://www.rfc-editor.org/rfc/rfc9052">COSE</a>). Other formats include <a href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18013:-5:ed-1:v1:en">ISO mDocs</a>, and <a href="https://datatracker.ietf.org/wg/spice/about/">SPICE</a>.  
 The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3.org/TR/vc-jose-cose/">Securing Verifiable Credentials using JOSE and COSE</a>.</p>
       <li data-md>
        <p><strong>Embedded Formats (Signature Algorithms):</strong> The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in <a href="https://www.w3.org/TR/vc-data-integrity/">Verifiable Credential Data Integrity 1.0</a>. New securing mechanisms are coming up, like [SD-BLS](https://arxiv.org/abs/2406.19035) (which uses BLS), and ongoing efforts to use BBS.</p>
@@ -949,7 +949,7 @@ The mechanism to use VCDM with JOSE/COSE is described in <a href="https://www.w3
     <li data-md>
      <p><strong>Status Information (Revocation Algorithms)</strong>: <em>Issuers</em> can implement several ways to keep the credential’s status up to date, such as a Revocation List, a Status List (e.g., <a href="https://www.w3.org/TR/vc-bitstring-status-list/">W3C Bitstring Status List v1.0</a>, <a href="https://datatracker.ietf.org/doc/html/draft-demarco-oauth-status-assertions">Status Assertions</a>, <a href="https://datatracker.ietf.org/doc/html/draft-ietf-oauth-status-list-03">Token Status List</a>), and Cryptographic Accumulators, etc..</p>
     <li data-md>
-     <p><strong>Communication Protocols</strong>: for the different phases of Issuance and Presentation such as [OID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html), [OID4VP](https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html), <a href="https://openid.net/specs/openid-connect-self-issued-v2-1_0.html">SIOPv2</a>, ISO REST’s API, and <a href="https://github.com/w3c-ccg/vc-api">Verifiable Credentials API</a>.</p>
+     <p><strong>Communication Protocols</strong>: for the different phases of Issuance and Presentation such as <a href="https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html">OID4VCI</a>, <a href="https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html">OID4VP</a>, <a href="https://openid.net/specs/openid-connect-self-issued-v2-1_0.html">SIOPv2</a>, ISO REST’s API, and <a href="https://github.com/w3c-ccg/vc-api">Verifiable Credentials API</a>.</p>
    </ul>
    <p class="note" role="note"><span class="marker">Note:</span> This list is representative. For more detailed information, please refer to the <a href="https://docs.google.com/spreadsheets/d/1X93ptJcmfX1NZEo5E7ElnqJ-knDS4Dj6JOYSJ_2PsUw/edit#gid=1084392809">Comparison Matrix</a>.</p>
    <div class="advisement" id="a4">
