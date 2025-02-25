@@ -247,7 +247,7 @@ In this model, the user, also known as *Holder*, *controls* their credentials ac
     <img src="figures/decentralized-identity-model.svg">
     <figcaption>
         Decentralized Identity Model, adapted from Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]]
-    </figcaptsion>
+    </figcaption>
 </figure>
 
 To best understand the decentralized model and its end-to-end operation, we can refer to the model by the Decentralized Identity Foundation (DIF) [[did-faq]] build on the Trust Over IP architecture [[introduction-toip]] [[evolution-toip]].
