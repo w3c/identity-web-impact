@@ -122,7 +122,7 @@ Having concluded this roundup of terminology, before we delve into the various d
 
 ## Why identity is important ## {#why-identity-is-important}
 
-Human identities are a very special case, particularly those issued by governments. We know that they are not the only type and that the others are also important and have interesting business implications, but human ones have distinctive characteristics. Let us see why.
+Human identities are a very special case, in particular when these identities are represented by credentials issued by governments. We know that they are not the only type and that the others are also important and have interesting business implications, but human ones have distinctive characteristics. Let us see why.
 
 ### Human rights ### {#human-rights}
 
@@ -669,7 +669,7 @@ Therefore, even in a scenario that may seem trivial, it requires extensive study
 Several individuals contributed to the document. The editor especially thanks Pierre-Antoine Champin, Andrea D’Intino, Giuseppe De Marco, Heather Flanagan, Ivan Herman, Tommaso Innocenti, Ian Jacobs, Philippe Le Hegaret, Coralie Mercier, and Denis Roio.
 
 # Revision History # {#revision-history}
- * 25 February 2025: Added BBS, Status List
+ * 25 February 2025: Added BBS, Status List, wording on issuing identity vs credentials (Thanks to Will Abramson)
  * 4 November 2024: Clarifying Turst Concept (Thanks to Veronica Cristiano)
  * 13 Semptember 2024: Improved definitions of VC and VP (Thanks to Veronica Cristiano), IndieAuth (Thanks to Tantek Çelik)
  * 30 August 2024: Added Government Issued use-cases
