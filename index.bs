@@ -79,6 +79,9 @@ Other SDOs also used the `vc` media type but applied it to a different type of c
 The OAuth group later transitioned to using `dc` for “Digital Credentials”.
 Hence the need for an all-encompassing term [[digital-credentials-that-can-be-verified]].
 
+Note: A peculiar difference between a W3C Verifiable Credential and an IETF SD-JWT VC is related to the possibility, but not the necessity, of using Linked Data (LD). For example, it is possible to use JSON-LD, in order to have interoperability at the data level and not only at the format level, making it possible to have machine-readable interlinked data.
+
+
 These definitions introduced important concepts that need clarification, such as *identifiers*, *authentication*, and *trust*.
 
 **Identifiers** are *pieces of information that uniquely refer to an entity within a specific context*. According to the W3C Decentralized Identifiers, there are various types of identifiers: “*communication addresses (telephone numbers, email addresses, usernames on social media), ID numbers (for passports, driver's licenses, tax IDs, health insurance), and product identifiers (serial numbers, barcodes, RFIDs). URIs (Uniform Resource Identifiers) are used for resources on the Web, and each web page you view in a browser has a globally unique URL (Uniform Resource Locator)*” [[did-core]].
