@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 60c422380, updated Thu Feb 20 19:11:22 2025 -0800" name="generator">
   <link href="https://www.w3.org/reports/identity-web-impact/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="f1eec77842a37391cd787486a7e937b115570ec7" name="revision">
+  <meta content="abc5273f84078f4fe95ca94c42fa92be459e093e" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -573,6 +573,11 @@ dfn > a.self-link::before      { content: "#"; }
      <p>The <strong>W3C Verifiable Credentials Data Model (VCDM)</strong> definition states, “<em>a set of one or more claims made by an issuer</em>” <a data-link-type="biblio" href="#biblio-vc-data-model-20" title="Verifiable Credentials Data Model v2.0">[vc-data-model-2.0]</a>. On the one hand, this definition seems similar to NIST’s. However, its framing is in the decentralized versus federated model (which we will analyze shortly), and thus, to ISO’s definition of identity mapping the ISO’s attributes to VCDM claims.</p>
    </ul>
    <p class="note" role="note"><span class="marker">Note:</span> Therefore, we will refer to the specific definition of credential in the various sections of the document according to the context.</p>
+   <p>An additional definition introduced in the NIST blog is <strong>Verifiable Digital Credentials</strong> as a broader term encompassing the ecosystem <a data-link-type="biblio" href="#biblio-nist-verifiable-digital-credential" title="Digital Identities: Getting to Know the Verifiable Digital Credential Ecosystem">[nist-verifiable-digital-credential]</a>.
+This definition was established to resolve a terminological issue. The term “Verifiable Credentials” emerged within the W3C Verifiable Credentials Working Group, and subsequently the <code>vc</code> media type.
+Other SDOs also used the <code>vc</code> media type but applied it to a different type of credential, particularly within the IETF OAuth group. 
+The OAuth group later transitioned to using <code>dc</code> for “Digital Credentials”.
+Hence the need for an all-encompassing term <a data-link-type="biblio" href="#biblio-digital-credentials-that-can-be-verified" title="Digital Credentials That Can Be Verified: A Lesson in Terminology">[digital-credentials-that-can-be-verified]</a>.</p>
    <p>These definitions introduced important concepts that need clarification, such as <em>identifiers</em>, <em>authentication</em>, and <em>trust</em>.</p>
    <p><strong>Identifiers</strong> are <em>pieces of information that uniquely refer to an entity within a specific context</em>. According to the W3C Decentralized Identifiers, there are various types of identifiers: “<em>communication addresses (telephone numbers, email addresses, usernames on social media), ID numbers (for passports, driver’s licenses, tax IDs, health insurance), and product identifiers (serial numbers, barcodes, RFIDs). URIs (Uniform Resource Identifiers) are used for resources on the Web, and each web page you view in a browser has a globally unique URL (Uniform Resource Locator)</em>” <a data-link-type="biblio" href="#biblio-did-core" title="Decentralized Identifiers (DIDs) v1.0">[did-core]</a>.</p>
    <p class="note" role="note"><span class="marker">Note:</span> Although entity, identity, and identifier are related, they are distinct: Identity refers to the essence of who or what an entity is, while an identifier is a specific piece of information used to recognize and refer to that entity uniquely.</p>
@@ -1187,6 +1192,8 @@ Each government has made its own architectural choices and can offer different s
    <dd><a href="https://www.youtube.com/watch?v=t8lMCmjPKq4"><cite>Introduction to Decentralized Identifiers (DID)</cite></a>. URL: <a href="https://www.youtube.com/watch?v=t8lMCmjPKq4">https://www.youtube.com/watch?v=t8lMCmjPKq4</a>
    <dt id="biblio-did-spec-registries">[DID-SPEC-REGISTRIES]
    <dd>Manu Sporny; Markus Sabadello. <a href="https://w3c.github.io/did-extensions/"><cite>Decentralized Identifier Extensions</cite></a>. URL: <a href="https://w3c.github.io/did-extensions/">https://w3c.github.io/did-extensions/</a>
+   <dt id="biblio-digital-credentials-that-can-be-verified">[DIGITAL-CREDENTIALS-THAT-CAN-BE-VERIFIED]
+   <dd><a href="https://sphericalcowconsulting.com/2025/01/20/digital-credentials-that-can-be-verified-a-lesson-in-terminology/"><cite>Digital Credentials That Can Be Verified: A Lesson in Terminology</cite></a>. URL: <a href="https://sphericalcowconsulting.com/2025/01/20/digital-credentials-that-can-be-verified-a-lesson-in-terminology/">https://sphericalcowconsulting.com/2025/01/20/digital-credentials-that-can-be-verified-a-lesson-in-terminology/</a>
    <dt id="biblio-digital-identities">[DIGITAL-IDENTITIES]
    <dd><a href="https://wicg.github.io/digital-credentials/"><cite>Digital Credentials</cite></a>. Draft Community Group Report. URL: <a href="https://wicg.github.io/digital-credentials/">https://wicg.github.io/digital-credentials/</a>
    <dt id="biblio-digital-identity-explainer">[DIGITAL-IDENTITY-EXPLAINER]
@@ -1233,6 +1240,8 @@ Each government has made its own architectural choices and can offer different s
    <dd><a href="https://www.wipo.int/marrakesh_treaty"><cite>Sustainable Development Goals</cite></a>. URL: <a href="https://www.wipo.int/marrakesh_treaty">https://www.wipo.int/marrakesh_treaty</a>
    <dt id="biblio-nist-sp-800-63-3">[NIST-SP-800-63-3]
    <dd><a href="https://doi.org/10.6028/NIST.SP.800-63-3"><cite>Types of credentials and authenticators</cite></a>. URL: <a href="https://doi.org/10.6028/NIST.SP.800-63-3">https://doi.org/10.6028/NIST.SP.800-63-3</a>
+   <dt id="biblio-nist-verifiable-digital-credential">[NIST-VERIFIABLE-DIGITAL-CREDENTIAL]
+   <dd><a href="https://www.nist.gov/blogs/cybersecurity-insights/digital-identities-getting-know-verifiable-digital-credential-ecosystem"><cite>Digital Identities: Getting to Know the Verifiable Digital Credential Ecosystem</cite></a>. URL: <a href="https://www.nist.gov/blogs/cybersecurity-insights/digital-identities-getting-know-verifiable-digital-credential-ecosystem">https://www.nist.gov/blogs/cybersecurity-insights/digital-identities-getting-know-verifiable-digital-credential-ecosystem</a>
    <dt id="biblio-nobody-knows-you-re-a-dog">[NOBODY-KNOWS-YOU-RE-A-DOG]
    <dd>Peter Steiner. <cite>On the Internet, Nobody Knows You're a Dog</cite>. 
    <dt id="biblio-osstmm-3">[OSSTMM-3]
