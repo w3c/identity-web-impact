@@ -246,7 +246,7 @@ In this model, the user, also known as *Holder*, *controls* their credentials ac
 <figure id="fig-decentralized-identity-model">
     <img src="figures/decentralized-identity-model.svg">
     <figcaption>
-        Decentralized Identity Model, adapted from Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]]</a>
+        Decentralized Identity Model, adapted from Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]]
     </figcaptsion>
 </figure>
 
