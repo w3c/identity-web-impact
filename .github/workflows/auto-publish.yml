@@ -6,7 +6,7 @@ on:
 jobs:
   main:
     name: Build, Validate and Deploy
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
@@ -14,3 +14,11 @@ jobs:
       - uses: w3c/spec-prod@v2
         with:
           GH_PAGES_BRANCH: gh-pages
+
+      # Copy figures folder
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./figures
+          destination_dir: figures

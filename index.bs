@@ -1,19 +1,27 @@
 <pre class='metadata'>
 Title: Identity & the Web
-Status: w3c/UD
 ED: https://www.w3.org/reports/identity-web-impact/
+Status: LD
 Shortname: identity-web-impact
 Issue Tracking: GitHub https://github.com/w3c/identity-web-impact/issues
 Level: 1
-Editor: Simone Onofri, w3cid 38211, W3C, simone@w3.org
-Abstract: <p>This document proposes an overview of Digital Identities on the Web and an analysis through different use cases of the systemic impact on both the market side and the human side, as well as the role that Web standardization may play in managing that impact.</p>
-Status Text: <p>This document is intended to capture the current shared understanding of the [W3C Team](https://www.w3.org/staff/) on the current and expected impact of developments linked to identity on the Web and identifying explorations the World Wide Web Consortium and its community have started or ought to be starting to manage that impact. It does not represent any consensus from the W3C Membership, nor is it a standardization document.</p><p>The document was authored by Simone Onofri ([simone@w3.org](mailto:simone@w3.org)), with significant contributions from the W3C Team and people listed in the Acknowledgements section.</p><p>This document helps structure discussions on what may be needed at the standardization level to make Identity's systemic impact less harmful or more manageable. It is bound to be incomplete and sometimes wrong — we are gathering input and feedback in [GitHub](https://github.com/w3c/identity-web-impact/issues), preferably before October 6, 2024.</p><p>Depending on the feedback received, possible next steps include more in-depth stakeholder interviews, a dedicated W3C Workshop, or developing a standardization roadmap.</p>
+Editor: Simone Onofri, w3cid 38211, W3C, https://w3.org, simone@w3.org
+Abstract:
+  <p>This document proposes an overview of Digital Identities on the Web and an analysis through different use cases of the systemic impact on both the market side and the human side, as well as the role that Web standardization may play in managing that impact.</p>
+Status Text: 
+  <p>This document is intended to capture the current shared understanding of the [W3C Team](https://www.w3.org/staff/) on the current and expected impact of developments linked to identity on the Web and identifying explorations the World Wide Web Consortium and its community have started or ought to be starting to manage that impact. It does not represent any consensus from the W3C Membership, nor is it a standardization document.</p>
+  <p>The document was authored by Simone Onofri ([simone@w3.org](mailto:simone@w3.org)), with significant contributions from the W3C Team and people listed in the Acknowledgements section.</p>
+  <p>This document helps structure discussions on what may be needed at the standardization level to make Identity's systemic impact less harmful or more manageable. It is bound to be incomplete and sometimes wrong — we are gathering input and feedback in [GitHub](https://github.com/w3c/identity-web-impact/issues), preferably before October 6, 2024.</p>
+  <p>If it's not feasible for you to use GitHub, send comments in e-mail to: <a href="mailto:public-team-report-comments@w3.org">public-team-report-comments@w3.org</a>. Please put your comments in the body of the message, not as an attachment. Start your e-mail subject line with: [identity-web-impact].</p>
+  <p>Depending on the feedback received, possible next steps include more in-depth stakeholder interviews, a dedicated W3C Workshop, or developing a standardization roadmap.</p>
 Markup Shorthands: markdown on, biblio yes
 Boilerplate: omit issues-index, omit conformance, repository-issue-tracking off
 Group: w3t
 Text Macro: W3C-STYLESHEET-URL https://www.w3.org/StyleSheets/TR/2021/base.css
 Text Macro: LONGSTATUS W3C Team
 Text Macro: W3C-STATUS-URL https://www.w3.org/staff/
+Mailing List: public-team-report-comments@w3.org
+Mailing List Archives: https://lists.w3.org/Archives/Public/public-team-report-comments/ 
 </pre>
 
 # Executive summary # {#executive-summary}
@@ -101,7 +109,7 @@ Why can a driver’s license and a student ID card, having similar attributes an
 
 There are several aspects, first of all, the *context* and *domain* in which the credential lives. The key difference lies in the **trust** we place in the issuers of these credentials. Trust can be defined as "*the belief that someone is good and honest and will not harm you, or that something is safe and reliable*" [[cambridge-dictionary-trust]]. Essentially, trust is a choice we make; we choose to trust or not trust someone or something [[OSSTMM-3]], and often, it is not a binary question.
 
-*Cryptographic trust*, such as verifying the signature of a credential, differs from *human trust* [[self-sovereign-identity]]. Cryptographic methods ensure that the credentials haven’t been tampered with. Human trust involves trusting the entity that issued the credential and that the issuer provided the credential to the legitimate user.
+*Cryptographic trust*, such as verifying the signature of a credential, differs from *human trust* [[self-sovereign-identity]]. Cryptographic methods ensure that the credentials haven’t been tampered with and that they have been issued by a trusted issuer. Human trust involves trusting the entity that issued the credential or, in the case of an issuer chain, trusting the root, and that the issuer provided the credential to the legitimate user.
 
 This is why we also need **governance frameworks** or **trust frameworks**. These frameworks include business, legal, and technical rules that help establish and maintain trust in credential issuers. 
 
@@ -118,9 +126,9 @@ Human identities are a very special case, particularly those issued by governmen
 
 ### Human rights ### {#human-rights}
 
-Identity is a fundamental human right that underpins personal *dignity* and *autonomy*. Article 6 of the Universal Declaration of Human Rights states, "*Everyone has the right to recognition everywhere as a person before the law*" [[UDHR]]. 
+Identity is a fundamental human right that underpins personal *dignity* and *autonomy*. Article 6 of the Universal Declaration of Human Rights states, "*Everyone has the right to recognition everywhere as a person before the law*" [[UDHR]]. This principle is reinforced by Article 16 of the International Covenant on Civil and Political Rights, which similarly reads: "*Everyone shall have the right to recognition everywhere as a person before the law*" [[ICCPR]]. 
 
-This principle is reinforced by Article 16 of the International Covenant on Civil and Political Rights, which states that "*everyone has the right to recognition everywhere as a person before the law*" [[ICCPR]]. Although the term "identity" is not explicitly used, its concept is inherent in recognizing the identity as a person.
+Although the term "identity" is not explicitly used here, its concept is inherent in recognizing the identity as a person.
 
 ### Sustainable development goal ### {#sustainable-development-goal}
 
@@ -141,7 +149,6 @@ They can guarantee other rights, such as the right to accessibility promoted by 
 These technologies can also be used on a humanitarian level. Referring to the NHIs, the International Committee of Red Cross (ICRC) investigated *Digital Emblems* [[ADEM]] to identify ICT assets protected under international law [[digitalizing-report]].
 
 Note: However, like all innovations, these technologies can have downsides. To paraphrase Paul Watzlawick, the innovation of these technologies must not become “*ultra-solutions*” where “*operation successful, patient dead*” [[ultra-solutions]]. So, the challenge is to enable this technological innovation by being aware of the threats to privacy, security, and human rights.
-So, the challenge is enabling this technological innovation by being aware of the threats to Privacy, security, and Human Rights.
 
 Therefore, it is necessary to analyze the various threats to mitigate them at their root in designing and implementing these technologies and related standards.
 
@@ -183,7 +190,7 @@ Here is the simplified *Data Flow*:
 Perspectives:
 * **Security**: there are different issues. For the *user*: password re-use in case of compromised password, so the user should use different passwords for different providers; there are also Phishing and Man-in-The-Middle attacks. From the provider’s point of view, as the passwords are stored on their systems, they need to implement proper security measures to protect them at rest and during transport.
 * **Privacy**: the centralized system can completely track the user.
-* **Standards**: Standards intervene at different levels. In how credentials are exchanged and sent: historically, *Basic Authentication* [[RFC1945]], *Digest Authentication* [[RFC2069 obsolete]] (and related updates), and via *HTML forms* with `input type=password` and `Cookies` for maintaining the session information on the Client. Other standards for increasing authentication factors include HTOP [[RFC4226 obsolete]] and TOTP [[RFC6238]]. Also, with SSL/TLS [[RFC2246 obsolete]] (and related updates) for credential transport and general traffic protection. . Other standards protecting the credentials at rest such as the (now obsolete) MD5 [[RFC1321]] and other [hashing algorithms by NIST](https://csrc.nist.gov/projects/hash-functions).
+* **Standards**: Standards intervene at different levels. In how credentials are exchanged and sent: historically, *Basic Authentication* [[RFC1945]], *Digest Authentication* [[RFC2069 obsolete]] (and related updates), and via *HTML forms* with `input type=password` and `Cookies` for maintaining the session information on the Client. Other standards for increasing authentication factors include HOTP [[RFC4226 obsolete]] and TOTP [[RFC6238]]. Also, with SSL/TLS [[RFC2246 obsolete]] (and related updates) for credential transport and general traffic protection. . Other standards protecting the credentials at rest such as the (now obsolete) MD5 [[RFC1321]] and other [hashing algorithms by NIST](https://csrc.nist.gov/projects/hash-functions).
 
 <div class="advisement" id="a1">
     <span class="marker">Enabling passwordless credentials for authentication and payments</span><br>
@@ -196,7 +203,7 @@ Perspectives:
 
 ## Federated identity model ## {#federated-identity-model}
 
-In the federated identity model, also known as a third-party **Identity Provider (IdP)**, the function of *making available identity information* is separated from the one *which provides a service to the user* - the **Service Provider (SP) or Relying Party (RP)** [[ISO-IEC-24760-1]].
+In the federated identity model, the function of *making available identity information*, also known as a third-party **Identity Provider (IdP)**, is separated from the one *which provides a service to the user* - the **Service Provider (SP) or Relying Party (RP)** [[ISO-IEC-24760-1]].
 
 The federated identity model is the typical scenario when a user logs into a third-party site using a social network's "Sign in with..." feature or through Single Sign-On (SSO) in enterprise environments.
 
@@ -234,7 +241,7 @@ Note: We will examine the decentralized identity model more closely, as it is th
 
 The decentralized identity model marks a significant shift in architecture. Instead of federated Identity Providers (IdPs) and Service Providers (SPs) or Relying Parties (RPs), the focus now centers on the user.
 
-In this model, the user *controls* their credentials acquires them from an *Issuer*, stores them in their *wallet*, and presents *them* to a Verifier. Verification activities are mediated by a *Verifiable Data Registry*, containing the necessary information.
+In this model, the user, also known as *Holder*, *controls* their credentials acquires them from an *Issuer*, stores them in their *wallet*, and presents *them* to a Verifier. Verification activities are mediated by a *Verifiable Data Registry*, containing the necessary information.
 
 <figure id="fig-decentralized-identity-model">
     <img src="figures/decentralized-identity-model.svg">
@@ -264,14 +271,14 @@ We can have different contexts, such as state, government, and university contex
 
 Each context is governed by one or more governance or trust frameworks.
 For example, for the domain of credentials issued by governments in Europe, we have the [EU Digital Wallet](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/Technical+Specifications), and we can have others related to other states.
-As well as other domains such as individual organizations, enterprises or universities.
+As well as other domains such as individual organizations, enterprises, or universities.
 So, a critical issue is interoperability across states.
 
 Note: There are differences between the levels of DIF and the **ToIP Technology Stack**: *Governance* is divided into parallel halves, with specific frameworks for each level.
 
 #### Layer 4: Applications, Wallets, Products  #### {#application-layer}
 
-At this level, we find the various applications accessible to end users:
+At this level, we find the various applications available to end users:
  * **Applications**: These can be Native or Web-based, and it is possible to interact with them differently.
  * **Digital Wallets**: These are where the Holder stores their credentials.
     Just as a physical wallet holds more than just IDs, the digital wallet can store various credentials and information. We can classify the wallets depending on several factors:
@@ -288,20 +295,20 @@ At this level, the various actors exchange credentials. Let us see what happens 
 The actors are:
 * The **Issuer** creates and *issues credentials* to the *Holder* and writes the necessary information within the *Verifiable Data Registry*. This can be a trusted third-party entity like governments or  universities. In some cases, credentials can be *self-issued* by the user, e.g., to represent informal skills or competencies. This flexibility allows for a broader range of credentials and applications.
 * The **Holder** (the *user*), at the heart of this architecture, receives the credentials from the Issuer, stores them in a *Digital Wallet*, and *presents* them to the *Verifier*.
-* The **Verifier** receives the presented credentials by the* Holder* and verifies them. This actor is akin to an SP or RP in federated models. This process does not necessarily involve informing the *Issuer*. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.
+* The **Verifier** receives the presented credentials by the *Holder* and verifies them. This actor is akin to an SP or RP in federated models. This process does not necessarily involve informing the *Issuer*. This decoupling is a key aspect of the decentralized identity model, enhancing privacy and control for the user.
 
 Note: In this model, the definition of a **credential** shifts to a set of *claims* (attributes) linked to *identifiers* controlled by the user. While credentials represent identities, not all claims within a credential are used for identification. They can describe various characteristics, extending the application of credentials beyond mere identification.
 
 The actors exchange:
-* **Verifiable Credential (VC)**: When the Issuer sends them to the Holder, who then stores it in their Wallet. Credential is called *Verifiable* because has *technologies, such as digital signatures, makes verifiable credentials more tamper-evident and more trustworthy than their physical counterparts*.
-    * **Metadata**: of the Credentials.
+* **Verifiable Credential (VC)**: When the Issuer sends them to the Holder, who then stores it in their Wallet. The word *Verifiable* refers to the characteristic of a credential (or presentation) as being able to be verified (though cryptographic mechanisms) by a *Verifier*. The addition of technologies, such as digital signatures, makes verifiable credentials more tamper-evident and more trustworthy than their physical counterparts. 
+    * **Metadata**: of the Credentials, to describe properties such as the *Issuer*, the expiry date and time, a representative image, the *Issuer* public key to use for verification purposes, the revocation mechanism, and so on.
     * **Claim(s)**: one or more assertions where a characteristic of a subject is described (e.g., the subject is a citizen of a certain state, was born in a certain place on a certain day, month, and year, and can drive cars of this type).  
-    * **Proof(s)**: cryptographic proof of the integrity of the credential, typically via a digital signature.
+    * **Proof(s)**: cryptographic proof of the integrity and the authenticity of the credential, typically via a digital signature. The proof is generated by the Issuer.
 
-* **Verifiable Presentation (VP)**: When the Holder sends a credential to the Verifier, which then verifies it. The basic case is to present the credential as is. However, in many scenarios, the holder may wish to present only a subset of the credential claims to the verifier - called *Selective Disclosure (SD)* - or a combination of information from different credentials. It contains:
-    * **Metadata**: of the presentation.  
-    * **Credential(s)**: information derived or combined from one or more credentials.  
-    * **Proof(s)**: cryptographic proof of the integrity of the credential(s) and the presentation.
+* **Verifiable Presentation (VP)**: When the Holder sends a credential to the Verifier, which then verifies it. VC are used to present claims to a Verifier by proving control over credentials that certify them. The basic case is to present the credential as is. However, in many scenarios, the holder may wish to present only a subset of the credential claims to the verifier - this mechanism is called *Selective Disclosure (SD)* - or a combination of information from different credentials. It may contain:
+    * **Metadata**: of the Presentation, including the *Issuer* public key to use for verification purposes.  
+    * **Credential(s)**: information derived or combined from one or more credentials. If *Selective Disclosure* is adopted, no credentials are shown, but only a subset of the credential claims.
+    * **Proof(s)**: cryptographic proof of the integrity and authenticity of the presentation. The proof is generated by the Holder. It consists in a proof of knowledge of a credential certifying the (dislosed) credential claims. If *Selective Disclosure* is adopted, the proof may be obtained through the use of a cryptographic zero-knowledge proof.
 
 Note: Refer to Ivan Herman’s  [W3C Verifiable Credentials Overview](https://www.w3.org/TR/vc-overview/) for a comprehensive overview of Verifiable Credentials.
 
@@ -416,11 +423,11 @@ Note: Not all of the technologies indicated are standard, so they should not be 
 This is why several Standards Development Organizations (SDOs) such as the World Wide Web Consortium (W3C), the Internet Engineering Task Force (IETF), the OpenID Foundation (OIDF), and the Decentralized Identity Foundation (DIF) are coordinating to standardize the components and how they should communicate:
 
 * **Data Models:** abstract models for Credentials and Presentation such as the [Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/) and mDL in ISO/IEC [18013-5:2021](https://www.iso.org/standard/69084.html).  
-* **Identifiers**: [DIDs](https://www.w3.org/TR/did-core/) and the [DID methods](https://w3c.github.io/did-spec-registries/#did-methods), or [WebID](https://w3c.github.io/WebID/spec/identity/).  
+* **Identifiers**: [DIDs](https://www.w3.org/TR/did-core/) and the [DID methods](https://w3c.github.io/did-spec-registries/#did-methods), [IndieAuth](https://www.w3.org/TR/indieauth/), or [WebID](https://w3c.github.io/WebID/spec/identity/).  
 * **Encoding Schemas:** JSON, JSON-LD, CBOR, CBOR-LD.  
 * **Securing Mechanisms:** Each mechanism may or may not support different privacy features or be quantum-resistant:  
     * **Enveloped Formats (Credential Formats)**: The proof wraps around the serialization of the credential.  
-        JSONs are enveloped using JSON Object Signing and Encryption (&#91;JOSE](https://datatracker.ietf.org/wg/jose/about/)), and we can find JWT, JWS, and JWK here. JOSE is *cryptographically agile* (as it can fit different cryptographic primitives) and can also have Selective Disclosure (SD) with &#91;SD-JWT](https://www.ietf.org/archive/id/draft-fett-oauth-selective-disclosure-jwt-02.html) (which uses HMAC).  
+        JSONs are enveloped using JSON Object Signing and Encryption (&#91;JOSE](https://datatracker.ietf.org/wg/jose/about/)), and we can find JWT, JWS, and JWK here. JOSE is *cryptographically agile* (as it can fit different cryptographic primitives) and can also have Selective Disclosure (SD) with &#91;SD-JWT](https://www.ietf.org/archive/id/draft-fett-oauth-selective-disclosure-jwt-02.html) (which uses HMAC). New securing mechanisms are coming up, like &#91;SD-BLS](https://arxiv.org/abs/2406.19035) (which uses BLS) and ongoing efforts to fit BBS.  
         CBORs are enveloped using CBOR Object Signing and Encryption (&#91;COSE](https://www.rfc-editor.org/rfc/rfc9052)). Other formats include [ISO mDocs](https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18013:-5:ed-1:v1:en) and &#91;SPICE](https://datatracker.ietf.org/wg/spice/about/).  
         The mechanism to use VCDM with JOSE/COSE is described in [Securing Verifiable Credentials using JOSE and COSE](https://www.w3.org/TR/vc-jose-cose/).  
     * **Embedded Formats (Signature Algorithms):** The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in [Verifiable Credential Data Integrity 1.0](https://www.w3.org/TR/vc-data-integrity/). New securing mechanisms are coming up, like &#91;SD-BLS](https://arxiv.org/abs/2406.19035) (which uses BLS), and ongoing efforts to use BBS# 
@@ -608,13 +615,16 @@ Each government has made its own architectural choices and can offer different s
 
 Below is a short list with some implementation examples:
 
+* **Canada**: [Pan-Canadian Trust Framework™](https://diacc.ca/trust-framework/)
+* **China**: [IIFAA Decentralized Trusted Authentication Technical Specification - Part 1: General Requirements](https://w3c-cg.github.io/cndid/CG-DRAFT-iifaa-did-20240725).
 * **Estonia**: [Estonian e-Identity](https://www.id.ee/en/).
-* **Europe**: [European Digital Identity Architecture Reference Framework (EUDI-ARF)](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework).  
+* **Europe**: [European Digital Identity Architecture and Reference Framework (EUDI-ARF)](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework).  
 * **India**: [Aadhaar](https://uidai.gov.in).
 * **Italy**: [Italy's Public Digital Identity System (SPID)](https://www.spid.gov.it/en/). 
 * **Nigeria**: [Nigeria's eID](https://nimc.gov.ng/digital-identity-ecosystem/).
 * **Singapore**: [Singpass](https://www.singpass.gov.sg/main).
 * **Spain**: [Cl@ve](https://clave.gob.es/clave_Home/en/clave.html).
+* **Switzerland**: [Swiss E-ID & Trust Infrastructure](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/tech-roadmap.md)
 * **United Arab Emirates**: [UAE Pass](https://uaepass.ae).
 * **United States of America**: [U.S. DHS on Digital Identities](https://www.dhs.gov/science-and-technology/digital-identity-and-trust) and Mobile Driving Licence (e.g., [Maryland](https://mva.maryland.gov/Pages/mdMobileID.aspx), [Arizona](https://azdot.gov/mvd/mobile-driver-license), [Utah](https://dld.utah.gov/utahmdl/), [California](https://www.dmv.ca.gov/portal/ca-dmv-wallet/)).
 
@@ -622,10 +632,10 @@ Some governments are doing pilot projects with Decentralized Identities, providi
 
 Let us delve into an extensively debated use case requiring a solution: age verification.
 
-The holder has a digital passport in the form of government-issued credentials; these credentials, in their claims, also contain age information.
+The holder has a digital passport in the form of government-issued credentials; these credentials, in their claims, also contain age information. The presentation can be done in different ways, providing different levels of privacy.
 * **Full Credential**: It is possible to send the full credential since it also contains the date of birth, from which the verifier can derive the age. However, this doesn’t meet the principle of Data Minimization, as I’m sending a lot of other information that can be misused and make us traceable.
-* **Selective Disclosure** [[selective-disclosure]]: If only the date of birth is submitted, we still have a minor data release, as the verifier is interested not in the date of birth but in whether the person is of age. Suppose the credential provided supports this privacy feature, which allows us to send individual attributes/claims. In that case, we can send only the date of birth, by which the verifier can derive the age. It certainly improves the situation concerning Data Minimization, but it does not solve it totally. To overcome this problem, some credentials have specific attributes with boolean values to present that our age exceeds a certain value (e.g., 16, 18, 21).
-* **Range Proof** [[range-proofs]]: If we send the verifier the boolean result of a computation related to the value of a specific attribute (e.g., the verifier asks us if we are older than 21 years old, and we send the result of the computation on the date of birth).
+* **Selective Disclosure** [[selective-disclosure]]: Suppose the credential provided supports this privacy feature, which allows us to send individual attributes/claims and hide the others. In that case, we can send only the date of birth, by which the verifier can derive the age. It certainly improves the situation concerning Data Minimization, but it does not solve it totally. To overcome this problem, some credentials have specific attributes with boolean values to present that our age exceeds a certain value (e.g., 16, 18, 21).
+* **Range Proof** [[range-proofs]]: Zero-knowledge range proofs allow a prover to convince a verifier that a secret value lies in a given interval (without showing the credential attribute). If the verifier ask for a specific attribute is within a given range, a range proof-presentation can be sent to the verifier (e.g., the verifier asks us if we are older than 21 years old, we send the result of the computation on the date of birth that proves that our age falls in that range without revealing it).
 
 The problem is that, even in the last two cases, we can present potentially linkable information to us or our issuer, which the verifier can use to make correlations. For example, it is necessary to decouple the signature from the signer and not use the same identifiers in different sessions.
 
