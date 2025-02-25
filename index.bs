@@ -73,6 +73,12 @@ Now, an important logical step. We present **credentials** to claim our identiti
 
 Note: Therefore, we will refer to the specific definition of credential in the various sections of the document according to the context.
 
+An additional definition introduced in the NIST blog is **Verifiable Digital Credentials** as a broader term encompassing the ecosystem [[nist-verifiable-digital-credential]].
+This definition was established to resolve a terminological issue. The term “Verifiable Credentials” emerged within the W3C Verifiable Credentials Working Group, and subsequently the `vc` media type.
+Other SDOs also used the `vc` media type but applied it to a different type of credential, particularly within the IETF OAuth group. 
+The OAuth group later transitioned to using `dc` for “Digital Credentials”.
+Hence the need for an all-encompassing term [[digital-credentials-that-can-be-verified]].
+
 These definitions introduced important concepts that need clarification, such as *identifiers*, *authentication*, and *trust*.
 
 **Identifiers** are *pieces of information that uniquely refer to an entity within a specific context*. According to the W3C Decentralized Identifiers, there are various types of identifiers: “*communication addresses (telephone numbers, email addresses, usernames on social media), ID numbers (for passports, driver's licenses, tax IDs, health insurance), and product identifiers (serial numbers, barcodes, RFIDs). URIs (Uniform Resource Identifiers) are used for resources on the Web, and each web page you view in a browser has a globally unique URL (Uniform Resource Locator)*” [[did-core]].
@@ -989,6 +995,16 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "title": "Stakeholder Relationships and Responsibilities: A New Perspective",
     "href":"https://doi.org/10.4468/2019.1.04civera.freeman",
     "authors" : ["Chiara Civera", "R. Edward Freeman"]
+  },
+  "nist-verifiable-digital-credential": {
+    "author" : ["Bill Fisher", "Ryan Galluzzo"],
+    "title": "Digital Identities: Getting to Know the Verifiable Digital Credential Ecosystem",
+    "href":"https://www.nist.gov/blogs/cybersecurity-insights/digital-identities-getting-know-verifiable-digital-credential-ecosystem"
+  },
+  "digital-credentials-that-can-be-verified": {
+    "author" : ["Heather Flanagan"],
+    "title": "Digital Credentials That Can Be Verified: A Lesson in Terminology",
+    "href":"https://sphericalcowconsulting.com/2025/01/20/digital-credentials-that-can-be-verified-a-lesson-in-terminology/"
   }
 
 }
