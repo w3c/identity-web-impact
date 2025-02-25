@@ -178,7 +178,7 @@ In the centralized identity model, also known as siloed or traditional, a single
 The centralized identity model is the typical scenario when the user logs in to a social network to use it, and the credentials here are used to authenticate.
 
 <figure id="fig-centralized-identity-model">
-    <img src="figures/centralized-identity-model.svg"></img>
+    <img src="figures/centralized-identity-model.svg">
     <figcaption>Centralized Identity Management</figcaption>
 </figure>
 
@@ -210,7 +210,7 @@ The federated identity model is the typical scenario when a user logs into a thi
 This model allows users to utilize a single Identity Provider (IdP) to authenticate and access multiple Service Providers (SPs) or Relying Parties (RPs) without needing to create separate accounts for each one.
 
 <figure id="fig-federated-identity-model">
-    <img src="figures/federated-identity-model.svg"></img>
+    <img src="figures/federated-identity-model.svg">
     <figcaption>Federated Identity Management</figcaption>
 </figure>
 
@@ -246,8 +246,8 @@ In this model, the user, also known as *Holder*, *controls* their credentials ac
 <figure id="fig-decentralized-identity-model">
     <img src="figures/decentralized-identity-model.svg">
     <figcaption>
-        Decentralized Identity Model, adapted from Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]]</a>
-    </figcaptsion>
+        Decentralized Identity Model, adapted from Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]]
+    </figcaption>
 </figure>
 
 To best understand the decentralized model and its end-to-end operation, we can refer to the model by the Decentralized Identity Foundation (DIF) [[did-faq]] build on the Trust Over IP architecture [[introduction-toip]] [[evolution-toip]].
@@ -256,7 +256,7 @@ This model comprises both technology and governance aspects, sliced into differe
 We will then provide an overview of the various layers, focusing on specific elements related to credentials and identifiers, considered the two pillars of decentralized identities.
 
 <figure id="fig-decentralized-identity-model-01">
-    <img src="figures/decentralized-identity-layers.svg"></img>
+    <img src="figures/decentralized-identity-layers.svg">
     <figcaption>Decentralized Identity Architecture, inspired and adapted by ToIP [[introduction-toip]]</figcaption>
 </figure>
 
@@ -430,7 +430,7 @@ This is why several Standards Development Organizations (SDOs) such as the World
         JSONs are enveloped using JSON Object Signing and Encryption (&#91;JOSE](https://datatracker.ietf.org/wg/jose/about/)), and we can find JWT, JWS, and JWK here. JOSE is *cryptographically agile* (as it can fit different cryptographic primitives) and can also have Selective Disclosure (SD) with &#91;SD-JWT](https://www.ietf.org/archive/id/draft-fett-oauth-selective-disclosure-jwt-02.html) (which uses HMAC). New securing mechanisms are coming up, like &#91;SD-BLS](https://arxiv.org/abs/2406.19035) (which uses BLS) and ongoing efforts to fit BBS.  
         CBORs are enveloped using CBOR Object Signing and Encryption (&#91;COSE](https://www.rfc-editor.org/rfc/rfc9052)). Other formats include [ISO mDocs](https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18013:-5:ed-1:v1:en) and &#91;SPICE](https://datatracker.ietf.org/wg/spice/about/).  
         The mechanism to use VCDM with JOSE/COSE is described in [Securing Verifiable Credentials using JOSE and COSE](https://www.w3.org/TR/vc-jose-cose/).  
-    * **Embedded Formats (Signature Algorithms):** The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in [Verifiable Credential Data Integrity 1.0](https://www.w3.org/TR/vc-data-integrity/).  
+    * **Embedded Formats (Signature Algorithms):** The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in [Verifiable Credential Data Integrity 1.0](https://www.w3.org/TR/vc-data-integrity/). New securing mechanisms are coming up, like &#91;SD-BLS](https://arxiv.org/abs/2406.19035) (which uses BLS), and ongoing efforts to use BBS. 
 * **Status Information (Revocation Algorithms)**: *Issuers* can implement several ways to keep the credential's status up to date, such as a Revocation List, a Status List (e.g., [W3C Bitstring Status List v1.0](https://www.w3.org/TR/vc-bitstring-status-list/), [Status Assertions](https://datatracker.ietf.org/doc/html/draft-demarco-oauth-status-assertions), [Token Status List](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-status-list-03)), and Cryptographic Accumulators, etc..
 * **Communication Protocols**: for the different phases of Issuance and Presentation such as \[OID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html), \[OID4VP](https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html), [SIOPv2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html), ISO REST’s API, and [Verifiable Credentials API](https://github.com/w3c-ccg/vc-api).
 
