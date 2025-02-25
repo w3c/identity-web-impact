@@ -178,7 +178,7 @@ In the centralized identity model, also known as siloed or traditional, a single
 The centralized identity model is the typical scenario when the user logs in to a social network to use it, and the credentials here are used to authenticate.
 
 <figure id="fig-centralized-identity-model">
-    <img src="figures/centralized-identity-model.svg"></img>
+    <img src="figures/centralized-identity-model.svg">
     <figcaption>Centralized Identity Management</figcaption>
 </figure>
 
@@ -210,7 +210,7 @@ The federated identity model is the typical scenario when a user logs into a thi
 This model allows users to utilize a single Identity Provider (IdP) to authenticate and access multiple Service Providers (SPs) or Relying Parties (RPs) without needing to create separate accounts for each one.
 
 <figure id="fig-federated-identity-model">
-    <img src="figures/federated-identity-model.svg"></img>
+    <img src="figures/federated-identity-model.svg">
     <figcaption>Federated Identity Management</figcaption>
 </figure>
 
@@ -256,7 +256,7 @@ This model comprises both technology and governance aspects, sliced into differe
 We will then provide an overview of the various layers, focusing on specific elements related to credentials and identifiers, considered the two pillars of decentralized identities.
 
 <figure id="fig-decentralized-identity-model-01">
-    <img src="figures/decentralized-identity-layers.svg"></img>
+    <img src="figures/decentralized-identity-layers.svg">
     <figcaption>Decentralized Identity Architecture, inspired and adapted by ToIP [[introduction-toip]]</figcaption>
 </figure>
 
