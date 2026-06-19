@@ -8,7 +8,7 @@
   <meta content="Bikeshed version d113b2e81, updated Tue Jun 9 14:57:55 2026 -0700" name="generator">
   <link href="https://www.w3.org/reports/identity-web-impact/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="87e5c8c19ae096233f033a9dbe19bdf08f7628de" name="revision">
+  <meta content="77de9f62c6a7bd4cde7261c28f51626a4d64a66f" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -589,6 +589,7 @@ This definition was established to resolve a terminological issue. The term “V
 Other SDOs also used the <code>vc</code> media type but applied it to a different type of credential, particularly within the IETF OAuth group. 
 The OAuth group later transitioned to using <code>dc</code> for “Digital Credentials”.
 Hence the need for an all-encompassing term <a data-link-type="biblio" href="#biblio-digital-credentials-that-can-be-verified" title="Digital Credentials That Can Be Verified: A Lesson in Terminology">[digital-credentials-that-can-be-verified]</a>.</p>
+   <p class="note" role="note"><span class="marker">Note:</span> A peculiar difference between a W3C Verifiable Credential and an IETF SD-JWT VC is related to the possibility, but not the necessity, of using Linked Data (LD). For example, it is possible to use JSON-LD, in order to have interoperability at the data level and not only at the format level, making it possible to have machine-readable interlinked data.</p>
    <p>These definitions introduced important concepts that need clarification, such as <em>identifiers</em>, <em>authentication</em>, and <em>trust</em>.</p>
    <p><strong>Identifiers</strong> are <em>pieces of information that uniquely refer to an entity within a specific context</em>. According to the W3C Decentralized Identifiers, there are various types of identifiers: “<em>communication addresses (telephone numbers, email addresses, usernames on social media), ID numbers (for passports, driver’s licenses, tax IDs, health insurance), and product identifiers (serial numbers, barcodes, RFIDs). URIs (Uniform Resource Identifiers) are used for resources on the Web, and each web page you view in a browser has a globally unique URL (Uniform Resource Locator)</em>” <a data-link-type="biblio" href="#biblio-did-core" title="Decentralized Identifiers (DIDs) v1.0">[did-core]</a>.</p>
    <p class="note" role="note"><span class="marker">Note:</span> Although entity, identity, and identifier are related, they are distinct: Identity refers to the essence of who or what an entity is, while an identifier is a specific piece of information used to recognize and refer to that entity uniquely.</p>
