@@ -5,14 +5,14 @@ Status: LD
 Shortname: identity-web-impact
 Issue Tracking: GitHub https://github.com/w3c/identity-web-impact/issues
 Level: 1
-Editor: Simone Onofri, w3cid 38211, W3C, https://w3.org, simone@w3.org
+Editor: Simone Onofri, w3cid 38211, W3C https://w3.org/, simone@w3.org
 Abstract:
   <p>This document proposes an overview of Digital Identities on the Web and an analysis through different use cases of the systemic impact on both the market side and the human side, as well as the role that Web standardization may play in managing that impact.</p>
 Status Text: 
   <p>This document is intended to capture the current shared understanding of the [W3C Team](https://www.w3.org/staff/) on the current and expected impact of developments linked to identity on the Web and identifying explorations the World Wide Web Consortium and its community have started or ought to be starting to manage that impact. It does not represent any consensus from the W3C Membership, nor is it a standardization document.</p>
   <p>The document was authored by Simone Onofri ([simone@w3.org](mailto:simone@w3.org)), with significant contributions from the W3C Team and people listed in the Acknowledgements section.</p>
-  <p>This document helps structure discussions on what may be needed at the standardization level to make Identity's systemic impact less harmful or more manageable. It is bound to be incomplete and sometimes wrong — we are gathering input and feedback in [GitHub](https://github.com/w3c/identity-web-impact/issues), preferably before October 6, 2024.</p>
-  <p>If it's not feasible for you to use GitHub, send comments in e-mail to: <a href="mailto:public-team-report-comments@w3.org">public-team-report-comments@w3.org</a>. Please put your comments in the body of the message, not as an attachment. Start your e-mail subject line with: [identity-web-impact].</p>
+  <p>This document helps structure discussions on what may be needed at the standardization level to make Identity's systemic impact less harmful or more manageable. It is bound to be incomplete and sometimes wrong — we are gathering input and feedback in [GitHub](https://github.com/w3c/identity-web-impact/issues).</p>
+  <p>If it is not feasible for you to use GitHub, send comments in e-mail to: <a href="mailto:public-team-report-comments@w3.org">public-team-report-comments@w3.org</a>. Please put your comments in the body of the message, not as an attachment. Start your e-mail subject line with: [identity-web-impact].</p>
   <p>Depending on the feedback received, possible next steps include more in-depth stakeholder interviews, a dedicated W3C Workshop, or developing a standardization roadmap.</p>
 Markup Shorthands: markdown on, biblio yes
 Boilerplate: omit issues-index, omit conformance, repository-issue-tracking off
@@ -48,13 +48,13 @@ We seek [input](https://github.com/w3c/identity-web-impact/issues) from the comm
 
 # Introduction # {#introduction}
 
-Digital Identities have been in development for decades, and at this moment in history, they are about to be implemented government-wide. They can change the Web and the concept of Identity as we know it. There are many opportunities but also threats to society and the Web.
+Digital Identities have been in development for decades, and governments in several jurisdictions are exploring, piloting, or deploying them. They can change the Web and the concept of Identity as we know it. There are many opportunities but also threats to society and the Web.
 
 ## Terminology ## {#terminology}
 
 The concept of identity is very broad and covers psychology, social sciences, mathematics, and logic. There is no agreed-upon definition of all the terminology. Let us start with a set of definitions to have a common ground in this paper.
 
-When we think about identity, we often think about our identity as individuals. It is inherent, although we tend to give a different meaning to our identity according to our culture, from the Western "*Cogito ergo sum*" (I think therefore I am) [[discourse-on-the-method]] to the African "*Ubuntu*" (I am because you are) [[what-does-ubuntu-really-mean]] or the Eastern "*tat tvam asl*" (that thou art), which express two notions, the man's real self (ātman), and the Cosmic Self (brahman) [[a-dictionary-of-hinduism]].
+When we think about identity, we often think about our identity as individuals. It is inherent, although we tend to give a different meaning to our identity according to our culture, from the Western "*Cogito ergo sum*" (I think therefore I am) [[discourse-on-the-method]] to the African "*Ubuntu*" (I am because you are) [[what-does-ubuntu-really-mean]] or the Eastern "*tat tvam asi*" (that thou art), which express two notions, the man's real self (ātman), and the Cosmic Self (brahman) [[a-dictionary-of-hinduism]].
 
 Analyzing the etymology, the term **identity** comes from the Latin root “*idem*”, which means “*the same*” [[oxford-etymology-identity]], so while it is an intimate concept, we also use it to distinguish ourselves from others. This is well explained in the Cambridge Dictionary in which the identity is “*the fact of being, or feeling that you are, a particular type of person, organization, etc.; the qualities that make a person, organization, etc. different from others*” [[cambridge-dictionary-identity]].
 
@@ -64,7 +64,7 @@ Looking more closely at the Information Technology (IT) domain, the ISO/IEC 2476
 
 Thus, a particularly important point is clear: there are not only identities of people, individuals, or human beings. We can also have identities for organizations, pets, and **Non-Human Identities** (NHI). NHI are all those accounts widely used by “devices, services, and servers” in networking, cloud, and workloads [[the-evolving-landscape-of-non-human-identity]].
 
-Now, an important logical step. We present **credentials** to claim our identities, whether in the physical or digital world. Just as we do not have a one-size-fits-all definition of identity, we also do not have a one-size-fits-all definition of credential, as it changes according to context. Starting with the definition from the Cambridge Dictionary, a (digital) credential is “*a piece of information that is sent from one computer to another to check that a user is who they claim to be or to allow someone to see information*” [[cambridge-dictionary-identity]]. While high-level, this definition considers two important aspects: on the one hand, the credential is used to prove our claims, such as who we are, and on the other hand, it can be used to gain access to information:
+Now, an important logical step. We present **credentials** to claim our identities, whether in the physical or digital world. Just as we do not have a one-size-fits-all definition of identity, we also do not have a one-size-fits-all definition of credential, as it changes according to context. Starting with the definition from the Cambridge Dictionary, a (digital) credential is “*a piece of information that is sent from one computer to another to check that a user is who they claim to be or to allow someone to see information*” [[cambridge-dictionary-credential]]. While high-level, this definition considers two important aspects: on the one hand, the credential is used to prove our claims, such as who we are, and on the other hand, it can be used to gain access to information:
 
 * The **ISO/IEC 24760-1** definition is very close to the last aspect from the dictionary, where a credential is a “*representation of an identity for use in authentication*” [[ISO-IEC-24760-1]].
 * The **Identification for Development (ID4D)** definition is close to the first aspect: “*any document, object, or data structure that vouches for a person’s identity through some method of trust and authentication*” [[types-of-credentials-and-authenticators]].  
@@ -79,8 +79,7 @@ Other SDOs also used the `vc` media type but applied it to a different type of c
 The OAuth group later transitioned to using `dc` for “Digital Credentials”.
 Hence the need for an all-encompassing term [[digital-credentials-that-can-be-verified]].
 
-Note: A peculiar difference between a W3C Verifiable Credential and an IETF SD-JWT VC is related to the possibility, but not the necessity, of using Linked Data (LD). For example, it is possible to use JSON-LD, in order to have interoperability at the data level and not only at the format level, making it possible to have machine-readable interlinked data.
-
+Note: A practical difference between W3C Verifiable Credentials and [IETF SD-JWT VC](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) is at the data-model layer. W3C Verifiable Credentials can use JSON-LD, which supports Linked Data semantics and machine-readable interlinked data. SD-JWT VC defines Verifiable Digital Credentials with JSON payloads based on SD-JWT, with or without selective disclosure.
 
 These definitions introduced important concepts that need clarification, such as *identifiers*, *authentication*, and *trust*.
 
@@ -131,7 +130,7 @@ Having concluded this roundup of terminology, before we delve into the various d
 
 ## Why identity is important ## {#why-identity-is-important}
 
-Human identities are a very special case, particularly those issued by governments. We know that they are not the only type and that the others are also important and have interesting business implications, but human ones have distinctive characteristics. Let us see why.
+Human identities are a very special case, in particular when aspects of these identities are represented by credentials issued by governments. We know that they are not the only type and that the others are also important and have interesting business implications, but human ones have distinctive characteristics. Let us see why.
 
 ### Human rights ### {#human-rights}
 
@@ -153,7 +152,7 @@ However, target 16.9 of the 2030 United Nations Sustainable Development Goals (S
 
 Digital identities and credentials are powerful business enablers and offer significant opportunities for individuals, governments, and organizations. 
 
-They can guarantee other rights, such as the right to accessibility promoted by the *Marrakesh Treaty* [[marrakesh-treaty]]. They can also "*empower refugees, stateless individuals, and forcibly displaced persons*" [[UNHCR-digital-identity]]. 
+They can support access to, or the exercise of, other rights, such as the right to accessibility promoted by the *Marrakesh Treaty* [[marrakesh-treaty]]. They can also "*empower refugees, stateless individuals, and forcibly displaced persons*" [[UNHCR-digital-identity]].
 
 These technologies can also be used on a humanitarian level. Referring to the NHIs, the International Committee of Red Cross (ICRC) investigated *Digital Emblems* [[ADEM]] to identify ICT assets protected under international law [[digitalizing-report]].
 
@@ -164,9 +163,9 @@ Therefore, it is necessary to analyze the various threats to mitigate them at th
 As an example, below is an initial analysis of threats to human rights (Harms) concerning government-issued digital identities using Microsoft's Harms Modeling [[harms-modeling]]:
 
 * **Opportunity Loss** (*Discrimination*): This complex issue spans multiple areas. *Digital divide*: if digital identities are required for access to public services and no alternatives are present, and if they depend on certain hardware, software, or stable connectivity, it can lead to discrimination for people who do not have availability of these resources. In addition to discrimination within the same country, there is further discrimination if there is no “cross-border” interoperability between the technologies and implementations used by different governments.  
-* **Economic loss** (*Discrimination*): The availability of digital identities and related credentials, which can contain a lot of information regarding wealth status, can be used to discriminate against access to credit. This can also be generalized - as was identified during a [W3C breakout session](https://github.com/w3c/breakouts-day-2024/issues/12) - and concerns the [Javons paradox](https://www.tandfonline.com/doi/abs/10.1080/15487733.2009.11908028). The more information available, the more likely it is that collection, particularly in greedy data-driven contexts, is abused.
+* **Economic loss** (*Discrimination*): The availability of digital identities and related credentials, which can contain a lot of information regarding wealth status, can be used to discriminate against access to credit. This can also be generalized - as was identified during a [W3C breakout session](https://github.com/w3c/breakouts-day-2024/issues/12) - and concerns the [Jevons paradox](https://www.tandfonline.com/doi/abs/10.1080/15487733.2009.11908028). The more information available, the more likely it is that collection, particularly in greedy data-driven contexts, is abused.
 * **Dignity loss** (*Dehumanization*): For example, if the vocabulary does not correctly describe people’s characteristics, this can reduce or obscure people’s humanity and characteristics.
-* **Privacy Loss** (*Surveillance*): if this technology is not designed and implemented properly, it can lead to surveillance by state and non-state actors such as government and private technology providers. For example, centralized or federated models are more prone to these threats, while decentralized models are less so, but it depends on how they are implemented. Therefore, it is necessary to provide privacy-preserving technologies and implement them properly.
+* **Privacy Loss** (*Surveillance*): if this technology is not designed and implemented properly, it can lead to surveillance by state and non-state actors such as government and private technology providers. For example, centralized or federated models may concentrate tracking in a provider, while decentralized models can reduce some centralized tracking patterns but can also introduce new correlation and governance risks. Therefore, it is necessary to provide privacy-preserving technologies and implement them properly.
 
 # Digital identity management models # {#digital-identity-management-models}
 
@@ -187,7 +186,7 @@ In the centralized identity model, also known as siloed or traditional, a single
 The centralized identity model is the typical scenario when the user logs in to a social network to use it, and the credentials here are used to authenticate.
 
 <figure id="fig-centralized-identity-model">
-    <img src="figures/centralized-identity-model.svg">
+    <img src="figures/centralized-identity-model.svg" alt="Diagram showing a user exchanging credentials directly with a single centralized identity provider that also provides the service." style="max-width: 100%; height: auto;">
     <figcaption>Centralized Identity Management</figcaption>
 </figure>
 
@@ -205,7 +204,7 @@ Perspectives:
     <span class="marker">Enabling passwordless credentials for authentication and payments</span><br>
     To mitigate security threats, in particular the use of multiple passwords and phishing, FIDO Alliance created **Passkeys**, "*a replacement for passwords that provide faster, easier, and more secure sign-ins to websites and apps across a user’s devices*" [[passkeys-101]].
     
-    The [W3C Web Authentication Working Group](https://www.w3.org/groups/wg/webauthn/) brought strong authentication to the Web Platform through Web Authentication Level 2 [[webauthn-2]] and is developing Level 3 [[webauthn-3]]. 
+    The [W3C Web Authentication Working Group](https://www.w3.org/groups/wg/webauthn/) brought strong authentication to the Web Platform through Web Authentication Level 2 [[webauthn-2]]. Web Authentication Level 3 [[webauthn-3]] continues that work and is a Candidate Recommendation Snapshot as of May 26, 2026.
 
     Synchronized Web Authentication credentials &mdash;passkeys&mdash; are well-suited for login authentication but less well-suited for some regulated high-assurance use cases, notably payments. To fulfill additional requirements of  payments ecosystems, the [W3C Web Payments Working Group](https://www.w3.org/Payments/WG/) is developing Secure Payment Confirmation [[secure-payment-confirmation]] to support multi-factor authentication and  requirements for cryptographic evidence of user consent to the terms of a transaction.
 </div>
@@ -219,7 +218,7 @@ The federated identity model is the typical scenario when a user logs into a thi
 This model allows users to utilize a single Identity Provider (IdP) to authenticate and access multiple Service Providers (SPs) or Relying Parties (RPs) without needing to create separate accounts for each one.
 
 <figure id="fig-federated-identity-model">
-    <img src="figures/federated-identity-model.svg">
+    <img src="figures/federated-identity-model.svg" alt="Diagram showing a user authenticating with an identity provider and using the resulting identity assertion with a service provider." style="max-width: 100%; height: auto;">
     <figcaption>Federated Identity Management</figcaption>
 </figure>
 
@@ -250,22 +249,22 @@ Note: We will examine the decentralized identity model more closely, as it is th
 
 The decentralized identity model marks a significant shift in architecture. Instead of federated Identity Providers (IdPs) and Service Providers (SPs) or Relying Parties (RPs), the focus now centers on the user.
 
-In this model, the user, also known as *Holder*, *controls* their credentials acquires them from an *Issuer*, stores them in their *wallet*, and presents *them* to a Verifier. Verification activities are mediated by a *Verifiable Data Registry*, containing the necessary information.
+In this model, the user, also known as *Holder*, *controls* their credentials, acquires them from an *Issuer*, stores them in their *wallet*, and presents *them* to a Verifier. Verification activities are mediated by a *Verifiable Data Registry*, containing the necessary information.
 
 <figure id="fig-decentralized-identity-model">
-    <img src="figures/decentralized-identity-model.svg">
+    <img src="figures/decentralized-identity-model.svg" alt="Diagram showing a holder receiving credentials from an issuer, storing them, and presenting them to a verifier with supporting verification data." style="max-width: 100%; height: auto;">
     <figcaption>
         Decentralized Identity Model, adapted from Verifiable Credentials Data Model (VCDM) [[vc-data-model-2.0]]
     </figcaption>
 </figure>
 
-To best understand the decentralized model and its end-to-end operation, we can refer to the model by the Decentralized Identity Foundation (DIF) [[did-faq]] build on the Trust Over IP architecture [[introduction-toip]] [[evolution-toip]].
+To best understand the decentralized model and its end-to-end operation, we can refer to the model by the Decentralized Identity Foundation (DIF) [[did-faq]] built on the Trust Over IP architecture [[introduction-toip]] [[evolution-toip]].
 
 This model comprises both technology and governance aspects, sliced into different layers. 
 We will then provide an overview of the various layers, focusing on specific elements related to credentials and identifiers, considered the two pillars of decentralized identities.
 
 <figure id="fig-decentralized-identity-model-01">
-    <img src="figures/decentralized-identity-layers.svg">
+    <img src="figures/decentralized-identity-layers.svg" alt="Layered decentralized identity architecture showing governance and trust frameworks above agents, credential exchange, identifiers, and data registries." style="max-width: 100%; height: auto;">
     <figcaption>Decentralized Identity Architecture, inspired and adapted by ToIP [[introduction-toip]]</figcaption>
 </figure>
 
@@ -309,19 +308,19 @@ The actors are:
 Note: In this model, the definition of a **credential** shifts to a set of *claims* (attributes) linked to *identifiers* controlled by the user. While credentials represent identities, not all claims within a credential are used for identification. They can describe various characteristics, extending the application of credentials beyond mere identification.
 
 The actors exchange:
-* **Verifiable Credential (VC)**: When the Issuer sends them to the Holder, who then stores it in their Wallet. The word *Verifiable* refers to the characteristic of a credential (or presentation) as being able to be verified (though cryptographic mechanisms) by a *Verifier*. The addition of technologies, such as digital signatures, makes verifiable credentials more tamper-evident and more trustworthy than their physical counterparts. 
+* **Verifiable Credential (VC)**: When the Issuer sends them to the Holder, who then stores it in their Wallet. The word *Verifiable* refers to the characteristic of a credential (or presentation) as being able to be verified (through cryptographic mechanisms) by a *Verifier*. The addition of technologies, such as digital signatures, makes verifiable credentials more tamper-evident and more trustworthy than their physical counterparts.
     * **Metadata**: of the Credentials, to describe properties such as the *Issuer*, the expiry date and time, a representative image, the *Issuer* public key to use for verification purposes, the revocation mechanism, and so on.
     * **Claim(s)**: one or more assertions where a characteristic of a subject is described (e.g., the subject is a citizen of a certain state, was born in a certain place on a certain day, month, and year, and can drive cars of this type).  
     * **Proof(s)**: cryptographic proof of the integrity and the authenticity of the credential, typically via a digital signature. The proof is generated by the Issuer.
 
-* **Verifiable Presentation (VP)**: When the Holder sends a credential to the Verifier, which then verifies it. VC are used to present claims to a Verifier by proving control over credentials that certify them. The basic case is to present the credential as is. However, in many scenarios, the holder may wish to present only a subset of the credential claims to the verifier - this mechanism is called *Selective Disclosure (SD)* - or a combination of information from different credentials. It may contain:
+* **Verifiable Presentation (VP)**: When the Holder sends a credential to the Verifier, which then verifies it. VCs are used to present claims to a Verifier by proving control over credentials that certify them. The basic case is to present the credential as is. However, in many scenarios, the holder may wish to present only a subset of the credential claims to the verifier - this mechanism is called *Selective Disclosure (SD)* - or a combination of information from different credentials. It may contain:
     * **Metadata**: of the Presentation, including the *Issuer* public key to use for verification purposes.  
     * **Credential(s)**: information derived or combined from one or more credentials. If *Selective Disclosure* is adopted, no credentials are shown, but only a subset of the credential claims.
-    * **Proof(s)**: cryptographic proof of the integrity and authenticity of the presentation. The proof is generated by the Holder. It consists in a proof of knowledge of a credential certifying the (dislosed) credential claims. If *Selective Disclosure* is adopted, the proof may be obtained through the use of a cryptographic zero-knowledge proof.
+    * **Proof(s)**: cryptographic proof of the integrity and authenticity of the presentation. The proof is generated by the Holder. It consists in a proof of knowledge of a credential certifying the disclosed credential claims. If *Selective Disclosure* is adopted, the proof may be obtained through the use of a cryptographic zero-knowledge proof.
 
 Note: Refer to Ivan Herman’s  [W3C Verifiable Credentials Overview](https://www.w3.org/TR/vc-overview/) for a comprehensive overview of Verifiable Credentials.
 
-Obviously, the Issuer, the Holder, and the Verifier need a **credential exchange protocol** for VCs and VPs. This is not described in VCDM but is defined by other standards, such as VC API and OpenID4VC.
+The Issuer, the Holder, and the Verifier need a **credential exchange protocol** for VCs and VPs. This is not described in VCDM but is defined by other standards, such as VC API and OpenID4VC.
 
 #### Layer 2: Agent Frameworks and Infrastructure #### {#agents-and-infrastructure}
 
@@ -364,10 +363,10 @@ Here is the data flow of credentials from when they are created to when they are
     2. The *Verifier* then presents a request for proof to the *Holder*. This can either be done actively (e.g., the Verifier presents a QR code that the Holder has to scan) or passively (e.g., they accessed a web page and were asked to access a credential).
     3. Through the *Wallet*, the holder's user agent determines if there are credentials to generate the required *Proof*. 
     4. The *Holder* may use the proof explicitly if they possess it.
-    5. The user agent of the *Holder* then prepares the Presentation - which can contain the full credential or part of it-  and sends it to the *Verifier*.
+    5. The user agent of the *Holder* then prepares the Presentation - which can contain the full credential or part of it - and sends it to the *Verifier*.
 * **Credential-Verification (CV)**
     1. The user agent of the *Verifier* verifies the *Presentation* (e.g., if the Presentation and the contained Credentials are signed correctly, issued by an *Issuer* they trust, compliant with their policy, the Holder is entitled to hold it, and that it has not been revoked or expired). The revocation check can be done using the methods defined by the specific credential.
-    2. If the verification is successful, the *Verifier* gives the *Holder* the access.
+    2. If the verification is successful, the *Verifier* grants the *Holder* access.
 * **Credential-Revocation (CR)**
     1. The *Issuer* can revoke a credential in various ways.
 
@@ -383,7 +382,7 @@ It is interesting to reflect on how this model differs from a security and priva
 
 Note: Architectural change can solve some issues and generate new ones, so a thorough analysis is necessary.
 
-We can take a step back and understand what privacy properties are needed for digital identity, considering that the higher the level of credential assurance, the more threats can impact the user. Over the years, several proposals have been made to understand the properties of digital identities, such as [Kim Cameron's 7 Identity Laws](https://www.identityblog.com/?p=352) and Ben Laure's Privacy Requirements. Analyzing the latter [[selective-disclosure]]:
+We can take a step back and understand what privacy properties are needed for digital identity, considering that the higher the level of credential assurance, the more threats can impact the user. Over the years, several proposals have been made to understand the properties of digital identities, such as [Kim Cameron's 7 Identity Laws](https://www.identityblog.com/?p=352) and Ben Laurie's Privacy Requirements. Analyzing the latter [[selective-disclosure]]:
 
 * **Verifiable**: Identities, credentials, and various claims must be verifiable, which is possible through appropriate cryptographic proofs. This is part of the security aspects, which include cryptography.
 * **Minimal**: This is a privacy aspect. When we send information to the verifier, the information should be minimized as much as possible. For example, if we have to show that we are of age, it is okay to submit all the credentials or even the specific claim of the date of birth, but simply that I am of age.  
@@ -409,7 +408,7 @@ First, different credential formats have different privacy and security features
 
     **Threat Modeling** is "*a family of structured, repeatable processes that allows to make rational decisions to secure applications, software, and systems*" [[threat-modeling-designing-for-security]]. This Threat Model is using different frameworks and toolkits to cover the different threat types, such as:
         * **Security**: *STRIDE* (Spoofing, Tampering, Repudiation, Denial of service, Escalation of privileges) [[STRIDE]], and *Guidelines for Writing RFC Text on Security Considerations* [[RFC3552]].
-        * **Privacy**: *LINNDUN* (Linking, Identifying, Non-Repudiation, Detecting, Data Disclosure, Unawareness & Inintervenability, Non-Compliance) [[LINDDUN]], and *Privacy Considerations for Internet Protocols* [[RFC6973]].
+        * **Privacy**: *LINDDUN* (Linkability, Identifiability, Non-Repudiation, Detectability, Disclosure of Information, Unawareness, Non-Compliance) [[LINDDUN]], and *Privacy Considerations for Internet Protocols* [[RFC6973]].
         * **Human Rights**: *Harms Modeling* [[harms-modeling]], and *Access Now #WhyID* [[access-now-whyid]].
 
        Other approaches include the [Self-Review Questionnaire: Security and Privacy](https://www.w3.org/TR/security-privacy-questionnaire/) and the *OSSTMM* [[OSSTMM-3]].
@@ -431,38 +430,38 @@ Note: Not all of the technologies indicated are standard, so they should not be 
 
 This is why several Standards Development Organizations (SDOs) such as the World Wide Web Consortium (W3C), the Internet Engineering Task Force (IETF), the OpenID Foundation (OIDF), and the Decentralized Identity Foundation (DIF) are coordinating to standardize the components and how they should communicate:
 
-* **Data Models:** abstract models for Credentials and Presentation such as the [Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/) and mDL in ISO/IEC [18013-5:2021](https://www.iso.org/standard/69084.html), and [IETF SD-JWT VC](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/).  
+* **Data Models:** abstract models for Credentials and Presentation such as the [Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/), mDL in ISO/IEC [18013-5:2021](https://www.iso.org/standard/69084.html), and [IETF SD-JWT VC](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/).
 * **Identifiers**: [DIDs](https://www.w3.org/TR/did-core/) and the [DID methods](https://w3c.github.io/did-spec-registries/#did-methods), [IndieAuth](https://www.w3.org/TR/indieauth/), [WebID](https://w3c.github.io/WebID/spec/identity/), X.509, URLs, or URIs.  
 * **Encoding Schemas:** JSON, JSON-LD, CBOR, CBOR-LD.  
 * **Securing Mechanisms:** Each mechanism may or may not support different privacy features or be quantum-resistant:  
     * **Enveloped Formats (Credential Formats)**: The proof wraps around the serialization of the credential.  
-        JSONs are enveloped using JSON Object Signing and Encryption ([JOSE](https://datatracker.ietf.org/wg/jose/about/)), and we can find JWT, JWS, and JWK here. JOSE is *cryptographically agile* (as it can fit different cryptographic primitives) and can also have Selective Disclosure (SD) with [SD-JWT](https://www.ietf.org/archive/id/draft-fett-oauth-selective-disclosure-jwt-02.html) (which uses HMAC). New securing mechanisms are coming up, like [SD-BLS](https://arxiv.org/abs/2406.19035) (which uses BLS) and ongoing efforts to fit BBS.  
+        JSONs are enveloped using JSON Object Signing and Encryption ([JOSE](https://datatracker.ietf.org/wg/jose/about/)), and we can find JWT, JWS, and JWK here. JOSE is *cryptographically agile* (as it can fit different cryptographic primitives) and can also have Selective Disclosure (SD) with [SD-JWT](https://www.ietf.org/archive/id/draft-fett-oauth-selective-disclosure-jwt-02.html) (which uses HMAC). Related work includes [SD-BLS](https://arxiv.org/abs/2406.19035), which uses BLS, and ongoing efforts to fit BBS.
         CBORs are enveloped using CBOR Object Signing and Encryption ([COSE](https://www.rfc-editor.org/rfc/rfc9052)). Other formats include [ISO mDocs](https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18013:-5:ed-1:v1:en), and [SPICE](https://datatracker.ietf.org/wg/spice/about/).  
         The mechanism to use VCDM with JOSE/COSE is described in [Securing Verifiable Credentials using JOSE and COSE](https://www.w3.org/TR/vc-jose-cose/).  
-    * **Embedded Formats (Signature Algorithms):** The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in [Verifiable Credential Data Integrity 1.0](https://www.w3.org/TR/vc-data-integrity/). New securing mechanisms are coming up, like &#91;SD-BLS](https://arxiv.org/abs/2406.19035) (which uses BLS), and ongoing efforts to use BBS. 
-* **Status Information (Revocation Algorithms)**: *Issuers* can implement several ways to keep the credential's status up to date, such as a Revocation List, a Status List (e.g., [W3C Bitstring Status List v1.0](https://www.w3.org/TR/vc-bitstring-status-list/), [Status Assertions](https://datatracker.ietf.org/doc/html/draft-demarco-oauth-status-assertions), [Token Status List](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-status-list-03)), and Cryptographic Accumulators, etc..
-* **Communication Protocols**: for the different phases of Issuance and Presentation such as [OID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html), [OID4VP](https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html), [SIOPv2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html), mDoc REST’s API, mDoc JavaScript API, and [Verifiable Credentials API](https://github.com/w3c-ccg/vc-api).
+    * **Embedded Formats (Signature Algorithms):** The proof is included in the serialization alongside the credentials (e.g., BBS, ECDSA, EdDSA). The mechanism is described in [Verifiable Credential Data Integrity 1.0](https://www.w3.org/TR/vc-data-integrity/). Related work includes [SD-BLS](https://arxiv.org/abs/2406.19035), which uses BLS, and ongoing efforts to use BBS.
+* **Status Information (Revocation Algorithms)**: *Issuers* can implement several ways to keep the credential's status up to date, such as a Revocation List, a Status List (e.g., [W3C Bitstring Status List v1.0](https://www.w3.org/TR/vc-bitstring-status-list/), [Status Assertions](https://datatracker.ietf.org/doc/html/draft-demarco-oauth-status-assertions), [Token Status List](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-status-list-03)), and Cryptographic Accumulators.
+* **Communication Protocols**: for the different phases of Issuance and Presentation such as [OID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html), [OID4VP](https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-wg-draft.html), [SIOPv2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html), mDoc REST API, mDoc JavaScript API, and [Verifiable Credentials API](https://github.com/w3c-ccg/vc-api).
 
 Note: This list is representative. For more detailed information, please refer to the [Comparison Matrix](https://docs.google.com/spreadsheets/d/1X93ptJcmfX1NZEo5E7ElnqJ-knDS4Dj6JOYSJ_2PsUw/edit#gid=1084392809).
 
 <div class="advisement" id="a4">
     <span class="marker">Mitigating surveillance, censorship, intrusion, and discrimination and ensuring interoperability by standardizing digital credentials in the web platform</span><br>
     
-    It's not easy to manage digital identities. In particular, if they are related to humans, it's important to *give people control over the identifying information about themselves they are presenting in different contexts on the web, and be transparent about it* [[design-principles]]. 
+    It is not easy to manage digital identities. In particular, if they are related to humans, it is important to *give people control over the identifying information about themselves they are presenting in different contexts on the web, and be transparent about it* [[design-principles]].
 
-    Given that a *user agent should help its user present the identity they want in each context they are in and should prevent or support recognition as appropriate* [[privacy-principles]], the [Web Platform Incubator Community Group (WICG)](https://www.w3.org/groups/cg/wicg/), incubated the Digital Credentials API [[DIGITAL-IDENTITIES]], a browser API to mediate the use of Digital Credentials between websites and wallets, to mitigate different threats to the users and promoting interoperability, and it is already working on the [Profile for OpenID4VP](https://github.com/openid/OpenID4VP/issues/125). 
+    Given that a *user agent should help its user present the identity they want in each context they are in and should prevent or support recognition as appropriate* [[privacy-principles]], the Digital Credentials API [[digital-credentials]] defines a browser API to mediate the use of Digital Credentials between websites and wallets. The API follows earlier incubation in the [Web Platform Incubator Community Group (WICG)](https://www.w3.org/groups/cg/wicg/) and is intended to mitigate different threats to users while promoting interoperability. Related work also includes the [Profile for OpenID4VP](https://github.com/openid/OpenID4VP/issues/125).
 
     The interoperability is important: if a service supports only a specific format, it excludes and discriminates against users who use a different format due to their government’s decisions rather than their own. Consequently, this limitation affects users and restricts the service’s business potential.
 
-    This API will follow the *users first, developers second, and browser engines third* principle [[design-principles]], and meeting the needs of regulations (e.g. [eIDAS](https://www.european-digital-identity-regulation.com) or [Children's Online Privacy Protection Rule (COPPA)](https://www.govinfo.gov/content/pkg/PLAW-105publ277/pdf/PLAW-105publ277.pdf)) [[digital-identity-explainer]].
+    This API follows the *users first, developers second, and browser engines third* principle [[design-principles]] while also considering regulatory needs, such as [eIDAS](https://www.european-digital-identity-regulation.com) and the [Children's Online Privacy Protection Rule (COPPA)](https://www.govinfo.gov/content/pkg/PLAW-105publ277/pdf/PLAW-105publ277.pdf) [[digital-identity-explainer]].
 
-    For these reasons, the Federated Identity Working Group—which has an API to integrate federated identities and thus has a close implementation link to decentralized ones—is in a [rechartering process to adopt the Digital Credentials API](https://github.com/w3c/strategy/issues/450), guided by the Threat Model to make the API secure, privacy-preserving, and rights-respecting.
+    For these reasons, the Federated Identity Working Group, whose scope includes APIs related to federated identity, has adopted the Digital Credentials API as Working Draft work. The work is guided by threat-modeling concerns so that the API can be developed with security, privacy, and rights considerations in scope.
 
-    Moreover, the group’s new scope proposal has a broader perspective. It can also use the other data flows of the decentralized identity model to enable all possible use cases through the web platform.
+    This also creates a broader perspective: the same web-platform work can support other decentralized identity data flows where the use cases require them.
 
 </div>
 
-# Uses cases # {#uses-cases}
+# Use cases # {#uses-cases}
 
 The world of Digital Identities is quite broad and has different uses in different industries, where it can enhance the user experience and act as a business enabler. 
 
@@ -500,12 +499,12 @@ Digital Transformation has been a trend for several years and has played a cruci
 The pandemic accelerated a variety of phenomena including the trend to remote work. 
 Because remote work implies fewer geography-based constraints, there will be demands for other forms of identification, and for interoperable credentials, in order to meet the demands of a more mobile workforce.
 
-The fact is that, net of a further trend in the last year of "back to the office", remote workers are estimated to be 67 percent in the technology industry, and this approach is preferred by 91 percent of workers [[statista-work-from-home]]. 
+Industry surveys and reporting continue to track remote and hybrid work as relevant workforce patterns [[statista-work-from-home]], but the exact share varies by sector, geography, and measurement method.
 
 In a global context, digital identities can help register employees and contractors by verifying their identities and qualifications, which is particularly challenging for a global workforce. 
 
 Note: By using together the identities issued by governments to both people and organizations, it is possible to make hiring processes smoother with benefits for organizations and people often subject to scams. 
-To enable this scenario, it's important to have interoperability at both the technical and governance levels.
+To enable this scenario, it is important to have interoperability at both the technical and governance levels.
 
 ## Things ## {#things}
 
@@ -521,7 +520,7 @@ Identifying physical goods presents unique challenges, such as associating the p
 
 ### Energy Devices (IoT) ### {#energy-devices-(iot)}
 
-In "Self-Sovereign Identity" [[self-sovereign-identity]], we find an interesting pilot project in the **Energy Sector** initiated by the Austrian Power Grid (APG) and Energy Web Foundation (EWF) to enable small and medium-sized devices called Distributed Energetic Resources (DER), to participate in frequency regulation of the national power grid [[distributed-energy-resources-for-frequency-regulation]]. This response to the UN’s Sustainable Development Goal 7 "Ensure access to affordable, reliable, sustainable and modern energy for all".
+In "Self-Sovereign Identity" [[self-sovereign-identity]], we find an interesting pilot project in the **Energy Sector** initiated by the Austrian Power Grid (APG) and Energy Web Foundation (EWF) to enable small and medium-sized devices called Distributed Energy Resources (DER), to participate in frequency regulation of the national power grid [[distributed-energy-resources-for-frequency-regulation]]. This responds to the UN’s Sustainable Development Goal 7 "Ensure access to affordable, reliable, sustainable and modern energy for all".
 
 The challenge is that the transmission grid must maintain a consistent frequency to function properly. Power plants typically coordinate to adjust the input frequency in response to changes in energy consumption. However, this becomes particularly complex when integrating small and distributed devices.
 
@@ -575,7 +574,7 @@ Note: Notably, the assurance of our identity in the social realm often relies on
 
 Up until the **1700s-1800s**, when there was a lack of direct knowledge between the parties (and thus trust), such as when traveling, to identify oneself, it began to be necessary to present credentials issued by a trusted third party, such as a government, in the form of a paper with written information proofed by the authority.
 
-Note: A particularly well-known example of textual credentials is the first driver's license, issued in 1888 to Karl Benz so he could use his experimental car [[how-might-driver-licensing]]. It was a paper signed by the local authority (a trusted party), which was required after neighbors complained about noise generated by his driving, so not for identifying himself.
+Note: A particularly well-known example of textual credentials is the first driver's license, issued in 1888 to Karl Benz so he could use his experimental car [[how-might-driver-licensing]]. It was a paper signed by the local authority (a trusted party), which was required after neighbors complained about noise generated by his driving, not to identify him.
 
 These credentials are issued by a trusted entity (e.g., a government), carried or presented by the person in question (e.g., the user with a passport), and then verified by those in charge to authenticate (e.g., the border police) and provide something (e.g., permission to cross the border).
 
@@ -642,7 +641,7 @@ Some governments are doing pilot projects with Decentralized Identities, providi
 Let us delve into an extensively debated use case requiring a solution: age verification.
 
 The holder has a digital passport in the form of government-issued credentials; these credentials, in their claims, also contain age information. The presentation can be done in different ways, providing different levels of privacy.
-* **Full Credential**: It is possible to send the full credential since it also contains the date of birth, from which the verifier can derive the age. However, this doesn’t meet the principle of Data Minimization, as I’m sending a lot of other information that can be misused and make us traceable.
+* **Full Credential**: It is possible to send the full credential since it also contains the date of birth, from which the verifier can derive the age. However, this does not meet the principle of Data Minimization, as it sends a lot of other information that can be misused and make us traceable.
 * **Selective Disclosure** [[selective-disclosure]]: Suppose the credential provided supports this privacy feature, which allows us to send individual attributes/claims and hide the others. In that case, we can send only the date of birth, by which the verifier can derive the age. It certainly improves the situation concerning Data Minimization, but it does not solve it totally. To overcome this problem, some credentials have specific attributes with boolean values to present that our age exceeds a certain value (e.g., 16, 18, 21).
 * **Range Proof** [[range-proofs]]: Zero-knowledge range proofs allow a prover to convince a verifier that a secret value lies in a given interval (without showing the credential attribute). If the verifier ask for a specific attribute is within a given range, a range proof-presentation can be sent to the verifier (e.g., the verifier asks us if we are older than 21 years old, we send the result of the computation on the date of birth that proves that our age falls in that range without revealing it).
 
@@ -678,9 +677,10 @@ Therefore, even in a scenario that may seem trivial, it requires extensive study
 Several individuals contributed to the document. The editor especially thanks Pierre-Antoine Champin, Andrea D’Intino, Giuseppe De Marco, Heather Flanagan, Ivan Herman, Tommaso Innocenti, Ian Jacobs, Philippe Le Hegaret, Coralie Mercier, and Denis Roio.
 
 # Revision History # {#revision-history}
- * 25 February 2025: Added BBS, Status List (Thanks to Kristina Yasuda)
- * 4 November 2024: Clarifying Turst Concept (Thanks to Veronica Cristiano)
- * 13 Semptember 2024: Improved definitions of VC and VP (Thanks to Veronica Cristiano), IndieAuth (Thanks to Tantek Çelik)
+ * 19 June 2026: Updated the document after editorial and factual review, including status text, WebAuthn and Digital Credentials references, image alternatives and sizing, terminology fixes, and recent credential-format and protocol additions.
+ * 25 February 2025: Added BBS, Status List (Thanks to Kristina Yasuda), wording on issuing identity vs credentials (Thanks to Will Abramson), and SD-JWT VC and mDoc API references
+ * 4 November 2024: Clarifying Trust Concept (Thanks to Veronica Cristiano)
+ * 13 September 2024: Improved definitions of VC and VP (Thanks to Veronica Cristiano), IndieAuth (Thanks to Tantek Çelik)
  * 30 August 2024: Added Government Issued use-cases
  * 13 August 2024: First publication
 
@@ -736,7 +736,7 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "title": "The Evolving Landscape of Non-Human Identity",
     "date": "2024"
   },
-  "cambridge-dictionary-identity": {
+  "cambridge-dictionary-credential": {
     "title": "CREDENTIAL | English meaning",
     "href": "https://dictionary.cambridge.org/dictionary/english/credential",
     "publisher": "Cambridge University Press"
@@ -747,7 +747,7 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "publisher": "ID4D"
   },
   "NIST-SP-800-63-3": {
-    "title": "Types of credentials and authenticators",
+    "title": "Digital Identity Guidelines",
     "href": "https://doi.org/10.6028/NIST.SP.800-63-3",
     "publisher": "NIST",
     "year": "2017"
@@ -759,7 +759,7 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "year": "1993"
   },
   "cambridge-dictionary-trust": {
-    "title": "trusT | English meaning",
+    "title": "TRUST | English meaning",
     "href": "https://dictionary.cambridge.org/dictionary/english/trust",
     "publisher": "Cambridge University Press"
   },
@@ -786,17 +786,17 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "publisher": "United Nations"
   },
   "SDGS-16": {
-    "title": "Sustainable Development Goals",
+    "title": "Sustainable Development Goal 16",
     "href": "https://sdgs.un.org/goals/goal16#targets_and_indicators",
     "publisher": "United Nations"
   },
   "ID4D-initiative": {
-    "title": "Sustainable Development Goals",
+    "title": "Identification for Development (ID4D)",
     "href": "https://www.worldbank.org/content/dam/Worldbank/Governance/GGP%20ID4D%20flyer.pdf",
     "publisher": "World Bank"
   },
   "marrakesh-treaty": {
-    "title": "Sustainable Development Goals",
+    "title": "Marrakesh Treaty",
     "href": "https://www.wipo.int/marrakesh_treaty",
     "publisher": "World Intellectual Property Organization"
   },
@@ -934,7 +934,7 @@ Several individuals contributed to the document. The editor especially thanks Pi
     "human-rights-and-technical-standards": {
     "title": "Human rights and technical standard-setting processes for new and emerging digital technologies : report of the Office of the United Nations High Commissioner for Human Rights",
     "href":"https://digitallibrary.un.org/record/4031373?v=pdf",
-    "publisher" : "United Nation"
+    "publisher" : "United Nations"
   },
     "did-intro": {
     "author" : ["Ivan Herman"],
