@@ -122,7 +122,7 @@ Having concluded this roundup of terminology, before we delve into the various d
 
 ## Why identity is important ## {#why-identity-is-important}
 
-Human identities are a very special case, in particular when these identities are represented by credentials issued by governments. We know that they are not the only type and that the others are also important and have interesting business implications, but human ones have distinctive characteristics. Let us see why.
+Human identities are a very special case, in particular when aspects of these identities are represented by credentials issued by governments. We know that they are not the only type and that the others are also important and have interesting business implications, but human ones have distinctive characteristics. Let us see why.
 
 ### Human rights ### {#human-rights}
 
